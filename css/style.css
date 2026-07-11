@@ -16,6 +16,19 @@ body { margin: 0; min-width: 320px; background: var(--paper); }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 
+/* Soft, staggered entrance motion for portfolio content. */
+.has-js .reveal-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, 36px, 0);
+  transition:
+    opacity 800ms cubic-bezier(.22, 1, .36, 1),
+    transform 800ms cubic-bezier(.22, 1, .36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.has-js .reveal-on-scroll--text { transform: translate3d(30px, 0, 0); }
+.has-js .reveal-on-scroll.is-revealed { opacity: 1; transform: translate3d(0, 0, 0); }
+
 .page-shell { width: min(100%, var(--page-width)); margin: auto; padding: 0 var(--page-padding); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
@@ -44,6 +57,7 @@ img { display: block; max-width: 100%; }
 /* Project detail pages */
 .project-gallery { padding-top: clamp(48px, 6vw, 76px); padding-bottom: clamp(78px, 10vw, 126px); }
 .project-gallery__content { width: min(100%, 775px); margin: auto; }
+.project-gallery--characters .project-gallery__content { width: min(100%, 620px); }
 .project-gallery__content img { display: block; width: 100%; height: auto; }
 .project-gallery__content video { display: block; width: 100%; height: auto; background: #000; }
 .project-gallery--wide .project-gallery__content { max-width: 1000px; }
@@ -57,15 +71,16 @@ img { display: block; max-width: 100%; }
 .project-videos { padding-top: clamp(48px, 6vw, 76px); padding-bottom: clamp(78px, 10vw, 126px); }
 .project-videos video { display: block; height: auto; max-width: 100%; background: #000; }
 .project-videos__stack, .project-videos__production { display: flex; flex-direction: column; align-items: center; gap: 50px; }
-.project-videos__stack video, .project-videos__production > video { width: min(640px, 100%); }
+.project-videos__stack video { width: min(576px, 100%); }
+.project-videos__production > video { width: min(576px, 100%); }
 .project-videos__row { display: flex; justify-content: center; gap: 35px; }
-.project-videos__row video { width: min(360px, calc((100vw - 83px) / 2)); }
+.project-videos__row video { width: min(288px, calc((100vw - 83px) / 2)); }
 .social-gallery { padding-top: clamp(48px, 6vw, 76px); padding-bottom: clamp(78px, 10vw, 126px); }
 .social-gallery img, .about-page img { display: block; height: auto; max-width: 100%; }
-.social-gallery__squares { display: grid; grid-template-columns: repeat(3, 290px); justify-content: center; gap: 32px; }
-.social-gallery__squares img { width: 290px; }
+.social-gallery__squares { display: grid; grid-template-columns: repeat(3, 232px); justify-content: center; gap: 32px; }
+.social-gallery__squares img { width: 232px; }
 .social-gallery__wide { display: flex; flex-direction: column; align-items: center; gap: 50px; margin-top: 50px; }
-.social-gallery__wide img { width: auto; }
+.social-gallery__wide img { width: 80%; }
 .about-page { display: flex; flex-direction: column; align-items: center; gap: 64px; padding-top: clamp(48px, 6vw, 76px); padding-bottom: clamp(78px, 10vw, 126px); }
 .about-page__banner { width: 100%; }
 .about-page__portrait { width: 276px; }
@@ -97,8 +112,8 @@ img { display: block; max-width: 100%; }
   .products .products__grid { grid-template-columns:1fr !important; justify-items:center; }
   .products .product-card { width:min(252px, 100%); }
 }
-@media (max-width: 960px) { .social-gallery__squares { grid-template-columns: repeat(2, minmax(0, 290px)); } .social-gallery__squares img { width: 100%; } }
-.short-video-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 282px)); justify-content: center; column-gap: 37px; row-gap: 57px; }
+@media (max-width: 960px) { .social-gallery__squares { grid-template-columns: repeat(2, minmax(0, 232px)); } .social-gallery__squares img { width: 100%; } }
+.short-video-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 226px)); justify-content: center; column-gap: 37px; row-gap: 57px; }
 .short-video-grid video { width: 100%; }
 .products { padding-top:clamp(48px,6vw,76px); padding-bottom:clamp(78px,10vw,126px); }.products__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:42px 34px; }.product-card { border:0; padding:0; background:none; cursor:pointer; overflow:hidden; }.product-card img { width:100%; aspect-ratio:1/1; object-fit:cover; transition:transform .22s ease,box-shadow .22s ease; }.product-card:hover img { transform:scale(1.025); box-shadow:0 14px 30px rgba(0,0,0,.16); }.product-modal[hidden]{display:none}.product-modal{position:fixed;inset:0;z-index:50;padding:30px;background:rgba(0,0,0,.55)}.product-modal__dialog{position:relative;width:min(100%,900px);height:100%;margin:auto;overflow:auto;background:#fff}.product-modal__close{position:sticky;top:12px;float:right;z-index:2;margin:12px;border:0;border-radius:50%;width:38px;height:38px;background:#222;color:#fff;font-size:28px;line-height:1;cursor:pointer}.product-modal__content{clear:both}.product-modal__content img{display:block;width:100%;height:auto}@media(max-width:700px){.products__grid{grid-template-columns:1fr;gap:32px}.product-modal{padding:12px}}
 .products__grid { grid-template-columns:repeat(3, 252px); justify-content:center; }
@@ -106,7 +121,7 @@ img { display: block; max-width: 100%; }
 .product-card { display:block; overflow:visible; }
 .product-card:hover img { transform:scale(1.022); box-shadow:0 14px 30px rgba(25,25,25,.16); }
 .product-modal__dialog { width:min(100%, 630px); }
-@media (max-width: 640px) { .short-video-grid { grid-template-columns: minmax(0, 282px); } }
+@media (max-width: 640px) { .short-video-grid { grid-template-columns: minmax(0, 226px); } }
 
 /* Shared footer */
 .site-footer { border-top: 1px solid var(--line); }
@@ -147,4 +162,10 @@ img { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .portfolio-card img { transition: none; }
+  .has-js .reveal-on-scroll,
+  .has-js .reveal-on-scroll--text {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
