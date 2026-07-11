@@ -1,4 +1,6 @@
 /* Shared site elements. Future pages only need data-site-header and data-site-footer. */
+document.documentElement.classList.add("has-js");
+
 const navigationItems = [
   ["公仔、吉祥物、禮品設計", "characters-mascots.html"],
   ["包裝設計", "packaging-design.html"],
@@ -132,3 +134,34 @@ topButton.setAttribute("aria-label", "回上面");
 topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 document.body.append(topButton);
 window.addEventListener("scroll", () => topButton.classList.toggle("is-visible", window.scrollY > 420), { passive: true });
+
+// Reveal portfolio media from below and text from the right as it enters view.
+const revealTargets = document.querySelectorAll([
+  "main img",
+  "main video",
+  ".portfolio-card span",
+  ".about-page__title",
+  ".about-page__intro h2",
+  ".about-page__intro p",
+  ".about-page__skills h3",
+  ".about-page__skills p"
+].join(","));
+
+revealTargets.forEach((element, index) => {
+  element.classList.add("reveal-on-scroll");
+  if (!element.matches("img, video")) element.classList.add("reveal-on-scroll--text");
+  element.style.setProperty("--reveal-delay", `${(index % 6) * 90}ms`);
+});
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-revealed");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -5%" });
+  revealTargets.forEach((element) => revealObserver.observe(element));
+} else {
+  revealTargets.forEach((element) => element.classList.add("is-revealed"));
+}
