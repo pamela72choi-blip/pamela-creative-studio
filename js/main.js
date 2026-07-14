@@ -115,6 +115,31 @@ if (characterProjectCover) {
   });
 }
 
+// Print Design: open the original manuscript for the first two projects.
+document.querySelectorAll("[data-print-manuscript]").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const modal = document.createElement("div");
+    modal.className = "product-modal";
+    modal.innerHTML = '<div class="product-modal__dialog" role="dialog" aria-modal="true" aria-label="印刷原稿展示"><button class="product-modal__close" type="button" aria-label="關閉">×</button><div class="product-modal__content"></div></div>';
+    const image = document.createElement("img");
+    image.src = trigger.dataset.printManuscript;
+    image.alt = `${trigger.querySelector("img").alt}原稿展示`;
+    modal.querySelector(".product-modal__content").append(image);
+
+    const close = () => {
+      document.removeEventListener("keydown", handleKeydown);
+      modal.remove();
+    };
+    const handleKeydown = (event) => { if (event.key === "Escape") close(); };
+
+    modal.querySelector(".product-modal__close").addEventListener("click", close);
+    modal.addEventListener("click", (event) => { if (event.target === modal) close(); });
+    document.addEventListener("keydown", handleKeydown);
+    document.body.append(modal);
+    modal.querySelector(".product-modal__close").focus();
+  });
+});
+
 // Discourage direct saving and provide a global return-to-top control.
 document.addEventListener("contextmenu", (event) => { if (event.target.closest("img, video")) event.preventDefault(); });
 document.addEventListener("dragstart", (event) => { if (event.target.closest("img")) event.preventDefault(); });

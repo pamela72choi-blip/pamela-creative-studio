@@ -29,6 +29,22 @@ img { display: block; max-width: 100%; }
 .has-js .reveal-on-scroll--text { transform: translate3d(30px, 0, 0); }
 .has-js .reveal-on-scroll.is-revealed { opacity: 1; transform: translate3d(0, 0, 0); }
 
+/* Give every clickable portfolio image the same subtle hover zoom. */
+main a img,
+main button img {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+main a:hover img,
+main a:focus-visible img,
+main button:hover img,
+main button:focus-visible img,
+.has-js main a:hover img.reveal-on-scroll.is-revealed,
+.has-js main a:focus-visible img.reveal-on-scroll.is-revealed,
+.has-js main button:hover img.reveal-on-scroll.is-revealed,
+.has-js main button:focus-visible img.reveal-on-scroll.is-revealed {
+  transform: scale(1.022);
+}
+
 .page-shell { width: min(100%, var(--page-width)); margin: auto; padding: 0 var(--page-padding); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
@@ -66,6 +82,8 @@ img { display: block; max-width: 100%; }
 .project-gallery--natural .project-gallery__content img { width: auto; height: auto; max-width: 100%; }
 .project-gallery--natural .project-gallery__content .project-image--print-03 { width: min(550px, 100%); height: auto; aspect-ratio: 550 / 367; }
 .project-gallery--natural .project-gallery__content .project-image--print-04 { width: min(723px, 100%); height: auto; aspect-ratio: 723 / 511; }
+.project-gallery--print .project-gallery__content { display: flex; width: min(100%, 630px); flex-direction: column; gap: 60px; }
+.project-gallery--print .project-gallery__content img { width: 100%; height: auto; }
 
 /* Video detail pages */
 .project-videos { padding-top: clamp(48px, 6vw, 76px); padding-bottom: clamp(78px, 10vw, 126px); }
@@ -167,5 +185,15 @@ img { display: block; max-width: 100%; }
     opacity: 1;
     transform: none;
     transition: none;
+  }
+  main a:hover img,
+  main a:focus-visible img,
+  main button:hover img,
+  main button:focus-visible img,
+  .has-js main a:hover img.reveal-on-scroll.is-revealed,
+  .has-js main a:focus-visible img.reveal-on-scroll.is-revealed,
+  .has-js main button:hover img.reveal-on-scroll.is-revealed,
+  .has-js main button:focus-visible img.reveal-on-scroll.is-revealed {
+    transform: none;
   }
 }
