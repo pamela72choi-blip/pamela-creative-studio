@@ -115,14 +115,14 @@ if (characterProjectCover) {
   });
 }
 
-// Print Design: open the original manuscript for the first two projects.
-document.querySelectorAll("[data-print-manuscript]").forEach((trigger) => {
+// Open the corresponding original manuscript from a clickable project image.
+document.querySelectorAll("[data-manuscript]").forEach((trigger) => {
   trigger.addEventListener("click", () => {
     const modal = document.createElement("div");
     modal.className = "product-modal";
-    modal.innerHTML = '<div class="product-modal__dialog" role="dialog" aria-modal="true" aria-label="印刷原稿展示"><button class="product-modal__close" type="button" aria-label="關閉">×</button><div class="product-modal__content"></div></div>';
+    modal.innerHTML = '<div class="product-modal__dialog" role="dialog" aria-modal="true" aria-label="設計原稿展示"><button class="product-modal__close" type="button" aria-label="關閉">×</button><div class="product-modal__content"></div></div>';
     const image = document.createElement("img");
-    image.src = trigger.dataset.printManuscript;
+    image.src = trigger.dataset.manuscript;
     image.alt = `${trigger.querySelector("img").alt}原稿展示`;
     modal.querySelector(".product-modal__content").append(image);
 
