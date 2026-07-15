@@ -116,15 +116,19 @@ if (characterProjectCover) {
 }
 
 // Open the corresponding original manuscript from a clickable project image.
-document.querySelectorAll("[data-manuscript]").forEach((trigger) => {
+document.querySelectorAll("[data-manuscript], [data-manuscripts]").forEach((trigger) => {
   trigger.addEventListener("click", () => {
     const modal = document.createElement("div");
     modal.className = "product-modal";
     modal.innerHTML = '<div class="product-modal__dialog" role="dialog" aria-modal="true" aria-label="設計原稿展示"><button class="product-modal__close" type="button" aria-label="關閉">×</button><div class="product-modal__content"></div></div>';
-    const image = document.createElement("img");
-    image.src = trigger.dataset.manuscript;
-    image.alt = `${trigger.querySelector("img").alt}原稿展示`;
-    modal.querySelector(".product-modal__content").append(image);
+    const manuscriptPaths = (trigger.dataset.manuscripts || trigger.dataset.manuscript).split("|");
+    const content = modal.querySelector(".product-modal__content");
+    manuscriptPaths.forEach((path, index) => {
+      const image = document.createElement("img");
+      image.src = path;
+      image.alt = `${trigger.querySelector("img").alt}原稿展示 ${index + 1}`;
+      content.append(image);
+    });
 
     const close = () => {
       document.removeEventListener("keydown", handleKeydown);
