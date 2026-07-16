@@ -2,7 +2,7 @@
 document.documentElement.classList.add("has-js");
 
 const navigationItems = [
-  ["公仔、吉祥物、禮品設計", "characters-mascots.html"],
+  ["公仔、吉祥物、文創商品", "characters-mascots.html"],
   ["包裝設計", "packaging-design.html"],
   ["海報、型錄、印刷品設計", "print-design.html"],
   ["社群貼文圖片", "social-media-design.html"],
