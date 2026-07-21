@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="透過六個簡單步驟，找出適合品牌目前階段的設計與內容方案。">
+    <title>幫你找最適合的方案 | Pamela Creative Studio</title>
+    <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/find-the-right-solution.js" defer></script>
+  </head>
+  <body>
+    <div data-site-header></div>
+
+    <main>
+      <section class="solution-page page-shell" aria-labelledby="solution-title">
+        <header class="solution-hero">
+          <p class="solution-hero__eyebrow">LET’S FIND YOUR NEXT STEP</p>
+          <h1 id="solution-title">幫你找最適合的方案</h1>
+          <p>不用先知道專業名稱。回答幾個簡單問題，我會依照品牌現況、需求與預算，整理適合你的合作方向。</p>
+        </header>
+
+        <div class="solution-progress" aria-label="問卷進度">
+          <div class="solution-progress__bar" aria-hidden="true"><span data-progress-bar></span></div>
+          <ol>
+            <li class="is-current"><span>1</span><small>需求</small></li>
+            <li><span>2</span><small>品牌</small></li>
+            <li><span>3</span><small>銷售</small></li>
+            <li><span>4</span><small>服務</small></li>
+            <li><span>5</span><small>預算</small></li>
+            <li><span>6</span><small>聯絡</small></li>
+          </ol>
+          <p class="solution-progress__text" aria-live="polite">Step 1 / 6</p>
+        </div>
+
+        <form class="solution-form" data-solution-form data-form-endpoint="" novalidate>
+          <input class="solution-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <section class="solution-step" data-step="1">
+            <fieldset>
+              <legend><span>Step 1</span>你希望解決什麼問題？</legend>
+              <p class="solution-step__question">今天最想改善的是？</p>
+              <div class="solution-options solution-options--two">
+                <label><input type="radio" name="problem" value="增加品牌形象" required><span>增加品牌形象</span></label>
+                <label><input type="radio" name="problem" value="提高產品銷售"><span>提高產品銷售</span></label>
+                <label><input type="radio" name="problem" value="建立新品牌"><span>建立新品牌</span></label>
+                <label><input type="radio" name="problem" value="社群曝光不足"><span>社群曝光不足</span></label>
+                <label><input type="radio" name="problem" value="包裝太普通"><span>包裝太普通</span></label>
+                <label><input type="radio" name="problem" value="官網不好看"><span>官網不好看</span></label>
+                <label><input type="radio" name="problem" value="不知道從哪開始"><span>不知道從哪開始</span></label>
+              </div>
+              <p class="solution-step__note">很多客戶一開始其實不知道自己需要什麼，從最想改善的事情開始就好。</p>
+            </fieldset>
+          </section>
+
+          <section class="solution-step" data-step="2" hidden>
+            <fieldset>
+              <legend><span>Step 2</span>品牌資訊</legend>
+              <p class="solution-step__question">請簡單介紹你的品牌。</p>
+              <div class="solution-fields">
+                <label>品牌名稱<input type="text" name="brandName" autocomplete="organization" required></label>
+                <label>行業<input type="text" name="industry" required></label>
+                <label class="solution-fields__wide">商品／服務<textarea name="offering" rows="3" required></textarea></label>
+                <label class="solution-fields__wide">官方網站<input type="url" name="officialWebsite" inputmode="url" placeholder="https://"></label>
+              </div>
+              <div class="solution-subgroup">
+                <p>社群經營（可複選）</p>
+                <div class="solution-options solution-options--inline">
+                  <label><input type="checkbox" name="socialMethods" value="FB"><span>FB</span></label>
+                  <label><input type="checkbox" name="socialMethods" value="IG"><span>IG</span></label>
+                  <label><input type="checkbox" name="socialMethods" value="Threads"><span>Threads</span></label>
+                  <label><input type="checkbox" name="socialMethods" value="其他" data-other-toggle="socialOther"><span>其他</span></label>
+                </div>
+                <label class="solution-other-field">其他社群<input type="text" name="socialOther" data-other-input="socialOther" disabled></label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="solution-step" data-step="3" hidden>
+            <fieldset>
+              <legend><span>Step 3</span>目前的銷售方式</legend>
+              <p class="solution-step__question">可複選，請選擇目前正在使用的方式。</p>
+              <div class="solution-options solution-options--two" data-required-group="salesMethods">
+                <label><input type="checkbox" name="salesMethods" value="實體店面"><span>實體店面</span></label>
+                <label><input type="checkbox" name="salesMethods" value="電商"><span>電商</span></label>
+                <label><input type="checkbox" name="salesMethods" value="OEM／代工"><span>OEM／代工</span></label>
+                <label><input type="checkbox" name="salesMethods" value="B2B"><span>B2B</span></label>
+                <label><input type="checkbox" name="salesMethods" value="B2C"><span>B2C</span></label>
+                <label><input type="checkbox" name="salesMethods" value="社群販售"><span>社群販售</span></label>
+                <label><input type="checkbox" name="salesMethods" value="團購"><span>團購</span></label>
+                <label><input type="checkbox" name="salesMethods" value="跨境電商"><span>跨境電商</span></label>
+                <label><input type="checkbox" name="salesMethods" value="尚未開始"><span>尚未開始</span></label>
+              </div>
+              <p class="solution-step__error" data-group-error hidden>請至少選擇一項銷售方式。</p>
+            </fieldset>
+          </section>
+
+          <section class="solution-step" data-step="4" hidden>
+            <fieldset>
+              <legend><span>Step 4</span>目前需要哪些服務？</legend>
+              <p class="solution-step__question">可複選，不確定也沒關係，先選最接近的項目。</p>
+              <div class="solution-options solution-options--two" data-required-group="services">
+                <label><input type="checkbox" name="services" value="Logo"><span>Logo</span></label>
+                <label><input type="checkbox" name="services" value="品牌識別"><span>品牌識別</span></label>
+                <label><input type="checkbox" name="services" value="包裝設計"><span>包裝設計</span></label>
+                <label><input type="checkbox" name="services" value="海報"><span>海報</span></label>
+                <label><input type="checkbox" name="services" value="型錄"><span>型錄</span></label>
+                <label><input type="checkbox" name="services" value="社群素材"><span>社群素材</span></label>
+                <label><input type="checkbox" name="services" value="網站"><span>網站</span></label>
+                <label><input type="checkbox" name="services" value="商品攝影修圖"><span>商品攝影修圖</span></label>
+                <label><input type="checkbox" name="services" value="短影音規劃"><span>短影音規劃</span></label>
+                <label><input type="checkbox" name="services" value="商品頁"><span>商品頁</span></label>
+                <label><input type="checkbox" name="services" value="長期合作"><span>長期合作</span></label>
+                <label><input type="checkbox" name="services" value="其他" data-other-toggle="serviceOther"><span>其他</span></label>
+              </div>
+              <label class="solution-other-field">其他服務<input type="text" name="serviceOther" data-other-input="serviceOther" disabled></label>
+              <p class="solution-step__error" data-group-error hidden>請至少選擇一項需要的服務。</p>
+            </fieldset>
+          </section>
+
+          <section class="solution-step" data-step="5" hidden>
+            <fieldset>
+              <legend><span>Step 5</span>預算</legend>
+              <p class="solution-step__question">選擇目前較接近的預算範圍。</p>
+              <div class="solution-options solution-options--two">
+                <label><input type="radio" name="budget" value="3000 以下" required><span>3000 以下</span></label>
+                <label><input type="radio" name="budget" value="3000～8000"><span>3000～8000</span></label>
+                <label><input type="radio" name="budget" value="8000～15000"><span>8000～15000</span></label>
+                <label><input type="radio" name="budget" value="15000～30000"><span>15000～30000</span></label>
+                <label><input type="radio" name="budget" value="30000+"><span>30000+</span></label>
+                <label><input type="radio" name="budget" value="想先討論"><span>想先討論</span></label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="solution-step" data-step="6" hidden>
+            <fieldset>
+              <legend><span>Step 6</span>留下聯絡資料</legend>
+              <p class="solution-step__question">送出後，我會依照你提供的資訊整理適合的方向，再與你聯絡。</p>
+              <div class="solution-fields">
+                <label>姓名<input type="text" name="name" autocomplete="name" required></label>
+                <label>Email<input type="email" name="email" autocomplete="email" inputmode="email" required></label>
+                <label>LINE<input type="text" name="line" autocomplete="off"></label>
+                <label>電話<input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
+              </div>
+              <p class="solution-step__note">資料僅用於回覆本次需求，不會提供給第三方。</p>
+            </fieldset>
+          </section>
+
+          <div class="solution-actions">
+            <button class="solution-button solution-button--secondary" type="button" data-previous hidden>上一步</button>
+            <button class="solution-button" type="button" data-next>下一步</button>
+            <button class="solution-button" type="submit" data-submit hidden>送出需求</button>
+          </div>
+          <p class="solution-form__status" data-form-status aria-live="polite"></p>
+        </form>
+
+        <div class="solution-success" data-form-success hidden tabindex="-1">
+          <span aria-hidden="true">✓</span>
+          <h2>需求已成功送出</h2>
+          <p>謝謝你提供完整資訊，我會在閱讀後與你聯絡。</p>
+          <button class="solution-button solution-button--secondary" type="button" data-form-restart>再填一份</button>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+  </body>
+</html>

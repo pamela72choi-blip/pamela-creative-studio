@@ -11,6 +11,7 @@ const navigationItems = [
   ["短影音", "short-form-videos.html"],
   ["實拍影片 + 後製", "video-production.html"],
   ["關於 PAMELA", "about-pamela.html"],
+  ["幫你找最適合的方案", "find-the-right-solution.html"],
 ];
 
 function buildHeader() {
@@ -46,6 +47,19 @@ function buildFooter() {
 
 document.querySelector("[data-site-header]").innerHTML = buildHeader();
 document.querySelector("[data-site-footer]").innerHTML = buildFooter();
+
+// A persistent shortcut to the guided solution questionnaire.
+const currentPageName = window.location.pathname.split("/").pop() || "index.html";
+if (currentPageName !== "find-the-right-solution.html") {
+  const solutionShortcut = document.createElement("a");
+  solutionShortcut.className = "solution-shortcut";
+  solutionShortcut.href = "find-the-right-solution.html";
+  solutionShortcut.setAttribute("aria-label", "幫你找最適合的方案");
+  solutionShortcut.innerHTML = `
+    <img src="assets/images/ui/find-the-right-solution.gif" alt="" width="1254" height="1254">
+    <span>幫你找<br>最適合的方案</span>`;
+  document.body.append(solutionShortcut);
+}
 
 // Keep the compact navigation accessible on small screens.
 const menuToggle = document.querySelector(".menu-toggle");
