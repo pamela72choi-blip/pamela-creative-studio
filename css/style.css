@@ -286,6 +286,10 @@ main button:focus-visible img,
   .social-gallery,
   .products,
   .about-page { padding-right: 30px; padding-left: 30px; }
+  .social-gallery__squares { grid-template-columns: minmax(0, 232px); }
+  .about-page__intro { display: block; width: 100%; max-width: none; }
+  .about-page__portrait { display: none; }
+  .about-page__skills { grid-template-columns: 1fr; width: 100%; max-width: none; gap: 40px; }
   .site-brand { font-size: 15px; }
   .site-nav ul { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: minmax(0, 296px); gap: 39px; }
