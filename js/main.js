@@ -170,6 +170,57 @@ document.querySelectorAll('video source[src^="assets/videos/"]').forEach((source
   source.src = `${r2VideoBaseUrl}/${localPath}`;
   source.parentElement.load();
 });
+
+// Open portfolio videos from static preview images.
+document.querySelectorAll("[data-video-preview]").forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const localSource = trigger.dataset.videoPreview;
+    const videoSource = localSource.startsWith("assets/videos/")
+      ? `${r2VideoBaseUrl}/${localSource.replace("assets/videos/", "")}`
+      : localSource;
+    const label = trigger.getAttribute("aria-label") || "播放作品影片";
+    const modal = document.createElement("div");
+    modal.className = "product-modal";
+    modal.innerHTML = `
+      <div class="product-modal__dialog video-modal__dialog" role="dialog" aria-modal="true" aria-label="${label}">
+        <button class="product-modal__close" type="button" aria-label="關閉">×</button>
+        <div class="product-modal__content video-modal__content">
+          <video controls autoplay playsinline controlsList="nodownload">
+            <source src="${videoSource}" type="video/mp4">
+            您的瀏覽器不支援影片播放。
+          </video>
+        </div>
+      </div>`;
+
+    const video = modal.querySelector("video");
+    const dialog = modal.querySelector(".video-modal__dialog");
+    video.addEventListener("loadedmetadata", () => {
+      if (!video.videoWidth || !video.videoHeight) return;
+      const viewportPadding = 60;
+      const availableWidth = Math.max(240, window.innerWidth - viewportPadding);
+      const availableHeight = Math.max(240, window.innerHeight - viewportPadding);
+      const aspectRatio = video.videoWidth / video.videoHeight;
+      dialog.style.width = `${Math.min(900, availableWidth, availableHeight * aspectRatio)}px`;
+    }, { once: true });
+    const close = () => {
+      video.pause();
+      video.removeAttribute("src");
+      video.querySelector("source")?.removeAttribute("src");
+      video.load();
+      document.removeEventListener("keydown", handleKeydown);
+      modal.remove();
+      trigger.focus();
+    };
+    const handleKeydown = (event) => { if (event.key === "Escape") close(); };
+
+    modal.querySelector(".product-modal__close").addEventListener("click", close);
+    modal.addEventListener("click", (event) => { if (event.target === modal) close(); });
+    document.addEventListener("keydown", handleKeydown);
+    document.body.append(modal);
+    modal.querySelector(".product-modal__close").focus();
+  });
+});
+
 const topButton = document.createElement("button");
 topButton.className = "back-to-top";
 topButton.type = "button";
