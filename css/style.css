@@ -92,6 +92,11 @@ main button:focus-visible img,
 .project-gallery--packaging .project-gallery__content { display: flex; width: min(100%, 640px); flex-direction: column; gap: 40px; }
 .project-gallery--packaging .project-gallery__content img,
 .project-gallery--packaging .project-gallery__content video { width: 100%; height: auto; }
+.project-gallery--web .project-gallery__content { width: min(100%, 576px); gap: 40px; }
+.project-link { display: block; overflow: visible; }
+.project-link img { transition: transform 220ms ease, box-shadow 220ms ease; }
+.project-link:hover img,
+.project-link:focus-visible img { transform: scale(1.022); box-shadow: 0 14px 30px rgba(25,25,25,.16); }
 
 /* Video detail pages */
 .project-videos { padding-top: clamp(48px, 6vw, 76px); padding-bottom: clamp(78px, 10vw, 126px); }
