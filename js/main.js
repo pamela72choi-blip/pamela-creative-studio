@@ -2,15 +2,15 @@
 document.documentElement.classList.add("has-js");
 
 const navigationItems = [
+  ["網頁前端設計", "web-design.html"],
+  ["社群貼文圖片", "social-media-design.html"],
+  ["商品頁", "product-pages.html"],
   ["公仔、吉祥物、文創商品", "characters-mascots.html"],
   ["包裝設計", "packaging-design.html"],
   ["海報、型錄、印刷品設計", "print-design.html"],
-  ["社群貼文圖片", "social-media-design.html"],
-  ["商品頁", "product-pages.html"],
   ["教學影片", "tutorial-videos.html"],
-  ["短影音", "short-form-videos.html"],
   ["實拍影片 + 後製", "video-production.html"],
-  ["網頁前端設計", "web-design.html"],
+  ["短影音", "short-form-videos.html"],
   ["關於 PAMELA", "about-pamela.html"],
   ["幫你找最適合的方案", "find-the-right-solution.html"],
 ];
