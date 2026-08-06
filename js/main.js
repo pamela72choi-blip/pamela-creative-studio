@@ -12,6 +12,7 @@ const navigationItems = [
   ["實拍影片 + 後製", "video-production.html"],
   ["短影音", "short-form-videos.html"],
   ["關於 PAMELA", "about-pamela.html"],
+  ["服務報價", "service-pricing.html"],
   ["幫你找最適合的方案", "find-the-right-solution.html"],
 ];
 
