@@ -4,7 +4,7 @@ document.documentElement.classList.add("has-js");
 const navigationItems = [
   ["網頁前端設計", "web-design.html"],
   ["社群貼文圖片", "social-media-design.html"],
-  ["商品頁", "product-pages.html"],
+  ["商品詳情長圖", "product-pages.html"],
   ["公仔、吉祥物、文創商品", "characters-mascots.html"],
   ["包裝設計", "packaging-design.html"],
   ["海報、型錄、印刷品設計", "print-design.html"],
@@ -13,7 +13,6 @@ const navigationItems = [
   ["短影音", "short-form-videos.html"],
   ["關於 PAMELA", "about-pamela.html"],
   ["服務報價", "service-pricing.html"],
-  ["幫你找最適合的方案", "find-the-right-solution.html"],
 ];
 
 function buildHeader() {
@@ -87,13 +86,13 @@ if (productGrid) {
     const cover = `${folder}/cover.jpg`;
     const card = document.createElement("button");
     card.className = "product-card"; card.type = "button";
-    card.innerHTML = `<img src="${cover}" alt="商品頁作品 ${index + 1}" loading="lazy">`;
+    card.innerHTML = `<img src="${cover}" alt="商品詳情長圖作品 ${index + 1}" loading="lazy">`;
     card.addEventListener("click", () => {
       const extension = jpgProducts.has(index + 1) ? "jpg" : "webp";
       modalContent.replaceChildren(...Array.from({ length: count }, (_, page) => {
         const image = document.createElement("img");
         image.src = `${folder}/${String(page).padStart(2, "0")}.${extension}`;
-        image.alt = `商品頁作品 ${index + 1}，第 ${page + 1} 張`;
+        image.alt = `商品詳情長圖作品 ${index + 1}，第 ${page + 1} 張`;
         return image;
       }));
       modal.hidden = false;
