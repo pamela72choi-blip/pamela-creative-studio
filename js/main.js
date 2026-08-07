@@ -221,6 +221,53 @@ document.querySelectorAll("[data-video-preview]").forEach((trigger) => {
   });
 });
 
+// Swipeable, keyboard-accessible book-style gallery on the About page.
+const flipbook = document.querySelector("[data-flipbook]");
+if (flipbook) {
+  const stage = flipbook.querySelector("[data-flipbook-stage]");
+  const pages = [...flipbook.querySelectorAll("[data-flipbook-page]")];
+  const previousButton = flipbook.querySelector("[data-flipbook-previous]");
+  const nextButton = flipbook.querySelector("[data-flipbook-next]");
+  const status = flipbook.querySelector("[data-flipbook-status]");
+  let currentPage = 0;
+  let pointerStartX = null;
+
+  const showPage = (nextPage) => {
+    const boundedPage = Math.max(0, Math.min(pages.length - 1, nextPage));
+    if (boundedPage === currentPage) return;
+    currentPage = boundedPage;
+    pages.forEach((page, index) => {
+      page.classList.toggle("is-active", index === currentPage);
+      page.classList.toggle("is-before", index < currentPage);
+      page.setAttribute("aria-hidden", String(index !== currentPage));
+    });
+    previousButton.disabled = currentPage === 0;
+    nextButton.disabled = currentPage === pages.length - 1;
+    status.textContent = `${currentPage + 1} / ${pages.length}`;
+  };
+
+  previousButton.disabled = true;
+  previousButton.addEventListener("click", () => showPage(currentPage - 1));
+  nextButton.addEventListener("click", () => showPage(currentPage + 1));
+  stage.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") { event.preventDefault(); showPage(currentPage - 1); }
+    if (event.key === "ArrowRight") { event.preventDefault(); showPage(currentPage + 1); }
+  });
+  stage.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    pointerStartX = event.clientX;
+    stage.setPointerCapture?.(event.pointerId);
+  });
+  stage.addEventListener("pointerup", (event) => {
+    if (pointerStartX === null) return;
+    const distance = event.clientX - pointerStartX;
+    pointerStartX = null;
+    if (Math.abs(distance) < 45) return;
+    showPage(currentPage + (distance < 0 ? 1 : -1));
+  });
+  stage.addEventListener("pointercancel", () => { pointerStartX = null; });
+}
+
 const topButton = document.createElement("button");
 topButton.className = "back-to-top";
 topButton.type = "button";
