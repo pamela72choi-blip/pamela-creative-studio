@@ -77,6 +77,11 @@ main button:focus-visible img,
 .products,
 .about-page { padding-right: 30px; padding-left: 30px; }
 .project-gallery { padding-top: clamp(48px, 6vw, 76px); padding-bottom: clamp(78px, 10vw, 126px); }
+.gallery-hint { width:min(100%, 775px); margin:0 auto 18px; color:#8a8581; font-size:13px; line-height:1.6; text-align:center; }
+.project-gallery--characters .gallery-hint { width:min(100%, 620px); }
+.project-gallery--packaging .gallery-hint { width:min(100%, 640px); }
+.project-gallery--print .gallery-hint { width:min(100%, 630px); }
+.products > .gallery-hint { margin-bottom:22px; }
 .project-gallery__content { display: flex; width: min(100%, 775px); flex-direction: column; gap: 40px; margin: auto; }
 .project-gallery--characters .project-gallery__content { width: min(100%, 620px); }
 .project-gallery__content img { display: block; width: 100%; height: auto; }
