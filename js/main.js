@@ -50,6 +50,10 @@ function buildFooter() {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 11.5a9 9 0 0 1-13.3 7.9L3 21l1.4-4.4a9 9 0 1 1 16.1-5.1Z"/><path d="m8 7 2 3-1.2 1.2a9 9 0 0 0 4 4L14 14l3 2c-.5 1.6-1.7 2-3.2 1.4-3.9-1.5-6.7-4.3-8.2-8.2C5 7.7 6.4 6.5 8 7Z"/></svg>
             <span>WhatsApp: +886 952 202 278</span>
           </a>
+          <div class="site-footer__contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.5 9.5c0 3.1-2.8 5.5-6.2 5.5-.7 0-1.4-.1-2-.3L3 16l1.1-2.7A5.2 5.2 0 0 1 2 9.5C2 6.5 4.8 4 8.3 4s6.2 2.5 6.2 5.5Z"/><path d="M10.5 15c.5 2.8 3.1 5 6.2 5 .7 0 1.4-.1 2-.3L21 21l-.8-2.6A5 5 0 0 0 22 14.5c0-2.7-2.4-5-5.5-5-.7 0-1.4.1-2 .3"/><circle cx="6.4" cy="8.8" r=".55" fill="currentColor" stroke="none"/><circle cx="10.2" cy="8.8" r=".55" fill="currentColor" stroke="none"/><circle cx="15" cy="14" r=".55" fill="currentColor" stroke="none"/><circle cx="18.4" cy="14" r=".55" fill="currentColor" stroke="none"/></svg>
+            <span>WeChat: Pamela-72</span>
+          </div>
           <a class="site-footer__contact" href="mailto:pamela72choi@gmail.com">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
             <span>Email: pamela72choi@gmail.com</span>
