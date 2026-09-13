@@ -7,6 +7,7 @@
     <title>幫你找最適合的方案 | Pamela Creative Studio</title>
     <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/website-pricing.css">
     <script src="js/main.js" defer></script>
     <script src="js/find-the-right-solution.js" defer></script>
   </head>
@@ -48,6 +49,10 @@
                 <label><input type="radio" name="problem" value="社群曝光不足"><span>社群曝光不足</span></label>
                 <label><input type="radio" name="problem" value="包裝太普通"><span>包裝太普通</span></label>
                 <label><input type="radio" name="problem" value="官網不好看"><span>官網不好看</span></label>
+                <label><input type="radio" name="problem" value="建立網站／單頁宣傳"><span>建立網站／單頁宣傳</span></label>
+                <label><input type="radio" name="problem" value="商品展示／商城導購"><span>商品展示／商城導購</span></label>
+                <label><input type="radio" name="problem" value="課程／服務預約"><span>課程／服務預約</span></label>
+                <label><input type="radio" name="problem" value="活動／報名資訊"><span>活動／報名資訊</span></label>
                 <label><input type="radio" name="problem" value="不知道從哪開始"><span>不知道從哪開始</span></label>
               </div>
               <p class="solution-step__note">很多客戶一開始其實不知道自己需要什麼，從最想改善的事情開始就好。</p>
@@ -108,6 +113,9 @@
                 <label><input type="checkbox" name="services" value="型錄"><span>型錄</span></label>
                 <label><input type="checkbox" name="services" value="社群素材"><span>社群素材</span></label>
                 <label><input type="checkbox" name="services" value="網站"><span>網站</span></label>
+                <label><input type="checkbox" name="services" value="商品展示／電商導購網站"><span>商品展示／電商導購網站</span></label>
+                <label><input type="checkbox" name="services" value="課程／預約型網站"><span>課程／預約型網站</span></label>
+                <label><input type="checkbox" name="services" value="活動／報名網站"><span>活動／報名網站</span></label>
                 <label><input type="checkbox" name="services" value="商品攝影修圖"><span>商品攝影修圖</span></label>
                 <label><input type="checkbox" name="services" value="短影音規劃"><span>短影音規劃</span></label>
                 <label><input type="checkbox" name="services" value="商品頁"><span>商品頁</span></label>
@@ -116,6 +124,78 @@
               </div>
               <label class="solution-other-field">其他服務<input type="text" name="serviceOther" data-other-input="serviceOther" disabled></label>
               <p class="solution-step__error" data-group-error hidden>請至少選擇一項需要的服務。</p>
+              <fieldset class="solution-subgroup" data-website-questions hidden disabled>
+                <legend>網站需求</legend>
+                <p class="solution-step__question">網站主要要協助你做什麼？可複選；商品頁圖片設計本身不需要另外建網站。</p>
+                <div class="solution-options solution-options--two" data-website-purpose>
+                <label><input type="checkbox" name="websitePurpose" value="landing"><span>單一品牌／服務／活動宣傳頁</span></label>
+                <label><input type="checkbox" name="websitePurpose" value="brand"><span>完整品牌形象與資訊展示</span></label>
+                <label><input type="checkbox" name="websitePurpose" value="products"><span>商品展示、分類與商城導購</span></label>
+                <label><input type="checkbox" name="websitePurpose" value="booking"><span>課程介紹、報名或服務／場地預約</span></label>
+                <label><input type="checkbox" name="websitePurpose" value="event"><span>活動報名、場次、公告或成果公布</span></label>
+                <label><input type="checkbox" name="websitePurpose" value="custom"><span>多種功能整合／特殊需求</span></label>
+                <label><input type="checkbox" name="websitePurpose" value="unsure"><span>還不確定，想先討論</span></label>
+                </div>
+                <p class="solution-step__error" data-website-error hidden>請至少選擇一項網站用途，不確定可選「還不確定，想先討論」。</p>
+                <div class="solution-subgroup" data-website-detail="products">
+                  <p>已有商品銷售平台嗎？（可複選，選填）</p>
+                  <div class="solution-options solution-options--two">
+                <label><input type="checkbox" name="commercePlatforms" value="蝦皮"><span>蝦皮</span></label>
+                <label><input type="checkbox" name="commercePlatforms" value="Coupang 酷澎"><span>Coupang 酷澎</span></label>
+                <label><input type="checkbox" name="commercePlatforms" value="Yahoo"><span>Yahoo</span></label>
+                <label><input type="checkbox" name="commercePlatforms" value="momo"><span>momo</span></label>
+                <label><input type="checkbox" name="commercePlatforms" value="其他商城"><span>其他商城</span></label>
+                <label><input type="checkbox" name="commercePlatforms" value="LINE／社群"><span>LINE／社群</span></label>
+                <label><input type="checkbox" name="commercePlatforms" value="尚未建立"><span>尚未建立</span></label>
+                <label><input type="checkbox" name="commercePlatforms" value="不適用"><span>不適用</span></label>
+                  </div>
+                </div>
+                <div class="solution-subgroup" data-website-detail="products">
+                  <p>商品交易希望如何完成？（選填）</p>
+                  <div class="solution-options solution-options--two">
+                <label><input type="radio" name="commerceFlow" value="external"><span>導流至既有商城／LINE 詢問</span></label>
+                <label><input type="radio" name="commerceFlow" value="onsite"><span>需要官網購物車、付款或訂單功能</span></label>
+                <label><input type="radio" name="commerceFlow" value="discuss"><span>想先評估適合的平台</span></label>
+                  </div>
+                </div>
+                <div class="solution-subgroup" data-website-detail="booking">
+                  <p>課程／預約需要哪些入口？（可複選，選填）</p>
+                  <div class="solution-options solution-options--two">
+                <label><input type="checkbox" name="bookingNeeds" value="課程列表／師資介紹"><span>課程列表／師資介紹</span></label>
+                <label><input type="checkbox" name="bookingNeeds" value="時段資訊／場地預約"><span>時段資訊／場地預約</span></label>
+                <label><input type="checkbox" name="bookingNeeds" value="報名表單／LINE 詢問"><span>報名表單／LINE 詢問</span></label>
+                <label><input type="checkbox" name="bookingNeeds" value="第三方預約服務整合"><span>第三方預約服務整合</span></label>
+                <label><input type="checkbox" name="bookingNeeds" value="付款／課程管理"><span>付款／課程管理</span></label>
+                  </div>
+                </div>
+                <div class="solution-subgroup" data-website-detail="event">
+                  <p>活動需要哪些內容？（可複選，選填）</p>
+                  <div class="solution-options solution-options--two">
+                <label><input type="checkbox" name="eventNeeds" value="活動介紹／日期時間地點"><span>活動介紹／日期時間地點</span></label>
+                <label><input type="checkbox" name="eventNeeds" value="報名入口／第三方報名平台"><span>報名入口／第三方報名平台</span></label>
+                <label><input type="checkbox" name="eventNeeds" value="場次選擇／報名名單"><span>場次選擇／報名名單</span></label>
+                <label><input type="checkbox" name="eventNeeds" value="賽程／即時公告"><span>賽程／即時公告</span></label>
+                <label><input type="checkbox" name="eventNeeds" value="成績／比賽結果公布"><span>成績／比賽結果公布</span></label>
+                <label><input type="checkbox" name="eventNeeds" value="成果頁／相簿／影片"><span>成果頁／相簿／影片</span></label>
+                <label><input type="checkbox" name="eventNeeds" value="宗教法會／功德項目／流程公告"><span>宗教法會／功德項目／流程公告</span></label>
+                <label><input type="checkbox" name="eventNeeds" value="線上付款"><span>線上付款</span></label>
+                  </div>
+                </div>
+                <div class="solution-subgroup">
+                  <p>其他功能需求（可複選，選填；費用另行評估）</p>
+                  <div class="solution-options solution-options--two">
+                <label><input type="checkbox" name="websiteFeatures" value="會員系統"><span>會員系統</span></label>
+                <label><input type="checkbox" name="websiteFeatures" value="大量資料／特殊查詢"><span>大量資料／特殊查詢</span></label>
+                <label><input type="checkbox" name="websiteFeatures" value="複雜報名流程"><span>複雜報名流程</span></label>
+                <label><input type="checkbox" name="websiteFeatures" value="API／特殊後台"><span>API／特殊後台</span></label>
+                <label><input type="checkbox" name="websiteFeatures" value="大型活動"><span>大型活動</span></label>
+                <label><input type="checkbox" name="websiteFeatures" value="多語系"><span>多語系</span></label>
+                <label><input type="checkbox" name="websiteFeatures" value="金流／訂單／物流／優惠券"><span>金流／訂單／物流／優惠券</span></label>
+                  </div>
+                </div>
+                <label class="solution-other-field">既有平台、網站需求或維護方式補充（選填）<input type="text" name="websiteNotes"></label>
+                <div class="solution-step__note" data-website-recommendation aria-live="polite" hidden></div>
+              </fieldset>
             </fieldset>
           </section>
 
@@ -144,6 +224,7 @@
                 <label>LINE<input type="text" name="line" autocomplete="off"></label>
                 <label>電話<input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
               </div>
+              <div class="solution-step__note" data-website-review hidden aria-live="polite"></div>
               <p class="solution-step__note">資料僅用於回覆本次需求，不會提供給第三方。</p>
             </fieldset>
           </section>
