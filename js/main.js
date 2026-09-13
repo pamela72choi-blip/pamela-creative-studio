@@ -43,7 +43,7 @@ function buildFooter() {
         <span>Copyright © <strong>Pamela Creative Studio</strong></span>
         <nav class="site-footer__contacts" aria-label="聯絡 Pamela">
           <a class="site-footer__contact" href="https://line.me/ti/p/Js9Ja7KqCo" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10.5c0 4.1-4 7.5-9 7.5H9l-4 3v-5.1c-1.3-1.3-2-3-2-5.4C3 6.4 7 3 12 3s9 3.4 9 7.5Z"/><path d="M7 8v5h2M11 8v5m3 0V8l3 5V8"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10.5c0 4.1-4 7.5-9 7.5H9l-4 3v-5.1c-1.3-1.3-2-3-2-5.4C3 6.4 7 3 12 3s9 3.4 9 7.5Z"/><path stroke-width="1.1" d="M6 8.5v4h2M9.5 8.5v4M11.5 12.5v-4l2.5 4v-4M18 8.5h-2v4h2M16 10.5h1.6"/></svg>
             <span>LINE: pamela-72</span>
           </a>
           <a class="site-footer__contact" href="https://wa.me/886952202278" target="_blank" rel="noopener noreferrer">

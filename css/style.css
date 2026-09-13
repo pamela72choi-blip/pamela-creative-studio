@@ -406,12 +406,12 @@ main button:focus-visible img,
 }
 
 /* Footer contact links */
-.site-footer { background:#191919; border-top:1px solid #303030; }
-.site-footer__inner { padding-top:36px; padding-bottom:36px; gap:18px; color:#aaa; }
-.site-footer strong { color:#f2f0ed; }
+.site-footer { background:#fff; border-top:1px solid #e6e6e6; }
+.site-footer__inner { padding-top:36px; padding-bottom:36px; gap:18px; color:#555; }
+.site-footer strong { color:#333; }
 .site-footer__contacts { display:flex; flex-direction:column; gap:3px; max-width:100%; text-align:left; }
-.site-footer__contact { display:flex; align-items:center; gap:12px; min-height:44px; padding:9px 12px; border-radius:6px; color:#d3d0cc; text-decoration:none; transition:color .18s ease,background .18s ease; }
-.site-footer__contact svg { width:21px; height:21px; flex:0 0 21px; color:#bfa98f; }
+.site-footer__contact { display:flex; align-items:center; gap:12px; min-height:44px; padding:9px 12px; border-radius:6px; color:#444; text-decoration:none; transition:color .18s ease,background .18s ease; }
+.site-footer__contact svg { width:21px; height:21px; flex:0 0 21px; color:#555; }
 .site-footer__contact span { overflow-wrap:anywhere; }
-.site-footer__contact:hover { color:#fff; background:#282624; }
-.site-footer__contact:focus-visible { outline:2px solid #bfa98f; outline-offset:3px; color:#fff; background:#282624; }
+.site-footer__contact:hover { color:#222; background:#f3f3f3; }
+.site-footer__contact:focus-visible { outline:2px solid #666; outline-offset:3px; color:#222; background:#f3f3f3; }
