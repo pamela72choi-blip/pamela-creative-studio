@@ -7,6 +7,7 @@
     <title>服務報價 | Pamela Creative Studio</title>
     <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/website-pricing.css">
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -37,10 +38,88 @@
             <a href="#web-design-pricing">網頁設計</a><a href="#digital-materials">社群・電商・網頁素材</a><a href="#graphic-design">平面視覺設計</a><a href="#print-design-pricing">印刷品設計</a><a href="#video-post-production">影音後製</a>
           </nav>
 
-          <section class="pricing-category" id="web-design-pricing"><h3>網頁設計</h3><div class="pricing-grid pricing-grid--items">
-            <article class="pricing-card"><h3>一頁式網站</h3><p class="pricing-card__price">NT$18,000 起</p><p class="pricing-card__intro">單頁式網站規劃、視覺設計及基礎 RWD 響應式功能。</p></article>
-            <article class="pricing-card"><h3>形象官網</h3><p class="pricing-card__price">NT$35,000 起</p><p class="pricing-card__intro">首頁 1 頁、基本內頁 3 頁、網站整體視覺設計及基礎 RWD 響應式功能。</p></article>
-          </div><p class="pricing-category__note">本方案不包含購物車、會員、金流、預約及後台管理等系統功能。如有相關需求，可協助評估適合的平台與建置方式，確認可行性後另行報價。</p></section>
+          <section class="pricing-category" id="web-design-pricing" aria-labelledby="web-design-title">
+            <h3 id="web-design-title">網站設計服務</h3>
+            <p class="pricing-card__intro">5 種主要方案與客製功能評估，依實際需求、內容量與功能另行評估。</p>
+            <div class="pricing-grid pricing-grid--items">
+              <article class="pricing-card" id="website-plan-1">
+                <h3>01｜一頁式網站</h3>
+                <p class="pricing-card__price">NT$ 18,000 起</p>
+                <p class="pricing-card__intro">用一個完整頁面，把品牌、服務與行動入口說清楚。<br>適合剛起步、預算有限，或只需要單一活動／服務頁面的客戶。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>個人品牌、小型工作室、單項服務、活動宣傳、產品／服務 Landing Page。</p>
+                <h4>包含方向</h4><ul><li>單頁式網站企劃</li><li>視覺設計</li><li>內容區塊排版</li><li>手機／桌機 RWD</li><li>基本聯絡表單</li><li>LINE／Email／社群連結</li><li>CTA 行動按鈕</li><li>基本 SEO 結構</li></ul>
+
+              </article>
+              <article class="pricing-card" id="website-plan-2">
+                <h3>02｜品牌形象官網</h3>
+                <p class="pricing-card__price">NT$ 35,000 起</p>
+                <p class="pricing-card__intro">建立完整品牌門面，讓客戶更清楚認識你是誰、提供什麼服務，以及如何與你聯絡。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>企業、品牌、工作室、專業服務、宗教／禮儀服務、個人品牌。</p>
+                <h4>基本可包含</h4><ul><li>首頁</li><li>關於我們</li><li>服務／產品介紹</li><li>案例／作品</li><li>最新消息或常見問題</li><li>聯絡頁</li><li>手機／桌機 RWD</li><li>基本 SEO 架構</li><li>社群／LINE／Email 整合</li></ul>
+                <p class="pricing-card__note">NT$ 35,000 起方案以品牌形象與資訊展示為主。若需要商品銷售、課程、預約、活動報名、會員、付款或其他功能，可依需求另行評估。</p>
+              </article>
+              <article class="pricing-card" id="website-plan-3">
+                <h3>03｜商品展示／電商導購網站</h3>
+                <p class="pricing-card__price">NT$ 38,000 起</p>
+                <p class="pricing-card__intro">網站負責品牌形象、商品內容與導購；訂單、付款與物流則可依實際需求，搭配成熟電商平台完成。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>已有蝦皮、Coupang 酷澎、Yahoo、momo 或其他購物平台的品牌。</p>
+                <h4>可包含</h4><ul><li>品牌首頁</li><li>商品分類</li><li>商品介紹</li><li>活動／優惠頁</li><li>商品導購</li><li>串接蝦皮／酷澎／Yahoo／momo／其他商城</li><li>LINE／社群導購</li><li>RWD</li><li>基本 SEO</li></ul>
+                <p class="pricing-card__note">不是所有品牌都需要重新打造一套購物系統。若客戶已經有成熟的電商通路，可優先整合既有平台，降低維護成本，也讓日後訂單與物流管理更簡單。</p>
+                <p class="pricing-card__note">若需要官網購物車、金流、會員、訂單、物流或優惠券：完整購物功能依平台與需求另行報價。</p>
+              </article>
+              <article class="pricing-card" id="website-plan-4">
+                <h3>04｜課程／預約型網站</h3>
+                <p class="pricing-card__price">NT$ 40,000 起</p>
+                <p class="pricing-card__intro">讓客戶從了解服務，到選擇課程、詢問或預約，都有清楚的操作入口。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>老師、教練、顧問、美容、健康服務、工作室、體驗課程、場地預約等。</p>
+                <h4>可依需求包含</h4><ul><li>品牌／服務介紹</li><li>課程介紹</li><li>課程列表</li><li>師資介紹</li><li>時段資訊</li><li>報名表單</li><li>預約入口</li><li>第三方預約服務整合</li><li>LINE／Email 通知入口</li><li>RWD</li><li>基本 SEO</li></ul>
+                <p class="pricing-card__note">預約、付款、會員或課程管理功能，會依實際使用的平台與流程另外評估。</p>
+              </article>
+              <article class="pricing-card" id="website-plan-5">
+                <h3>05｜活動／報名網站</h3>
+                <p class="pricing-card__price">NT$ 30,000 起</p>
+                <p class="pricing-card__intro">從活動宣傳、資訊整理、報名入口，到活動後的成績或結果公布，依照活動流程規劃適合的網站內容。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>運動賽事、講座、展覽、招生活動、宗教法會、禮儀活動、公益活動、品牌活動、各式期間限定活動。</p>
+                <h4>基本可包含</h4><ul><li>活動主視覺</li><li>活動介紹</li><li>日期／時間／地點</li><li>活動流程</li><li>注意事項</li><li>報名入口</li><li>FAQ</li><li>聯絡資訊</li><li>RWD</li><li>基本 SEO</li></ul>
+                <details><summary>可依需求追加</summary><ul><li>報名名單</li><li>場次選擇</li><li>賽程</li><li>即時公告</li><li>參加者資訊</li><li>成績公布</li><li>比賽結果</li><li>活動成果頁</li><li>相簿／影片</li><li>線上付款</li><li>第三方報名平台整合</li></ul></details>
+                <p class="pricing-card__note">宗教法會也可套用此類型：法會介紹、日期場次、功德項目、報名方式、流程說明與相關公告，皆可依活動需求規劃。</p>
+              </article>
+              <article class="pricing-card" id="website-plan-6">
+                <h3>06｜客製功能網站｜依需求評估</h3>
+                <p class="pricing-card__price">依需求報價</p>
+                <p class="pricing-card__intro">先了解實際使用情境、預算與後續維護方式，再評估適合的平台、第三方服務或工程開發方式。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>多種功能整合、大量資料、會員系統、特殊查詢功能、複雜報名流程、API／第三方系統、特殊後台、大型活動、其他特殊需求。</p>
+                <p class="pricing-card__note">若需要專業工程開發，可採合作工程師或另外評估。</p>
+              </article>
+            </div>
+            <div class="web-addons" aria-labelledby="web-addons-title">
+              <h3 id="web-addons-title">常見加購項目</h3>
+              <dl class="web-addons__list">
+                <div><dt>追加一般內容頁</dt><dd>NT$ 3,000 起／頁</dd></div>
+                <div><dt>活動／Landing Page</dt><dd>NT$ 8,000 起／頁</dd></div>
+                <div><dt>商品頁版型設計</dt><dd>NT$ 5,000 起</dd></div>
+                <div><dt>大量商品上架</dt><dd>依數量報價</dd></div>
+                <div><dt>表單設計／需求表</dt><dd>NT$ 3,000 起</dd></div>
+                <div><dt>第三方平台串接／導流</dt><dd>NT$ 3,000 起</dd></div>
+                <div><dt>報名流程規劃</dt><dd>NT$ 5,000 起</dd></div>
+                <div><dt>預約功能整合</dt><dd>NT$ 5,000 起</dd></div>
+                <div><dt>多語系網站</dt><dd>原網站費用＋20% 起</dd></div>
+                <div><dt>基本 SEO 優化</dt><dd>可依方案包含；進階 SEO 另行評估</dd></div>
+                <div><dt>網站內容整理／文案協助</dt><dd>依內容量報價</dd></div>
+                <div><dt>網站後續維護</dt><dd>可選單次修改或月／季維護方案，依需求另外報價。</dd></div>
+              </dl>
+            </div>
+            <div class="pricing-category__note">
+              <p>以上為基本建置參考價格。實際費用會依網站頁數、內容量、功能、資料整理程度、平台、第三方服務及製作時程評估。</p>
+              <p>不綁單一平台。會依預算、功能需求與日後維護方式，規劃適合的網站與數位整合方案。</p>
+              <p>網站主機、網域、平台月費、金流、物流、第三方預約／報名工具及其他外部服務費用，若有產生，原則上由客戶依實際使用方案支付。</p>
+              <p>如果已有蝦皮、Coupang 酷澎、Yahoo、momo 或其他成熟電商平台，不一定需要另外建立複雜購物系統，可規劃品牌官網＋商品展示＋商城導購的方式。</p>
+            </div>
+            <div class="web-pricing-cta">
+              <h3>不知道自己需要哪一種網站？</h3>
+              <div><a class="pricing-cta" href="find-the-right-solution.html">幫我找到適合的方案</a><a class="pricing-cta" href="https://line.me/ti/p/Js9Ja7KqCo" target="_blank" rel="noopener noreferrer">先聊聊我的需求</a></div>
+            </div>
+          </section>
 
           <section class="pricing-category" id="digital-materials"><h3>社群・電商・網頁素材</h3><div class="pricing-grid pricing-grid--items">
             <article class="pricing-card"><h3>社群貼文設計</h3><p class="pricing-card__price">NT$500 起／張</p><p class="pricing-card__intro">適用於 Facebook、Instagram 貼文及一般社群宣傳圖片。</p></article>
