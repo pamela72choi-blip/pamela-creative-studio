@@ -41,7 +41,20 @@ function buildFooter() {
     <footer class="site-footer">
       <div class="page-shell site-footer__inner">
         <span>Copyright © <strong>Pamela Creative Studio</strong></span>
-        <a href="mailto:pamela72choi@gmail.com">pamela72choi@gmail.com</a>
+        <nav class="site-footer__contacts" aria-label="聯絡 Pamela">
+          <a class="site-footer__contact" href="https://line.me/ti/p/Js9Ja7KqCo" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10.5c0 4.1-4 7.5-9 7.5H9l-4 3v-5.1c-1.3-1.3-2-3-2-5.4C3 6.4 7 3 12 3s9 3.4 9 7.5Z"/><path d="M7 8v5h2M11 8v5m3 0V8l3 5V8"/></svg>
+            <span>LINE: pamela-72</span>
+          </a>
+          <a class="site-footer__contact" href="https://wa.me/886952202278" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 11.5a9 9 0 0 1-13.3 7.9L3 21l1.4-4.4a9 9 0 1 1 16.1-5.1Z"/><path d="m8 7 2 3-1.2 1.2a9 9 0 0 0 4 4L14 14l3 2c-.5 1.6-1.7 2-3.2 1.4-3.9-1.5-6.7-4.3-8.2-8.2C5 7.7 6.4 6.5 8 7Z"/></svg>
+            <span>WhatsApp: +886 952 202 278</span>
+          </a>
+          <a class="site-footer__contact" href="mailto:pamela72choi@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>Email: pamela72choi@gmail.com</span>
+          </a>
+        </nav>
       </div>
     </footer>`;
 }
