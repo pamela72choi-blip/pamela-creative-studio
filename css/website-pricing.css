@@ -1,0 +1,20 @@
+
+/* Website pricing additions: scoped to the website category only. */
+#web-design-pricing .pricing-card h4 { margin:20px 0 8px; font-size:14px; }
+#web-design-pricing details { margin-top:20px; color:#77706b; font-size:14px; line-height:1.8; }
+#web-design-pricing summary { cursor:pointer; font-weight:650; }
+#web-design-pricing details ul { margin-top:8px; }
+#web-design-pricing .web-addons { margin-top:40px; }
+#web-design-pricing .web-addons__list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 28px; margin:0; }
+#web-design-pricing .web-addons__list > div { padding:16px 0; border-bottom:1px solid #e8e5e1; }
+#web-design-pricing dt { font-size:15px; font-weight:650; }
+#web-design-pricing dd { margin:7px 0 0; color:#77706b; font-size:14px; line-height:1.7; }
+#web-design-pricing .web-pricing-cta { margin-top:32px; }
+#web-design-pricing .web-pricing-cta > div { display:flex; flex-wrap:wrap; gap:12px; }
+#web-design-pricing .web-pricing-cta .pricing-cta { text-align:center; }
+@media (max-width:700px) {
+  #web-design-pricing .web-addons__list { grid-template-columns:1fr; }
+}
+ .solution-step fieldset[data-website-questions] { margin-top:32px; padding-top:28px; border-top:1px solid #e7e1dc; }
+[data-website-questions][hidden], [data-website-detail][hidden] { display:none; }
+[data-website-recommendation] p { margin:12px 0; }
