@@ -74,7 +74,7 @@ if (currentPageName !== "find-the-right-solution.html") {
   solutionShortcut.href = "find-the-right-solution.html";
   solutionShortcut.setAttribute("aria-label", "幫你找最適合的方案");
   solutionShortcut.innerHTML = `
-    <img src="assets/images/ui/find-the-right-solution.gif" alt="" width="1254" height="1254">
+    <img src="assets/images/ui/find-the-right-solution.webp" alt="" width="368" height="368">
     <span>幫你找<br>最適合的方案</span>`;
   document.body.append(solutionShortcut);
 }
