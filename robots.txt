@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pamela72choi-blip.github.io/pamela-creative-studio/sitemap.xml

@@ -94,6 +94,31 @@ const productGrid = document.querySelector("[data-products]");
 if (productGrid) {
   const jpgProducts = new Set([5, 6, 9, 11, 22]);
   const pageCounts = [2, 3, 10, 11, 13, 14, 9, 10, 8, 10, 9, 12, 10, 10, 9, 4, 8, 10, 3, 7, 6, 7, 12];
+  const productAltTexts = [
+    "汽車晶艷鍍膜維護組電商商品詳情頁",
+    "汽油辛烷值提升劑電商商品詳情頁",
+    "汽車晶艷鍍膜洗車精電商商品詳情頁",
+    "汽車護膜洗車精電商商品詳情頁",
+    "沙棘果油保健產品電商商品詳情頁",
+    "牛樟芝複方膠囊電商商品詳情頁",
+    "膠原蛋白粉保健產品電商商品詳情頁",
+    "夜眠胺基酸保健產品電商商品詳情頁",
+    "女性養護保健產品電商商品詳情頁",
+    "白牛樟芝保健產品電商商品詳情頁",
+    "鹿胎盤青杞雙肽保健產品電商商品詳情頁",
+    "靈芝孢子粉保健產品電商商品詳情頁",
+    "綠循環 BCAA 營養補充品電商商品詳情頁",
+    "美肌膠原蛋白飲電商商品詳情頁",
+    "靈芝萃清新飲品電商商品詳情頁",
+    "旗魚鬆食品電商商品詳情頁",
+    "綜合堅果與果乾食品電商商品詳情頁",
+    "頭皮煥活精華液電商商品詳情頁",
+    "亮白奇肌膠囊保養品電商商品詳情頁",
+    "泰國佛牌護身符電商商品詳情頁",
+    "泰國藥師佛聖物電商商品詳情頁",
+    "泰國女神佛牌電商商品詳情頁",
+    "居家清潔噴霧電商商品詳情頁"
+  ];
   const modal = document.querySelector("[data-product-modal]");
   const modalContent = document.querySelector("[data-product-content]");
   const closeModal = () => { modal.hidden = true; modalContent.replaceChildren(); };
@@ -103,13 +128,13 @@ if (productGrid) {
     const cover = `${folder}/cover.jpg`;
     const card = document.createElement("button");
     card.className = "product-card"; card.type = "button";
-    card.innerHTML = `<img src="${cover}" alt="商品詳情長圖作品 ${index + 1}" loading="lazy">`;
+    card.innerHTML = `<img src="${cover}" alt="${productAltTexts[index]}" loading="lazy">`;
     card.addEventListener("click", () => {
       const extension = jpgProducts.has(index + 1) ? "jpg" : "webp";
       modalContent.replaceChildren(...Array.from({ length: count }, (_, page) => {
         const image = document.createElement("img");
         image.src = `${folder}/${String(page).padStart(2, "0")}.${extension}`;
-        image.alt = `商品詳情長圖作品 ${index + 1}，第 ${page + 1} 張`;
+        image.alt = `${productAltTexts[index]}，內容圖第 ${page + 1} 張`;
         return image;
       }));
       modal.hidden = false;
@@ -137,7 +162,7 @@ if (characterProjectCover) {
     ["00", "01", "02", "03"].forEach((file, index) => {
       const image = document.createElement("img");
       image.src = `characters-mascots/characters-mascots_01/${file}.jpg`;
-      image.alt = `角色設計完整作品 ${index + 1}`;
+      image.alt = `品牌角色吉祥物完整設計稿第 ${index + 1} 張`;
       content.append(image);
     });
     const close = () => modal.remove();

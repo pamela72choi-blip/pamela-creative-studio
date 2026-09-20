@@ -63,6 +63,14 @@ main button:focus-visible img,
 
 /* Homepage */
 .portfolio { padding-top: clamp(54px, 7vw, 88px); padding-bottom: clamp(78px, 10vw, 126px); }
+.portfolio-intro,
+.project-intro { width: min(100%, 760px); margin: 0 auto clamp(42px, 5vw, 64px); text-align: center; }
+.section-kicker { margin: 0 0 12px; color: #8a8581; font-size: 12px; font-weight: 700; letter-spacing: .16em; }
+.portfolio-intro h1,
+.project-intro h1 { margin: 0; color: #2f2f2f; font-size: clamp(28px, 4vw, 46px); line-height: 1.24; letter-spacing: -.025em; }
+.portfolio-intro > p:last-child,
+.project-intro > p:last-of-type { margin: 20px auto 0; color: #6f6a66; font-size: 16px; line-height: 1.9; }
+.section-title { margin: 0 0 32px; color: #4e4a47; font-size: 18px; font-weight: 650; text-align: center; }
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, 296px); justify-content: center; gap: clamp(28px, 4.25vw, 52px) clamp(22px, 4.2vw, 50px); }
 .portfolio-card { display: block; width: 296px; text-decoration: none; }
 .portfolio-card img { width: 296px; height: 296px; aspect-ratio: 1 / 1; object-fit: cover; background: #f2f0ee; box-shadow: 0 0 0 rgba(0,0,0,0); transition: transform 220ms ease, box-shadow 220ms ease; }
@@ -77,6 +85,9 @@ main button:focus-visible img,
 .products,
 .about-page { padding-right: 30px; padding-left: 30px; }
 .project-gallery { padding-top: clamp(48px, 6vw, 76px); padding-bottom: clamp(78px, 10vw, 126px); }
+.project-intro--print { width: min(100%, 760px); margin-bottom: 30px; }
+.service-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 24px 0 0; padding: 0; list-style: none; }
+.service-tags li { padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px; color: #67615d; font-size: 14px; line-height: 1.4; }
 .gallery-hint { width:min(100%, 775px); margin:0 auto 18px; color:#8a8581; font-size:13px; line-height:1.6; text-align:center; }
 .project-gallery--characters .gallery-hint { width:min(100%, 620px); }
 .project-gallery--packaging .gallery-hint { width:min(100%, 640px); }
