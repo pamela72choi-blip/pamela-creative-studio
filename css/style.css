@@ -62,19 +62,6 @@ html.is-loading.is-ready body::after { opacity: 0; transform: translate(-50%, ca
   html.is-loading body::after { animation: none; }
 }
 
-/* Soft, staggered entrance motion for portfolio content. */
-.has-js .reveal-on-scroll {
-  opacity: 0;
-  transform: translate3d(0, 36px, 0);
-  transition:
-    opacity 800ms cubic-bezier(.22, 1, .36, 1),
-    transform 800ms cubic-bezier(.22, 1, .36, 1);
-  transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
-}
-.has-js .reveal-on-scroll--text { transform: translate3d(30px, 0, 0); }
-.has-js .reveal-on-scroll.is-revealed { opacity: 1; transform: translate3d(0, 0, 0); }
-
 /* Give every clickable portfolio image the same subtle hover zoom. */
 main a img,
 main button img {
@@ -83,11 +70,7 @@ main button img {
 main a:hover img,
 main a:focus-visible img,
 main button:hover img,
-main button:focus-visible img,
-.has-js main a:hover img.reveal-on-scroll.is-revealed,
-.has-js main a:focus-visible img.reveal-on-scroll.is-revealed,
-.has-js main button:hover img.reveal-on-scroll.is-revealed,
-.has-js main button:focus-visible img.reveal-on-scroll.is-revealed {
+main button:focus-visible img {
   transform: scale(1.022);
 }
 
@@ -126,6 +109,9 @@ main button:focus-visible img,
 .portfolio-local-note { width: min(100%, 760px); margin: clamp(72px, 9vw, 112px) auto 0; padding: 0 clamp(8px, 2vw, 24px); text-align: center; }
 .portfolio-local-note p { margin: 0; color: #77716d; font-size: 12px; font-weight: 400; line-height: 2; letter-spacing: .035em; }
 .portfolio-mobile-break { display: none; }
+.page-seo-note { width:min(100%, 760px); margin:clamp(72px,9vw,112px) auto 0; padding:0 clamp(8px,2vw,24px); text-align:center; }
+.page-seo-note p { margin:0; color:#77716d; font-size:12px; font-weight:400; line-height:2; letter-spacing:.035em; }
+.page-note-mobile-break { display:none; }
 
 /* Project detail pages */
 .project-gallery,
@@ -350,6 +336,7 @@ main button:focus-visible img,
 .pricing-hero h1 { margin:0; color:#252525; font-size:clamp(34px,5vw,54px); line-height:1.15; letter-spacing:-.035em; }
 .pricing-hero p:last-of-type { margin:18px auto 0; color:#74706d; font-size:16px; line-height:1.8; }
 .pricing-quick-links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:28px; }
+.pricing-quick-links--top { margin:0 0 clamp(42px,6vw,70px); }
 .pricing-quick-links a { display:inline-flex; min-height:42px; align-items:center; justify-content:center; padding:9px 17px; border:1px solid #d8d0ca; border-radius:999px; background:#fff; color:#5f5752; font-size:14px; font-weight:650; text-decoration:none; transition:background .18s ease,border-color .18s ease,color .18s ease,transform .18s ease; }
 .pricing-quick-links a:hover,.pricing-quick-links a:focus-visible { border-color:#8e7463; background:#8e7463; color:#fff; transform:translateY(-1px); }
 #individual-items > .pricing-quick-links { margin-bottom:clamp(36px,5vw,54px); }
@@ -435,6 +422,9 @@ main button:focus-visible img,
   .portfolio-local-note { padding-right: 0; padding-left: 0; }
   .portfolio-local-note p { letter-spacing: 0; }
   .portfolio-mobile-break { display: block; }
+  .page-seo-note { padding-right:0; padding-left:0; }
+  .page-seo-note p { letter-spacing:0; }
+  .page-note-mobile-break { display:block; }
   .site-footer__inner { min-height: 118px; }
   .pricing-page { padding-right:20px; padding-left:20px; }
   .pricing-section,.pricing-category { scroll-margin-top:86px; }
@@ -449,20 +439,10 @@ main button:focus-visible img,
   html { scroll-behavior: auto; }
   .solution-shortcut { transition:none; }
   .portfolio-card img { transition: none; }
-  .has-js .reveal-on-scroll,
-  .has-js .reveal-on-scroll--text {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
   main a:hover img,
   main a:focus-visible img,
   main button:hover img,
-  main button:focus-visible img,
-  .has-js main a:hover img.reveal-on-scroll.is-revealed,
-  .has-js main a:focus-visible img.reveal-on-scroll.is-revealed,
-  .has-js main button:hover img.reveal-on-scroll.is-revealed,
-  .has-js main button:focus-visible img.reveal-on-scroll.is-revealed {
+  main button:focus-visible img {
     transform: none;
   }
   .flipbook-page,

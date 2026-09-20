@@ -1,8 +1,8 @@
 /* Shared site elements. Future pages only need data-site-header and data-site-footer. */
 document.documentElement.classList.add("has-js");
 
-// Fade out the shared loading screen after the page is ready. The fallback
-// prevents slow third-party media from leaving visitors behind an overlay.
+// Keep the loading screen visible until this page's images and video previews
+// are ready, then reveal the complete layout at once.
 const loadingStartedAt = performance.now();
 let loadingFinished = false;
 function finishLoadingScreen() {
@@ -17,10 +17,6 @@ function finishLoadingScreen() {
     }, 560);
   }, minimumDisplayTime);
 }
-
-if (document.readyState === "complete") finishLoadingScreen();
-else window.addEventListener("load", finishLoadingScreen, { once: true });
-window.setTimeout(finishLoadingScreen, 4500);
 
 const navigationItems = [
   ["網頁設計", "web-design.html"],
@@ -149,7 +145,7 @@ if (productGrid) {
     const cover = `${folder}/cover.jpg`;
     const card = document.createElement("button");
     card.className = "product-card"; card.type = "button";
-    card.innerHTML = `<img src="${cover}" alt="${productAltTexts[index]}" loading="lazy">`;
+    card.innerHTML = `<img src="${cover}" alt="${productAltTexts[index]}" loading="eager">`;
     card.addEventListener("click", () => {
       const extension = jpgProducts.has(index + 1) ? "jpg" : "webp";
       modalContent.replaceChildren(...Array.from({ length: count }, (_, page) => {
@@ -340,33 +336,25 @@ topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "s
 document.body.append(topButton);
 window.addEventListener("scroll", () => topButton.classList.toggle("is-visible", window.scrollY > 420), { passive: true });
 
-// Reveal portfolio media from below and text from the right as it enters view.
-const revealTargets = document.querySelectorAll([
-  "main img",
-  "main video",
-  ".portfolio-card span",
-  ".about-page__title",
-  ".about-page__intro h2",
-  ".about-page__intro p",
-  ".about-page__skills h3",
-  ".about-page__skills p"
-].join(","));
+document.querySelectorAll('img[loading="lazy"]').forEach((image) => { image.loading = "eager"; });
 
-revealTargets.forEach((element, index) => {
-  element.classList.add("reveal-on-scroll");
-  if (!element.matches("img, video")) element.classList.add("reveal-on-scroll--text");
-  element.style.setProperty("--reveal-delay", `${(index % 6) * 90}ms`);
+const mediaReady = [...document.querySelectorAll("main img, main video")].map((media) => {
+  if (media instanceof HTMLImageElement) {
+    const decodeImage = () => media.decode?.().catch(() => undefined);
+    if (media.complete) return decodeImage();
+    return new Promise((resolve) => {
+      media.addEventListener("load", () => Promise.resolve(decodeImage()).then(resolve), { once: true });
+      media.addEventListener("error", resolve, { once: true });
+    });
+  }
+  if (media.readyState >= 1) return Promise.resolve();
+  return new Promise((resolve) => {
+    media.addEventListener("loadedmetadata", resolve, { once: true });
+    media.addEventListener("error", resolve, { once: true });
+  });
 });
 
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-revealed");
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.12, rootMargin: "0px 0px -5%" });
-  revealTargets.forEach((element) => revealObserver.observe(element));
-} else {
-  revealTargets.forEach((element) => element.classList.add("is-revealed"));
-}
+Promise.race([
+  Promise.all(mediaReady),
+  new Promise((resolve) => window.setTimeout(resolve, 15000))
+]).then(finishLoadingScreen);
