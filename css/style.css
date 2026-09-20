@@ -79,6 +79,7 @@ main button:focus-visible img,
 .portfolio-card:focus-visible { outline: 2px solid #565656; outline-offset: 5px; }
 .portfolio-local-note { width: min(100%, 760px); margin: clamp(72px, 9vw, 112px) auto 0; padding: 0 clamp(8px, 2vw, 24px); text-align: center; }
 .portfolio-local-note p { margin: 0; color: #77716d; font-size: 12px; font-weight: 400; line-height: 2; letter-spacing: .035em; }
+.portfolio-mobile-break { display: none; }
 
 /* Project detail pages */
 .project-gallery,
@@ -385,6 +386,9 @@ main button:focus-visible img,
   .portfolio-card, .portfolio-card img { width: min(296px, 100%); }
   .portfolio-card img { height: auto; aspect-ratio: 1 / 1; }
   .portfolio-card span { margin-top: 13px; font-size: 17px; }
+  .portfolio-local-note { padding-right: 0; padding-left: 0; }
+  .portfolio-local-note p { letter-spacing: 0; }
+  .portfolio-mobile-break { display: block; }
   .site-footer__inner { min-height: 118px; }
   .pricing-page { padding-right:20px; padding-left:20px; }
   .pricing-section,.pricing-category { scroll-margin-top:86px; }
