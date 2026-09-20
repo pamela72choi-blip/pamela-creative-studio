@@ -1,6 +1,27 @@
 /* Shared site elements. Future pages only need data-site-header and data-site-footer. */
 document.documentElement.classList.add("has-js");
 
+// Fade out the shared loading screen after the page is ready. The fallback
+// prevents slow third-party media from leaving visitors behind an overlay.
+const loadingStartedAt = performance.now();
+let loadingFinished = false;
+function finishLoadingScreen() {
+  if (loadingFinished || !document.documentElement.classList.contains("is-loading")) return;
+  loadingFinished = true;
+  const elapsedTime = performance.now() - loadingStartedAt;
+  const minimumDisplayTime = Math.max(0, 650 - elapsedTime);
+  window.setTimeout(() => {
+    document.documentElement.classList.add("is-ready");
+    window.setTimeout(() => {
+      document.documentElement.classList.remove("is-loading", "is-ready");
+    }, 560);
+  }, minimumDisplayTime);
+}
+
+if (document.readyState === "complete") finishLoadingScreen();
+else window.addEventListener("load", finishLoadingScreen, { once: true });
+window.setTimeout(finishLoadingScreen, 4500);
+
 const navigationItems = [
   ["網頁設計", "web-design.html"],
   ["社群貼文圖片", "social-media-design.html"],

@@ -16,6 +16,52 @@ body { margin: 0; min-width: 320px; background: var(--paper); }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 
+/* Branded loading screen shared by every page. */
+html.is-loading { overflow: hidden; }
+html.is-loading body::before,
+html.is-loading body::after {
+  position: fixed;
+  z-index: 10000;
+  pointer-events: none;
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(.22, 1, .36, 1);
+}
+html.is-loading body::before {
+  inset: 0;
+  background: #fff;
+  content: "";
+  opacity: 1;
+}
+html.is-loading body::after {
+  top: 50%;
+  left: 50%;
+  width: min(260px, calc(100vw - 64px));
+  padding-bottom: 16px;
+  border-bottom: 1px solid #aaa39e;
+  color: #282828;
+  content: "Pamela Creative Studio";
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: .015em;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  animation: loading-mark 1.15s ease-in-out infinite alternate;
+}
+html.is-loading.is-ready body::before { opacity: 0; }
+html.is-loading.is-ready body::after { opacity: 0; transform: translate(-50%, calc(-50% - 10px)); }
+
+@keyframes loading-mark {
+  from { border-bottom-color: #dedad7; }
+  to { border-bottom-color: #5f5a56; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.is-loading body::before,
+  html.is-loading body::after { transition-duration: 1ms; }
+  html.is-loading body::after { animation: none; }
+}
+
 /* Soft, staggered entrance motion for portfolio content. */
 .has-js .reveal-on-scroll {
   opacity: 0;
