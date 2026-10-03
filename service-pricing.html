@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/website-pricing.css">
     <script src="js/main.js" defer></script>
+    <style>
+/* The estimator extends the existing pricing page's typography and palette. */
+#design-quote{scroll-margin-top:105px}.quote-intro{margin:0 0 26px;color:#77706b;font-size:15px;line-height:1.8}.quote-workspace{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr);gap:28px;align-items:start}.quote-panel{padding:clamp(22px,3vw,32px);border:1px solid #e4ddd7;border-radius:3px;background:#fff;box-shadow:0 16px 40px rgba(69,52,41,.07)}.quote-panel h3{margin:0 0 20px;color:#33302e;font-size:22px}.quote-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.quote-field{display:flex;flex-direction:column;gap:8px;color:#545454;font-size:14px;font-weight:600}.quote-field--full{grid-column:1/-1}.quote-field input,.quote-field select,.quote-field textarea,.quote-chat-form input{font:inherit;font-size:15px;line-height:1.6;color:#545454;background:#fff;border:1px solid #ded8d3;border-radius:3px;padding:10px 12px;min-width:0;width:100%}.quote-field input:focus,.quote-field select:focus,.quote-field textarea:focus,.quote-chat-form input:focus{outline:2px solid #b59d8c;outline-offset:2px}.quote-field textarea{resize:vertical}.quote-field small{font-size:12px;font-weight:400;color:#77706b}.quote-service-note{padding:15px 18px;border-left:3px solid #b59d8c;background:#f8f5f2;font-size:14px;line-height:1.8;white-space:pre-line;margin:20px 0}.quote-add{margin-top:18px;cursor:pointer}.quote-summary{position:sticky;top:110px}.quote-total{margin:12px 0 8px;color:#8e7463;font-size:clamp(26px,3vw,36px);font-weight:800;line-height:1.4}.quote-help{color:#77706b;font-size:13px;line-height:1.75;margin:12px 0}.quote-cart{padding:0;list-style:none;margin:20px 0}.quote-cart li{display:grid;grid-template-columns:1fr auto;gap:8px;padding:16px 0;border-bottom:1px solid #e8e5e1}.quote-cart strong{font-size:14px;color:#4b4541;display:block}.quote-cart small{font-size:12px;color:#787878;display:block;margin-top:4px;white-space:pre-line}.quote-remove{border:0;background:transparent;color:#80766f;text-decoration:underline;cursor:pointer;font-size:12px;align-self:start;padding:3px}.quote-empty{margin:20px 0;padding:20px;background:#f8f5f2;color:#80766f;font-size:14px;line-height:1.8}.quote-estimate-note{font-size:13px;color:#716965;line-height:1.8;white-space:pre-line}.quote-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.quote-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #b59d8c;border-radius:2px;background:#fff;color:#716055;font:inherit;font-size:14px;cursor:pointer;text-decoration:none}.quote-error{color:#a33b2c;font-size:14px;line-height:1.7;margin-top:15px}.quote-success{color:#5c7562;font-size:14px;line-height:1.7;margin-top:15px}.quote-panel button:disabled{opacity:.55;cursor:not-allowed}.quote-panel .pricing-cta{cursor:pointer;font:inherit;font-size:14px;min-height:44px}.quote-contact{margin-top:28px;padding-top:24px;border-top:1px solid #e8e5e1}.quote-contact h4{font-size:17px;margin:0 0 18px}.quote-consultation{margin-top:32px}.quote-faq-buttons{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 20px}.quote-faq-buttons button{font:inherit;font-size:14px;border:1px solid #e4ddd7;background:#fff;color:#716965;padding:9px 13px;border-radius:3px;cursor:pointer;text-align:left}.quote-faq-buttons button:hover{background:#f8f5f2}.quote-chat{display:flex;flex-direction:column;gap:14px;max-height:350px;overflow:auto;background:#faf8f6;padding:22px;margin-bottom:20px;border:1px solid #eee9e5}.quote-message{max-width:92%;white-space:pre-line;overflow-wrap:anywhere;font-size:15px;line-height:1.8;padding:13px 17px;border:1px solid #e4ddd7;border-radius:3px;background:#fff;align-self:flex-start}.quote-message--user{background:#8e7463;color:#fff;border-color:#8e7463;align-self:flex-end}.quote-chat-form{display:flex;gap:10px}.quote-chat-form input{flex:1}.quote-policy{margin:20px 0 0;padding-left:20px;color:#77706b;font-size:13px;line-height:1.8}.quote-card-select{margin-top:20px}.quote-card-select button{font:inherit;font-size:14px;background:#fff;color:#716055;border:1px solid #b59d8c;border-radius:2px;padding:10px 16px;cursor:pointer}.quote-field[hidden],.quote-service-note[hidden],.quote-error[hidden],.quote-success[hidden]{display:none}.quote-print{display:none}@media(max-width:800px){.quote-workspace{grid-template-columns:1fr}.quote-summary{position:static}.quote-message{max-width:100%}}@media(max-width:500px){.quote-fields{grid-template-columns:1fr}.quote-chat-form{flex-wrap:wrap}.quote-chat-form input{flex-basis:100%}.quote-chat-form button{width:100%}.quote-panel{padding:22px 18px}.quote-actions>a,.quote-actions>button{flex:1;text-align:center}.quote-chat{padding:16px}.quote-total{font-size:28px}}
+@media print{body.quote-is-printing>*{display:none!important}body.quote-is-printing>.quote-print{display:block!important;color:#333;background:white;padding:20px;font:14px/1.8 system-ui,sans-serif}body.quote-is-printing>.quote-print h1{font-size:26px}body.quote-is-printing>.quote-print pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}}
+
+    </style>
   </head>
   <body>
     <div data-site-header></div>
@@ -25,8 +31,63 @@
       <div class="pricing-page page-shell">
         <h1 class="sr-only">服務報價</h1>
         <nav class="pricing-quick-links pricing-quick-links--top" aria-label="報價主要分類">
-          <a href="#packages">套組方案</a><a href="#individual-items">單一品項</a>
+          <a href="#ai-print-pricing">AI 圖印刷完稿</a><a href="#design-quote">需求與自動初估</a><a href="#packages">套組方案</a><a href="#individual-items">單一品項</a>
         </nav>
+
+<section class="pricing-section" id="ai-print-pricing" aria-labelledby="ai-print-title">
+  <header class="pricing-section__header"><h2 id="ai-print-title">AI 生成圖轉可印刷檔案</h2><p>依生成圖片重建文字與版面，整理成符合實際尺寸與印刷規格的檔案。</p></header>
+  <div class="pricing-grid pricing-grid--items">
+    <article class="pricing-card"><h3>單張大圖重建與印刷完稿</h3><p class="pricing-card__price">看圖後報價／張</p><p class="pricing-card__intro">適用於 AI 生成的海報、主視覺與單張平面圖。先檢查原圖、實際印刷尺寸與重建範圍，再確認費用。</p><ul><li>依需求重建文字、Logo 與可編修元素</li><li>整理實際尺寸、版面、出血與印刷輸出</li><li>複雜插畫重畫、影像修復或重新生成另估</li></ul><p class="pricing-card__note">請提供原始圖片、完整文字、印刷尺寸與印刷廠規格。不是將整張圖片直接轉存，就能保證放大印刷品質。</p><div class="quote-card-select"><button type="button" data-quote-select="ai-flat">加入需求初估</button></div></article>
+    <article class="pricing-card"><h3>立體包裝重建與展開排版</h3><p class="pricing-card__price">NT$4,000～8,000／款</p><p class="pricing-card__intro">依 AI 包裝情境圖重建平面設計，配合印刷廠提供的正式刀模，完成包裝展開排版。</p><ul><li>各一尺寸、正反面完稿</li><li>重建文字與向量元素、展開排版與套刀模</li><li>包含 2 次局部修改</li><li>交付可編修 SVG／PDF；原生 .ai 檔依需求確認</li></ul><p class="pricing-card__note">梨山春茶袋參考 NT$5,000～8,000／款；肉脯袋參考 NT$4,000～6,000／款。需提供完整文字、原圖、正式刀模與印刷規格；另購素材、複雜插畫重畫、印刷與打樣另計。</p><div class="quote-card-select"><button type="button" data-quote-select="ai-package">加入需求初估</button></div></article>
+  </div>
+</section>
+<section class="pricing-section" id="design-quote" aria-labelledby="design-quote-title">
+  <header class="pricing-section__header"><h2 id="design-quote-title">設計需求與自動初估</h2><p>選擇單項服務與加購，整理需求，再由 Pamela 確認正式報價。</p></header>
+  <p class="quote-intro">起價項目先計算參考下限；依量報價、特殊規格與範圍尚未確定的項目另列待確認。套組方案不列入此初估。</p>
+  <noscript><p class="pricing-category__note">請開啟瀏覽器 JavaScript 使用自動初估，或直接 Email 至 pamela72choi@gmail.com 說明需求。</p></noscript>
+  <div class="quote-workspace">
+    <div class="quote-panel">
+      <h3>選擇服務</h3>
+      <form id="quote-item-form">
+        <div class="quote-fields">
+          <label class="quote-field quote-field--full">服務項目<select id="quote-service" required><option value="">請選擇服務</option></select></label>
+          <label class="quote-field">數量 <input id="quote-quantity" type="number" value="1" min="1" max="100" step="1" required><small id="quote-unit"></small></label>
+          <label class="quote-field">尺寸／規格<input id="quote-spec" maxlength="300" placeholder="例如：A2、1920 × 1080、盒型尺寸"></label>
+          <label class="quote-field quote-field--full" id="quote-variant-field" hidden>計價方式<select id="quote-variant"></select></label>
+        </div>
+        <p class="quote-service-note" id="quote-service-note" hidden></p>
+        <button class="pricing-cta quote-add" type="submit">加入初估清單</button>
+      </form>
+      <div class="quote-contact">
+        <h4>聯絡與需求</h4>
+        <div class="quote-fields">
+          <label class="quote-field">姓名／公司<input id="quote-name" maxlength="100" autocomplete="name" placeholder="您的稱呼"></label>
+          <label class="quote-field">Email／LINE／電話<input id="quote-contact" maxlength="200" placeholder="方便聯絡您的方式"></label>
+          <label class="quote-field quote-field--full">希望完成日期<input id="quote-deadline" type="date"></label>
+          <label class="quote-field quote-field--full">需求補充<textarea id="quote-details" rows="4" maxlength="5000" placeholder="用途、風格、素材準備情況、修改需求、交付格式或急件說明"></textarea></label>
+        </div>
+        <p class="quote-help">需求會先整理成 Email 草稿，由您確認並寄出。請於信件附上原圖、參考圖片或刀模；收到後由 Pamela 確認檔期與正式報價。</p>
+      </div>
+    </div>
+    <aside class="quote-panel quote-summary" aria-labelledby="quote-summary-title">
+      <h3 id="quote-summary-title">您的需求初估</h3>
+      <p class="quote-total" id="quote-total">尚未加入項目</p>
+      <p class="quote-help" id="quote-total-note">加入服務後，即可查看參考明細。</p>
+      <div class="quote-empty" id="quote-empty">可以選擇多項服務，也能從下方報價卡片直接加入。</div>
+      <ul class="quote-cart" id="quote-cart" aria-label="初估項目"></ul>
+      <p class="quote-estimate-note" id="quote-manual-note"></p>
+      <ul class="quote-policy"><li>初估不代表正式報價或已承諾交期。</li><li>一般項目每案 3 次微調；基礎影片剪輯為 1 次，AI 包裝重建為 2 次局部修改。</li><li>印刷、打樣、運費與網站外部服務費用另計；稅額與原始檔交付需另確認。</li></ul>
+      <div class="quote-actions"><button type="button" class="pricing-cta" id="quote-email">整理需求並開啟 Email</button><button type="button" class="quote-secondary" id="quote-copy">複製需求</button><button type="button" class="quote-secondary" id="quote-print">列印初估</button></div>
+      <p class="quote-error" id="quote-error" role="alert" hidden></p><p class="quote-success" id="quote-success" role="status" hidden></p>
+    </aside>
+  </div>
+  <section class="quote-panel quote-consultation" aria-labelledby="quote-chat-title">
+    <h3 id="quote-chat-title">先問問合作與報價</h3><p class="quote-help">依本頁價格與合作規則自動回答。特殊需求會請您補充資料，由 Pamela 確認。</p>
+    <div class="quote-faq-buttons"><button type="button" data-quote-question="包裝重建需要準備什麼？">AI 圖與包裝完稿</button><button type="button" data-quote-question="網站報價包含什麼？">網站製作</button><button type="button" data-quote-question="可以修改幾次？">修改次數</button><button type="button" data-quote-question="報價包含印刷費嗎？">印刷費</button><button type="button" data-quote-question="可以接急件嗎？">交期與急件</button></div>
+    <div class="quote-chat" id="quote-chat" role="log" aria-live="polite" aria-label="諮詢對話"><div class="quote-message">您好，您可以詢問服務價格、AI 圖轉印刷檔、包裝刀模、修改次數或合作流程。</div></div>
+    <form class="quote-chat-form" id="quote-chat-form"><input id="quote-question" aria-label="諮詢問題" placeholder="例如：商品宣傳圖卡多少錢？" maxlength="1000" required><button type="submit" class="pricing-cta">送出問題</button></form>
+  </section>
+</section>
 
         <section class="pricing-section" id="packages" aria-labelledby="packages-title">
           <header class="pricing-section__header"><h2 id="packages-title">套組方案</h2><p>適合希望一次整合多項內容、維持視覺一致性的品牌。</p></header>
@@ -40,7 +101,7 @@
         <section class="pricing-section" id="individual-items" aria-labelledby="individual-title">
           <header class="pricing-section__header"><h2 id="individual-title">單一品項</h2><p>可依需求選擇個別服務，正式費用將視製作範圍評估。</p></header>
           <nav class="pricing-quick-links" aria-label="單一品項分類">
-            <a href="#web-design-pricing">網頁設計</a><a href="#digital-materials">社群・電商・網頁素材</a><a href="#graphic-design">平面視覺設計</a><a href="#print-design-pricing">印刷品設計</a><a href="#video-post-production">影音後製</a>
+            <a href="#ai-print-pricing">AI 圖印刷完稿</a><a href="#web-design-pricing">網頁設計</a><a href="#digital-materials">社群・電商・網頁素材</a><a href="#graphic-design">平面視覺設計</a><a href="#print-design-pricing">印刷品設計</a><a href="#video-post-production">影音後製</a>
           </nav>
 
           <section class="pricing-category" id="web-design-pricing" aria-labelledby="web-design-title">
@@ -54,7 +115,7 @@
                 <p class="pricing-card__intro"><strong>適合：</strong>個人品牌、小型工作室、單項服務、活動宣傳、產品／服務 Landing Page。</p>
                 <h4>包含方向</h4><ul><li>單頁式網站企劃</li><li>視覺設計</li><li>內容區塊排版</li><li>手機／桌機 RWD</li><li>基本聯絡表單</li><li>LINE／Email／社群連結</li><li>CTA 行動按鈕</li><li>基本 SEO 結構</li></ul>
 
-              </article>
+              <div class="quote-card-select"><button type="button" data-quote-select="service-1">加入需求初估</button></div></article>
               <article class="pricing-card" id="website-plan-2">
                 <h3>02｜品牌形象官網</h3>
                 <p class="pricing-card__price">NT$28,000 起</p>
@@ -62,7 +123,7 @@
                 <p class="pricing-card__intro"><strong>適合：</strong>企業、品牌、工作室、專業服務、宗教／禮儀服務、個人品牌。</p>
                 <h4>基本可包含</h4><ul><li>首頁</li><li>關於我們</li><li>服務／產品介紹</li><li>案例／作品</li><li>最新消息或常見問題</li><li>聯絡頁</li><li>手機／桌機 RWD</li><li>基本 SEO 架構</li><li>社群／LINE／Email 整合</li></ul>
                 <p class="pricing-card__note">NT$28,000 起方案以品牌形象與資訊展示為主。若需要商品銷售、活動報名、會員、付款或其他功能，可依需求另行評估。</p>
-              </article>
+              <div class="quote-card-select"><button type="button" data-quote-select="service-2">加入需求初估</button></div></article>
               <article class="pricing-card" id="website-plan-3">
                 <h3>03｜商品展示／電商導購網站</h3>
                 <p class="pricing-card__price">NT$32,000 起</p>
@@ -71,7 +132,7 @@
                 <h4>可包含</h4><ul><li>品牌首頁</li><li>商品分類</li><li>商品介紹</li><li>活動／優惠頁</li><li>商品導購</li><li>串接蝦皮／酷澎／Yahoo／momo／其他商城</li><li>LINE／社群導購</li><li>RWD</li><li>基本 SEO</li></ul>
                 <p class="pricing-card__note">不是所有品牌都需要重新打造一套購物系統。若客戶已經有成熟的電商通路，可優先整合既有平台，降低維護成本，也讓日後訂單與物流管理更簡單。</p>
                 <p class="pricing-card__note">若需要官網購物車、金流、會員、訂單、物流或優惠券：完整購物功能依平台與需求另行報價。</p>
-              </article>
+              <div class="quote-card-select"><button type="button" data-quote-select="service-3">加入需求初估</button></div></article>
               <article class="pricing-card" id="website-plan-4">
                 <h3>04｜活動／報名網站</h3>
                 <p class="pricing-card__price">NT$12,000 起</p>
@@ -80,7 +141,7 @@
                 <h4>基本可包含</h4><ul><li>活動主視覺</li><li>活動介紹</li><li>日期／時間／地點</li><li>活動流程</li><li>注意事項</li><li>報名入口</li><li>FAQ</li><li>聯絡資訊</li><li>RWD</li><li>基本 SEO</li></ul>
                 <details><summary>可依需求追加</summary><ul><li>報名名單</li><li>場次選擇</li><li>賽程</li><li>即時公告</li><li>參加者資訊</li><li>成績公布</li><li>比賽結果</li><li>活動成果頁</li><li>相簿／影片</li><li>線上付款</li><li>第三方報名平台整合</li></ul></details>
                 <p class="pricing-card__note">宗教法會也可套用此類型：法會介紹、日期場次、功德項目、報名方式、流程說明與相關公告，皆可依活動需求規劃。</p>
-              </article>
+              <div class="quote-card-select"><button type="button" data-quote-select="service-4">加入需求初估</button></div></article>
             </div>
             <div class="web-addons" aria-labelledby="web-addons-title">
               <h3 id="web-addons-title">常見加購項目</h3>
@@ -107,38 +168,401 @@
           </section>
 
           <section class="pricing-category" id="digital-materials"><h3>社群・電商・網頁素材</h3><div class="pricing-grid pricing-grid--items">
-            <article class="pricing-card"><h3>社群貼文設計</h3><p class="pricing-card__price">NT$500 起／張</p><p class="pricing-card__intro">適用於 Facebook、Instagram 貼文及一般社群宣傳圖片。</p></article>
-            <article class="pricing-card"><h3>商品宣傳圖卡</h3><p class="pricing-card__price">NT$800 起／張</p><p class="pricing-card__intro">適用於商品特色、優惠活動、品牌宣傳及電商平台圖卡。</p></article>
-            <article class="pricing-card"><h3>商品詳情長圖</h3><p class="pricing-card__price">NT$5,000 起</p><p class="pricing-card__intro">約 5～6 個內容區塊，依商品資料、文案整理及設計難度報價。</p></article>
-            <article class="pricing-card"><h3>Banner 設計</h3><p class="pricing-card__price">NT$1,500 起</p><p class="pricing-card__intro">適用於網站首頁、電商活動及廣告橫幅，以單一尺寸計價。</p></article>
-            <article class="pricing-card"><h3>LINE 圖文選單</h3><p class="pricing-card__price">NT$1,500 起</p><p class="pricing-card__intro">依選單格數、視覺內容與連結規劃確認正式報價。</p></article>
+            <article class="pricing-card"><h3>社群貼文設計</h3><p class="pricing-card__price">NT$500 起／張</p><p class="pricing-card__intro">適用於 Facebook、Instagram 貼文及一般社群宣傳圖片。</p><div class="quote-card-select"><button type="button" data-quote-select="service-5">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>商品宣傳圖卡</h3><p class="pricing-card__price">NT$800 起／張</p><p class="pricing-card__intro">適用於商品特色、優惠活動、品牌宣傳及電商平台圖卡。</p><div class="quote-card-select"><button type="button" data-quote-select="service-6">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>商品詳情長圖</h3><p class="pricing-card__price">NT$5,000 起</p><p class="pricing-card__intro">約 5～6 個內容區塊，依商品資料、文案整理及設計難度報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-7">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>Banner 設計</h3><p class="pricing-card__price">NT$1,500 起</p><p class="pricing-card__intro">適用於網站首頁、電商活動及廣告橫幅，以單一尺寸計價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-8">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>LINE 圖文選單</h3><p class="pricing-card__price">NT$1,500 起</p><p class="pricing-card__intro">依選單格數、視覺內容與連結規劃確認正式報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-9">加入需求初估</button></div></article>
           </div></section>
 
           <section class="pricing-category" id="graphic-design"><h3>平面視覺設計</h3><div class="pricing-grid pricing-grid--items">
-            <article class="pricing-card"><h3>Logo 設計</h3><p class="pricing-card__price">NT$3,500 起</p><p class="pricing-card__intro">依品牌定位、設計方向與提案需求確認正式報價。</p></article>
-            <article class="pricing-card"><h3>吉祥物設計</h3><p class="pricing-card__price">NT$8,000 起</p><p class="pricing-card__intro">依角色複雜度、動作數量及延伸應用需求報價。</p></article>
+            <article class="pricing-card"><h3>Logo 設計</h3><p class="pricing-card__price">NT$3,500 起</p><p class="pricing-card__intro">依品牌定位、設計方向與提案需求確認正式報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-10">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>吉祥物設計</h3><p class="pricing-card__price">NT$8,000 起</p><p class="pricing-card__intro">依角色複雜度、動作數量及延伸應用需求報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-11">加入需求初估</button></div></article>
           </div></section>
 
           <section class="pricing-category" id="print-design-pricing"><h3>印刷品設計</h3><div class="pricing-grid pricing-grid--items">
-            <article class="pricing-card"><h3>一般印刷品設計</h3><p class="pricing-card__price">NT$1,500 起／件</p><p class="pricing-card__intro">適用於 DM、海報、菜單、名片及宣傳小卡，以單一尺寸計價。</p></article>
-            <article class="pricing-card"><h3>包裝貼標設計</h3><p class="pricing-card__price">NT$3,000 起</p><p class="pricing-card__intro">依標籤尺寸、品項數量與印刷需求確認正式報價。</p></article>
-            <article class="pricing-card"><h3>包裝紙盒設計</h3><p class="pricing-card__price">NT$9,800 起</p><p class="pricing-card__intro">適用於已有刀模的包裝紙盒設計。若需協助規劃刀模、打樣或聯繫印刷廠，另行報價。</p></article>
+            <article class="pricing-card"><h3>一般印刷品設計</h3><p class="pricing-card__price">NT$1,500 起／件</p><p class="pricing-card__intro">適用於 DM、海報、菜單、名片及宣傳小卡，以單一尺寸計價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-12">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>包裝貼標設計</h3><p class="pricing-card__price">NT$3,000 起</p><p class="pricing-card__intro">依標籤尺寸、品項數量與印刷需求確認正式報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-13">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>包裝紙盒設計</h3><p class="pricing-card__price">NT$9,800 起</p><p class="pricing-card__intro">適用於已有刀模的包裝紙盒設計。若需協助規劃刀模、打樣或聯繫印刷廠，另行報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-14">加入需求初估</button></div></article>
           </div><p class="pricing-category__note">如需協助印刷發包、校稿及送印，可另行提供代辦服務；以上設計價格不包含印刷費與運費。</p></section>
 
           <section class="pricing-category" id="video-post-production"><h3>影音後製</h3><div class="pricing-grid pricing-grid--items">
-            <article class="pricing-card"><h3>基礎影片剪輯</h3><p class="pricing-card__price">NT$800 起</p><p class="pricing-card__intro">包含基本字幕、轉場及背景配樂，依素材數量、影片長度與剪輯難度報價。</p><p class="pricing-card__note">包含 1 次字幕、配樂或轉場微調；超出修改次數後，每次加收原報價總額的 10%。</p></article>
-            <article class="pricing-card"><h3>AI 短影音全案</h3><p class="pricing-card__price">NT$3,000 起</p><p class="pricing-card__intro">包含腳本企劃、AI 角色或場景生成、影片剪輯及成品輸出。</p><p class="pricing-card__note">依腳本複雜度與生成數量報價。若更換角色、場景或腳本方向並重新生成，每次加收 NT$500 起。</p></article>
+            <article class="pricing-card"><h3>基礎影片剪輯</h3><p class="pricing-card__price">NT$800 起</p><p class="pricing-card__intro">包含基本字幕、轉場及背景配樂，依素材數量、影片長度與剪輯難度報價。</p><p class="pricing-card__note">包含 1 次字幕、配樂或轉場微調；超出修改次數後，每次加收原報價總額的 10%。</p><div class="quote-card-select"><button type="button" data-quote-select="service-15">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>AI 短影音全案</h3><p class="pricing-card__price">NT$3,000 起</p><p class="pricing-card__intro">包含腳本企劃、AI 角色或場景生成、影片剪輯及成品輸出。</p><p class="pricing-card__note">依腳本複雜度與生成數量報價。若更換角色、場景或腳本方向並重新生成，每次加收 NT$500 起。</p><div class="quote-card-select"><button type="button" data-quote-select="service-16">加入需求初估</button></div></article>
           </div></section>
         </section>
 
         <footer class="pricing-footer-note">
           <p>以上價格皆為參考起價，正式報價將依內容、尺寸、數量、製作難度、交期及修改範圍評估。</p>
-          <p>除影片剪輯另有標示外，每案提供 3 次免費微調。若超出原先確認的範圍、變更設計方向或增加製作項目，將另行報價。</p>
+          <p>除影片剪輯與 AI 包裝重建另有標示外，每案提供 3 次免費微調。若超出原先確認的範圍、變更設計方向或增加製作項目，將另行報價。</p>
           <p>若有其他設計需求，或作品集中尚未展示的項目，也歡迎以下聯絡方式提出討論 😊</p>
         </footer>
         <section class="page-seo-note" aria-label="設計服務報價說明"><p>品牌視覺、網頁與影音製作報價，<br>可依需求選擇單項服務，<br class="page-note-mobile-break">或規劃完整整合方案。</p></section>
       </div>
     </main>
     <div data-site-footer></div>
+    <script>
+(() => {
+  'use strict';
+  const catalog = [{"id": "ai-flat", "group": "AI 生成圖轉可印刷檔案", "name": "單張大圖重建與印刷完稿", "rate": "看圖後報價／張", "min": null, "max": null, "unit": "張", "note": "請提供原圖、完整文字、實際印刷尺寸與印刷規格。需重建的文字、Logo、元素及影像品質，先看圖再評估；複雜插畫重畫與重新生成另估。"}, {"id": "ai-package", "group": "AI 生成圖轉可印刷檔案", "name": "立體包裝重建與展開排版", "rate": "NT$4,000～8,000／款", "min": 4000, "max": 8000, "unit": "款", "note": "各一尺寸、正反面完稿、2 次局部修改。需提供正式刀模、完整文字、原圖與印刷規格；另購素材、複雜插畫重畫、印刷與打樣另計。", "variants": [{"name": "一般包裝重建", "min": 4000, "max": 8000}, {"name": "梨山春茶袋（原討論範圍）", "min": 5000, "max": 8000}, {"name": "肉脯袋（原討論範圍）", "min": 4000, "max": 6000}]}, {"id": "service-1", "group": "網站設計服務", "name": "一頁式網站", "rate": "NT$15,000 起", "min": 15000, "max": null, "unit": "案", "note": "用一個完整頁面，把品牌、服務與行動入口說清楚。 適合剛起步、預算有限，或只需要單一活動／服務頁面的客戶。\n適合： 個人品牌、小型工作室、單項服務、活動宣傳、產品／服務 Landing Page。"}, {"id": "service-2", "group": "網站設計服務", "name": "品牌形象官網", "rate": "NT$28,000 起", "min": 28000, "max": null, "unit": "案", "note": "建立完整品牌門面，讓客戶更清楚認識你是誰、提供什麼服務，以及如何與你聯絡。\n適合： 企業、品牌、工作室、專業服務、宗教／禮儀服務、個人品牌。\nNT$28,000 起方案以品牌形象與資訊展示為主。若需要商品銷售、活動報名、會員、付款或其他功能，可依需求另行評估。"}, {"id": "service-3", "group": "網站設計服務", "name": "商品展示／電商導購網站", "rate": "NT$32,000 起", "min": 32000, "max": null, "unit": "案", "note": "網站負責品牌形象、商品內容與導購；訂單、付款與物流則可依實際需求，搭配成熟電商平台完成。\n適合： 已有蝦皮、Coupang 酷澎、Yahoo、momo 或其他購物平台的品牌。\n不是所有品牌都需要重新打造一套購物系統。若客戶已經有成熟的電商通路，可優先整合既有平台，降低維護成本，也讓日後訂單與物流管理更簡單。\n若需要官網購物車、金流、會員、訂單、物流或優惠券：完整購物功能依平台與需求另行報價。"}, {"id": "service-4", "group": "網站設計服務", "name": "活動／報名網站", "rate": "NT$12,000 起", "min": 12000, "max": null, "unit": "案", "note": "從活動宣傳、資訊整理、報名入口，到活動後的成績或結果公布，依照活動流程規劃適合的網站內容。\n適合： 運動賽事、講座、展覽、招生活動、宗教法會、禮儀活動、公益活動、品牌活動、各式期間限定活動。\n宗教法會也可套用此類型：法會介紹、日期場次、功德項目、報名方式、流程說明與相關公告，皆可依活動需求規劃。"}, {"id": "service-5", "group": "社群・電商・網頁素材", "name": "社群貼文設計", "rate": "NT$500 起／張", "min": 500, "max": null, "unit": "張", "note": "適用於 Facebook、Instagram 貼文及一般社群宣傳圖片。"}, {"id": "service-6", "group": "社群・電商・網頁素材", "name": "商品宣傳圖卡", "rate": "NT$800 起／張", "min": 800, "max": null, "unit": "張", "note": "適用於商品特色、優惠活動、品牌宣傳及電商平台圖卡。"}, {"id": "service-7", "group": "社群・電商・網頁素材", "name": "商品詳情長圖", "rate": "NT$5,000 起", "min": 5000, "max": null, "unit": "案", "note": "約 5～6 個內容區塊，依商品資料、文案整理及設計難度報價。"}, {"id": "service-8", "group": "社群・電商・網頁素材", "name": "Banner 設計", "rate": "NT$1,500 起", "min": 1500, "max": null, "unit": "案", "note": "適用於網站首頁、電商活動及廣告橫幅，以單一尺寸計價。"}, {"id": "service-9", "group": "社群・電商・網頁素材", "name": "LINE 圖文選單", "rate": "NT$1,500 起", "min": 1500, "max": null, "unit": "案", "note": "依選單格數、視覺內容與連結規劃確認正式報價。"}, {"id": "service-10", "group": "平面視覺設計", "name": "Logo 設計", "rate": "NT$3,500 起", "min": 3500, "max": null, "unit": "案", "note": "依品牌定位、設計方向與提案需求確認正式報價。"}, {"id": "service-11", "group": "平面視覺設計", "name": "吉祥物設計", "rate": "NT$8,000 起", "min": 8000, "max": null, "unit": "案", "note": "依角色複雜度、動作數量及延伸應用需求報價。"}, {"id": "service-12", "group": "印刷品設計", "name": "一般印刷品設計", "rate": "NT$1,500 起／件", "min": 1500, "max": null, "unit": "件", "note": "適用於 DM、海報、菜單、名片及宣傳小卡，以單一尺寸計價。"}, {"id": "service-13", "group": "印刷品設計", "name": "包裝貼標設計", "rate": "NT$3,000 起", "min": 3000, "max": null, "unit": "款", "note": "依標籤尺寸、品項數量與印刷需求確認正式報價。"}, {"id": "service-14", "group": "印刷品設計", "name": "包裝紙盒設計", "rate": "NT$9,800 起", "min": 9800, "max": null, "unit": "款", "note": "適用於已有刀模的包裝紙盒設計。若需協助規劃刀模、打樣或聯繫印刷廠，另行報價。"}, {"id": "service-15", "group": "影音後製", "name": "基礎影片剪輯", "rate": "NT$800 起", "min": 800, "max": null, "unit": "支", "note": "包含基本字幕、轉場及背景配樂，依素材數量、影片長度與剪輯難度報價。\n包含 1 次字幕、配樂或轉場微調；超出修改次數後，每次加收原報價總額的 10%。"}, {"id": "service-16", "group": "影音後製", "name": "AI 短影音全案", "rate": "NT$3,000 起", "min": 3000, "max": null, "unit": "支", "note": "包含腳本企劃、AI 角色或場景生成、影片剪輯及成品輸出。\n依腳本複雜度與生成數量報價。若更換角色、場景或腳本方向並重新生成，每次加收 NT$500 起。"}, {"id": "addon-1", "group": "網站加購與維護", "name": "追加一般內容頁", "rate": "NT$3,000 起／頁", "min": 3000, "max": null, "unit": "頁", "note": "一般內容頁追加，依資料與排版範圍評估。"}, {"id": "addon-2", "group": "網站加購與維護", "name": "活動／Landing Page", "rate": "NT$8,000 起／頁", "min": 8000, "max": null, "unit": "頁", "note": "新增活動／Landing Page，依內容量評估。"}, {"id": "addon-3", "group": "網站加購與維護", "name": "商品頁版型設計", "rate": "NT$5,000 起", "min": 5000, "max": null, "unit": "案", "note": "商品頁版型設計，商品資料整理與延伸品項另確認。"}, {"id": "addon-4", "group": "網站加購與維護", "name": "大量商品上架", "rate": "依數量報價", "min": null, "max": null, "unit": "件", "note": "請註明商品數量、規格變體、平台與素材準備程度，人工確認費用。"}, {"id": "addon-5", "group": "網站加購與維護", "name": "表單設計／需求表", "rate": "NT$3,000 起", "min": 3000, "max": null, "unit": "案", "note": "表單設計／需求表，依欄位與流程確認。"}, {"id": "addon-6", "group": "網站加購與維護", "name": "第三方平台串接／導流", "rate": "NT$2,000～3,000 起", "min": 2000, "max": 3000, "unit": "案", "note": "依串接平台與功能確認；外部服務費用另計。"}, {"id": "addon-7", "group": "網站加購與維護", "name": "報名頁內容／流程整理", "rate": "NT$3,000 起", "min": 3000, "max": null, "unit": "案", "note": "報名頁內容與流程整理，依活動需求評估。"}, {"id": "addon-8", "group": "網站加購與維護", "name": "多語系網站", "rate": "NT$5,000 起／語系；或原網站費用＋20%", "min": 5000, "max": null, "unit": "語系", "note": "此初估先按 NT$5,000 起／語系計算；亦可依原網站費用＋20%評估，由 Pamela 確認適用方式，翻譯需求另確認。"}, {"id": "addon-9", "group": "網站加購與維護", "name": "基本 SEO 設定", "rate": "依方案包含；進階需求另估", "min": null, "max": null, "unit": "案", "note": "Title／Description／網站結構等基本設定依網站方案包含，不重複計入初估。進階 SEO、關鍵字策略與長期優化另估。"}, {"id": "addon-10", "group": "網站加購與維護", "name": "網站內容整理／文案協助", "rate": "依內容量報價", "min": null, "max": null, "unit": "案", "note": "依網站內容量、資料準備程度與文案範圍評估。"}, {"id": "addon-11", "group": "網站加購與維護", "name": "網站後續維護", "rate": "單次 NT$1,500 起；月維護 NT$5,000 起", "min": 1500, "max": null, "unit": "次／月", "note": "依更新內容與頻率報價；月維護按月份計算，單次維護按次數計算。", "variants": [{"name": "單次維護", "min": 1500, "max": null, "unit": "次"}, {"name": "月維護", "min": 5000, "max": null, "unit": "月"}]}];
+  const format = value => 'NT$' + value.toLocaleString('en-US');
+  function itemById(id) { return catalog.find(item => item.id === id); }
+  function resolveItem(id, quantity, variant = 0, spec = '') {
+    const service = itemById(id);
+    if (!service || !Number.isInteger(quantity) || quantity < 1 || quantity > 100) throw new Error('請選擇服務，數量需為 1～100 的整數。');
+    if (!Number.isInteger(variant) || variant < 0 || (service.variants && variant >= service.variants.length) || (!service.variants && variant !== 0)) throw new Error('請確認計價方式。');
+    const choice = service.variants ? service.variants[variant] : service;
+    return { id, quantity, variant, spec: String(spec).slice(0, 300), name: service.name + (service.variants ? '｜' + choice.name : ''), unit: choice.unit || service.unit, min: choice.min === null ? null : choice.min * quantity, max: choice.max === null ? null : choice.max * quantity, note: service.note };
+  }
+  function calculate(cart) {
+    const rows = cart.map(row => resolveItem(row.id, row.quantity, row.variant, row.spec));
+    return { rows, minimum: rows.reduce((sum, row) => sum + (row.min || 0), 0), hasKnown: rows.some(row => row.min !== null), pending: rows.filter(row => row.min === null), hasOpenPrice: rows.some(row => row.min !== null && row.max === null) };
+  }
+  function answer(question) {
+    const q = String(question).trim();
+    if (!q || q.length > 1000) throw new Error('請輸入 1～1000 字的問題。');
+    if (/準備|資料|素材|刀模|尺寸|解析度/.test(q)) {
+      if (/包裝|刀模/.test(q)) return '包裝重建請提供原始圖片、完整文字／Logo、正式刀模、實際尺寸與印刷廠規格。參考費用 NT$4,000～8,000／款，含各一尺寸、正反面完稿及 2 次局部修改；印刷、打樣、付費素材與複雜插畫重畫另計。';
+      if (/AI|生成|大圖|解析度/i.test(q)) return '單張大圖先看圖後報價。請提供原圖、完整文字、印刷尺寸及印刷廠規格，再確認文字、Logo 與元素的重建範圍；直接改解析度或轉存檔案不能保證印刷品質。';
+      return '請提供用途、尺寸或影片長度、數量、完整文案、品牌 Logo、參考風格、素材與希望完成日期。您可以先整理需求；圖片、影片或刀模請附在 Email 裡。';
+    }
+    if (/修改|改稿/.test(q)) return '一般服務每案提供 3 次微調；基礎影片剪輯含 1 次字幕、配樂或轉場微調，超出後每次加收原報價總額的 10%。AI 包裝重建含 2 次局部修改；AI 短影音更換角色、場景或腳本方向並重新生成，每次 NT$500 起。變更方向、尺寸或製作範圍需另行報價。';
+    if (/原始檔|原檔|\.ai|SVG|PDF|向量|授權|版權/i.test(q)) return 'AI 包裝重建可交付可編修 SVG／PDF，文字與適合重建的元素會整理成可編修內容；照片與複雜圖像不保證全部轉成向量。原生 .ai、其他原始檔與素材授權依案件另行確認，最終印刷規格仍需配合印刷廠。';
+    if (/急件|多久|檔期|交期|趕件|完成時間/.test(q)) return '請提供希望完成日期與急件原因。初估不會直接承諾交期；Pamela 會依素材是否齊全、製作範圍與當時檔期確認是否能接，急件費用另估。';
+    if (/付款|訂金|匯款|稅|發票/.test(q)) return '付款方式、訂金、稅額及交付安排會在正式報價時確認。自動初估不會直接產生付款要求，也不代表已成立委託。';
+    if (/印刷費|運費|打樣|代印|印刷發包/.test(q)) return '本頁設計與完稿價格不包含印刷、打樣與運費。若需要印刷發包、校稿或送印代辦，可在需求裡註明，由 Pamela 另行評估。';
+    if (/包套|套組/.test(q)) return '套組方案可查看本頁「套組方案」區塊，這個初估清單只計算單項服務與網站加購。若想採用套組，請在需求補充註明方案名稱，由 Pamela 確認。';
+    if (/網站/.test(q) && /包含|主機|網域|功能|商城/.test(q)) return '網站方案依本頁說明提供視覺、內容與基本 RWD／SEO 等服務。主機、網域、平台月費、金流、物流、第三方報名工具等外部費用另計。購物車、會員、付款與完整訂單功能需另確認；也可採官網＋既有商城導購。';
+    if (/包含/.test(q)) return '服務範圍以本頁各項說明與正式報價為準。新增尺寸、內容、重做方向、拍攝、印刷、付費素材或其他外部費用需另確認；可先加入初估，並在需求補充說明。';
+    const rules = [ [/AI.*(圖|生成)|大圖|重建|可印刷/i, ['ai-flat','ai-package']], [/包裝|紙盒|貼標/,['service-13','service-14','ai-package']], [/社群|貼文/,['service-5']], [/商品.*(圖卡|宣傳)/,['service-6']], [/長圖|詳情/,['service-7']], [/banner|橫幅/i,['service-8']], [/LINE.*(選單|圖文)/i,['service-9']], [/logo|標誌/i,['service-10']], [/吉祥物|角色/,['service-11']], [/海報|DM|菜單|名片|印刷品/i,['service-12']], [/AI.*(影音|影片)/i,['service-16']], [/影片|剪輯|影音/,['service-15','service-16']], [/網站|網頁/,['service-1','service-2','service-3','service-4']] ];
+    let found = catalog.filter(service => q.toLowerCase().includes(service.name.toLowerCase()));
+    if (!found.length) for (const [pattern, ids] of rules) if (pattern.test(q)) { found = ids.map(itemById); break; }
+    if (found.length) return found.map(service => service.name + '：' + service.rate + '\n' + service.note).join('\n\n') + '\n\n可在「需求與自動初估」加入服務，正式金額與交期由 Pamela 確認。';
+    if (/費用|價格|價錢|報價|多少/.test(q)) return '可在「需求與自動初估」選擇單項服務與網站加購。起價項目先計算參考下限；看圖或依量報價的項目會列為待確認。正式費用由 Pamela 看過需求後確認。';
+    return '這個問題需要 Pamela 進一步確認。請在「需求補充」寫下問題並留下聯絡方式，再將整理好的需求寄出。我可以先回答本頁服務價格、素材準備、修改、包裝刀模、印刷費與合作流程。';
+  }
+  if (typeof module !== 'undefined' && module.exports) module.exports = { catalog, resolveItem, calculate, answer };
+  if (typeof document === 'undefined') return;
+  const byId = id => document.getElementById(id);
+  const serviceSelect = byId('quote-service'), variantSelect = byId('quote-variant');
+  const cart = [];
+  const groups = [...new Set(catalog.map(service => service.group))];
+  for (const name of groups) { const group = document.createElement('optgroup'); group.label = name; for (const service of catalog.filter(v => v.group === name)) { const option = document.createElement('option'); option.value = service.id; option.textContent = service.name + '｜' + service.rate; group.append(option); } serviceSelect.append(group); }
+  function hideMessages() { byId('quote-error').hidden = true; byId('quote-success').hidden = true; }
+  function showError(message) { byId('quote-error').textContent = message; byId('quote-error').hidden = false; }
+  function showSuccess(message) { byId('quote-success').textContent = message; byId('quote-success').hidden = false; }
+  function selectService(id) { const service = itemById(id); if (!service) return; serviceSelect.value = id; byId('quote-unit').textContent = '以「' + service.unit + '」計算；規格與製作範圍需確認。'; byId('quote-service-note').textContent = service.rate + '\n' + service.note; byId('quote-service-note').hidden = false; variantSelect.replaceChildren(); byId('quote-variant-field').hidden = !service.variants; if(service.variants) for(const [index, choice] of service.variants.entries()) { const option = document.createElement('option'); option.value = String(index); option.textContent = choice.name; variantSelect.append(option); } }
+  serviceSelect.addEventListener('change', () => { if (serviceSelect.value) selectService(serviceSelect.value); else { byId('quote-service-note').hidden = true; byId('quote-variant-field').hidden = true; byId('quote-unit').textContent = ''; } });
+  document.querySelectorAll('[data-quote-select]').forEach(button => button.addEventListener('click', () => { selectService(button.dataset.quoteSelect); byId('design-quote').scrollIntoView({ behavior: 'smooth', block: 'start' }); serviceSelect.focus({ preventScroll: true }); }));
+  function priceLabel(row) { if (row.min === null) return '待確認'; return row.max === null ? format(row.min) + ' 起' : format(row.min) + '～' + format(row.max); }
+  function render() {
+    const result = calculate(cart), list = byId('quote-cart'); list.replaceChildren(); byId('quote-empty').hidden = !!cart.length;
+    byId('quote-total').textContent = !cart.length ? '尚未加入項目' : result.hasKnown ? format(result.minimum) + ' 起' : '需人工確認報價';
+    byId('quote-total-note').textContent = !cart.length ? '加入服務後，即可查看參考明細。' : '已知項目的參考下限；不是正式總價。';
+    byId('quote-manual-note').textContent = result.pending.length ? '待確認：' + result.pending.map(v => v.name).join('、') + '。這些項目尚未計入上方金額。' : cart.length ? '各項正式費用需依完整需求、尺寸、數量與製作難度確認。' : '';
+    result.rows.forEach((row, index) => { const li = document.createElement('li'), content = document.createElement('div'), strong = document.createElement('strong'), small = document.createElement('small'), remove = document.createElement('button'); strong.textContent = row.name + ' × ' + row.quantity + row.unit; small.textContent = priceLabel(row) + (row.spec ? '\n規格：' + row.spec : ''); content.append(strong,small); remove.type = 'button'; remove.className = 'quote-remove'; remove.textContent = '移除'; remove.setAttribute('aria-label','移除 '+row.name); remove.addEventListener('click', () => { cart.splice(index,1); hideMessages(); render(); }); li.append(content,remove); list.append(li); });
+    for(const id of ['quote-copy','quote-print','quote-email']) byId(id).disabled = !cart.length;
+  }
+  byId('quote-item-form').addEventListener('submit', event => { event.preventDefault(); hideMessages(); try { if(cart.length>=30)throw new Error('每次最多加入 30 項，其他需求可在補充欄註明。'); const row = resolveItem(serviceSelect.value, Number(byId('quote-quantity').value), itemById(serviceSelect.value)?.variants ? Number(variantSelect.value) : 0, byId('quote-spec').value); cart.push(row); render(); showSuccess('已加入需求初估清單。'); } catch(error) { showError(error.message); } });
+  function summary() {
+    const result = calculate(cart);
+    return ['Pamela Creative Studio｜設計需求與參考初估','日期：'+new Date().toLocaleDateString('zh-TW',{timeZone:'Asia/Taipei'}),'姓名／公司：'+byId('quote-name').value.trim(),'聯絡方式：'+byId('quote-contact').value.trim(),'希望完成日期：'+(byId('quote-deadline').value||'待討論'),'','需求項目：',...result.rows.map((row,i)=>(i+1)+'. '+row.name+' × '+row.quantity+row.unit+'｜'+priceLabel(row)+(row.spec?'\n   規格：'+row.spec:'')+'\n   '+row.note),'','已知項目參考下限：'+(result.hasKnown?format(result.minimum)+' 起':'需人工確認'),...(result.pending.length?['尚未計入：'+result.pending.map(v=>v.name).join('、')]:[]),'','需求補充：',byId('quote-details').value.trim()||'待補充','','初估不是正式報價或交期承諾，實際費用由 Pamela 確認。','印刷、打樣、運費、付費素材與網站外部服務費用另計；稅額與交付內容另確認。','一般服務每案 3 次微調；基礎影片剪輯為 1 次，AI 包裝重建為 2 次局部修改。'].join('\n');
+  }
+  async function copySummary() { hideMessages(); try { await navigator.clipboard.writeText(summary()); showSuccess('需求已複製，可以貼到 Email 或 LINE。'); } catch { const area = document.createElement('textarea'); area.value = summary(); area.setAttribute('aria-label','需求摘要，請長按複製'); area.style.cssText='width:100%;min-height:200px;margin-top:16px'; byId('quote-copy-fallback')?.remove(); area.id='quote-copy-fallback'; byId('quote-success').before(area); area.focus(); area.select(); showSuccess('瀏覽器無法自動複製，請在下方摘要全選並複製。'); } }
+  byId('quote-copy').addEventListener('click', copySummary);
+  byId('quote-email').addEventListener('click', () => { hideMessages(); if(!byId('quote-name').value.trim() || !byId('quote-contact').value.trim()) { showError('請先填入姓名／公司與聯絡方式，方便確認正式報價。'); byId(!byId('quote-name').value.trim()?'quote-name':'quote-contact').focus(); return; } const body = summary(); const uri = 'mailto:pamela72choi@gmail.com?subject='+encodeURIComponent('設計需求與報價諮詢｜'+byId('quote-name').value.trim())+'&body='+encodeURIComponent(body); if(uri.length>7000) { showError('需求內容較長，請使用「複製需求」，再貼到 Email 寄至 pamela72choi@gmail.com。'); return; } window.location.href = uri; showSuccess('已嘗試開啟 Email 草稿。請在郵件 App 確認寄出；本站尚未送出或儲存這筆需求。若沒有開啟，請複製需求並自行寄信。'); });
+  byId('quote-print').addEventListener('click', () => { let page = byId('quote-print-page'); if(!page) { page = document.createElement('section'); page.id = 'quote-print-page'; page.className = 'quote-print'; document.body.append(page); } const h = document.createElement('h1'); h.textContent = '設計需求初估單'; const pre = document.createElement('pre'); pre.textContent = summary(); page.replaceChildren(h,pre); document.body.classList.add('quote-is-printing'); window.print(); });
+  window.addEventListener('afterprint', () => document.body.classList.remove('quote-is-printing'));
+  function chat(question) { const q = question.trim(); if(!q) return; const log = byId('quote-chat'); for (const [role, value] of [['user',q],['assistant',answer(q)]]) { const message = document.createElement('div'); message.className = 'quote-message' + (role === 'user' ? ' quote-message--user' : ''); message.textContent = value; log.append(message); } while(log.childElementCount>41)log.firstElementChild.remove(); log.scrollTop = log.scrollHeight; }
+  byId('quote-chat-form').addEventListener('submit', event => { event.preventDefault(); chat(byId('quote-question').value); byId('quote-question').value = ''; });
+  document.querySelectorAll('[data-quote-question]').forEach(button => button.addEventListener('click', () => chat(button.dataset.quoteQuestion)));
+  render();
+})();
+
+    </script>
+  </body>
+</html>
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>設計服務與參考報價｜Pamela Creative Studio</title>
+    <meta name="description" content="查看 Pamela Creative Studio 品牌、網頁、平面、電商與影音設計的套組方案及單項服務參考報價。">
+    <link rel="canonical" href="https://pamela72choi-blip.github.io/pamela-creative-studio/service-pricing.html">
+    <meta property="og:title" content="設計服務與參考報價｜Pamela Creative Studio">
+    <meta property="og:description" content="查看 Pamela Creative Studio 品牌、網頁、平面、電商與影音設計的套組方案及單項服務參考報價。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pamela72choi-blip.github.io/pamela-creative-studio/service-pricing.html">
+    <meta property="og:image" content="https://pamela72choi-blip.github.io/pamela-creative-studio/assets/images/10-Web-design.webp">
+    <meta property="og:image:alt" content="Pamela Creative Studio 設計服務與參考報價">
+    <meta property="og:locale" content="zh_TW">
+    <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+    <script>document.documentElement.classList.add("has-js","is-loading")</script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/website-pricing.css">
+    <script src="js/main.js" defer></script>
+    <style>
+/* The estimator extends the existing pricing page's typography and palette. */
+#design-quote{scroll-margin-top:105px}.quote-intro{margin:0 0 26px;color:#77706b;font-size:15px;line-height:1.8}.quote-workspace{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr);gap:28px;align-items:start}.quote-panel{padding:clamp(22px,3vw,32px);border:1px solid #e4ddd7;border-radius:3px;background:#fff;box-shadow:0 16px 40px rgba(69,52,41,.07)}.quote-panel h3{margin:0 0 20px;color:#33302e;font-size:22px}.quote-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}.quote-field{display:flex;flex-direction:column;gap:8px;color:#545454;font-size:14px;font-weight:600}.quote-field--full{grid-column:1/-1}.quote-field input,.quote-field select,.quote-field textarea,.quote-chat-form input{font:inherit;font-size:15px;line-height:1.6;color:#545454;background:#fff;border:1px solid #ded8d3;border-radius:3px;padding:10px 12px;min-width:0;width:100%}.quote-field input:focus,.quote-field select:focus,.quote-field textarea:focus,.quote-chat-form input:focus{outline:2px solid #b59d8c;outline-offset:2px}.quote-field textarea{resize:vertical}.quote-field small{font-size:12px;font-weight:400;color:#77706b}.quote-service-note{padding:15px 18px;border-left:3px solid #b59d8c;background:#f8f5f2;font-size:14px;line-height:1.8;white-space:pre-line;margin:20px 0}.quote-add{margin-top:18px;cursor:pointer}.quote-summary{position:sticky;top:110px}.quote-total{margin:12px 0 8px;color:#8e7463;font-size:clamp(26px,3vw,36px);font-weight:800;line-height:1.4}.quote-help{color:#77706b;font-size:13px;line-height:1.75;margin:12px 0}.quote-cart{padding:0;list-style:none;margin:20px 0}.quote-cart li{display:grid;grid-template-columns:1fr auto;gap:8px;padding:16px 0;border-bottom:1px solid #e8e5e1}.quote-cart strong{font-size:14px;color:#4b4541;display:block}.quote-cart small{font-size:12px;color:#787878;display:block;margin-top:4px;white-space:pre-line}.quote-remove{border:0;background:transparent;color:#80766f;text-decoration:underline;cursor:pointer;font-size:12px;align-self:start;padding:3px}.quote-empty{margin:20px 0;padding:20px;background:#f8f5f2;color:#80766f;font-size:14px;line-height:1.8}.quote-estimate-note{font-size:13px;color:#716965;line-height:1.8;white-space:pre-line}.quote-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.quote-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid #b59d8c;border-radius:2px;background:#fff;color:#716055;font:inherit;font-size:14px;cursor:pointer;text-decoration:none}.quote-error{color:#a33b2c;font-size:14px;line-height:1.7;margin-top:15px}.quote-success{color:#5c7562;font-size:14px;line-height:1.7;margin-top:15px}.quote-panel button:disabled{opacity:.55;cursor:not-allowed}.quote-panel .pricing-cta{cursor:pointer;font:inherit;font-size:14px;min-height:44px}.quote-contact{margin-top:28px;padding-top:24px;border-top:1px solid #e8e5e1}.quote-contact h4{font-size:17px;margin:0 0 18px}.quote-consultation{margin-top:32px}.quote-faq-buttons{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 20px}.quote-faq-buttons button{font:inherit;font-size:14px;border:1px solid #e4ddd7;background:#fff;color:#716965;padding:9px 13px;border-radius:3px;cursor:pointer;text-align:left}.quote-faq-buttons button:hover{background:#f8f5f2}.quote-chat{display:flex;flex-direction:column;gap:14px;max-height:350px;overflow:auto;background:#faf8f6;padding:22px;margin-bottom:20px;border:1px solid #eee9e5}.quote-message{max-width:92%;white-space:pre-line;overflow-wrap:anywhere;font-size:15px;line-height:1.8;padding:13px 17px;border:1px solid #e4ddd7;border-radius:3px;background:#fff;align-self:flex-start}.quote-message--user{background:#8e7463;color:#fff;border-color:#8e7463;align-self:flex-end}.quote-chat-form{display:flex;gap:10px}.quote-chat-form input{flex:1}.quote-policy{margin:20px 0 0;padding-left:20px;color:#77706b;font-size:13px;line-height:1.8}.quote-card-select{margin-top:20px}.quote-card-select button{font:inherit;font-size:14px;background:#fff;color:#716055;border:1px solid #b59d8c;border-radius:2px;padding:10px 16px;cursor:pointer}.quote-field[hidden],.quote-service-note[hidden],.quote-error[hidden],.quote-success[hidden]{display:none}.quote-print{display:none}@media(max-width:800px){.quote-workspace{grid-template-columns:1fr}.quote-summary{position:static}.quote-message{max-width:100%}}@media(max-width:500px){.quote-fields{grid-template-columns:1fr}.quote-chat-form{flex-wrap:wrap}.quote-chat-form input{flex-basis:100%}.quote-chat-form button{width:100%}.quote-panel{padding:22px 18px}.quote-actions>a,.quote-actions>button{flex:1;text-align:center}.quote-chat{padding:16px}.quote-total{font-size:28px}}
+@media print{body.quote-is-printing>*{display:none!important}body.quote-is-printing>.quote-print{display:block!important;color:#333;background:white;padding:20px;font:14px/1.8 system-ui,sans-serif}body.quote-is-printing>.quote-print h1{font-size:26px}body.quote-is-printing>.quote-print pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}}
+
+    </style>
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main>
+      <div class="pricing-page page-shell">
+        <h1 class="sr-only">服務報價</h1>
+        <nav class="pricing-quick-links pricing-quick-links--top" aria-label="報價主要分類">
+          <a href="#ai-print-pricing">AI 圖印刷完稿</a><a href="#design-quote">需求與自動初估</a><a href="#packages">套組方案</a><a href="#individual-items">單一品項</a>
+        </nav>
+
+<section class="pricing-section" id="ai-print-pricing" aria-labelledby="ai-print-title">
+  <header class="pricing-section__header"><h2 id="ai-print-title">AI 生成圖轉可印刷檔案</h2><p>依生成圖片重建文字與版面，整理成符合實際尺寸與印刷規格的檔案。</p></header>
+  <div class="pricing-grid pricing-grid--items">
+    <article class="pricing-card"><h3>單張大圖重建與印刷完稿</h3><p class="pricing-card__price">看圖後報價／張</p><p class="pricing-card__intro">適用於 AI 生成的海報、主視覺與單張平面圖。先檢查原圖、實際印刷尺寸與重建範圍，再確認費用。</p><ul><li>依需求重建文字、Logo 與可編修元素</li><li>整理實際尺寸、版面、出血與印刷輸出</li><li>複雜插畫重畫、影像修復或重新生成另估</li></ul><p class="pricing-card__note">請提供原始圖片、完整文字、印刷尺寸與印刷廠規格。不是將整張圖片直接轉存，就能保證放大印刷品質。</p><div class="quote-card-select"><button type="button" data-quote-select="ai-flat">加入需求初估</button></div></article>
+    <article class="pricing-card"><h3>立體包裝重建與展開排版</h3><p class="pricing-card__price">NT$4,000～8,000／款</p><p class="pricing-card__intro">依 AI 包裝情境圖重建平面設計，配合印刷廠提供的正式刀模，完成包裝展開排版。</p><ul><li>各一尺寸、正反面完稿</li><li>重建文字與向量元素、展開排版與套刀模</li><li>包含 2 次局部修改</li><li>交付可編修 SVG／PDF；原生 .ai 檔依需求確認</li></ul><p class="pricing-card__note">梨山春茶袋參考 NT$5,000～8,000／款；肉脯袋參考 NT$4,000～6,000／款。需提供完整文字、原圖、正式刀模與印刷規格；另購素材、複雜插畫重畫、印刷與打樣另計。</p><div class="quote-card-select"><button type="button" data-quote-select="ai-package">加入需求初估</button></div></article>
+  </div>
+</section>
+<section class="pricing-section" id="design-quote" aria-labelledby="design-quote-title">
+  <header class="pricing-section__header"><h2 id="design-quote-title">設計需求與自動初估</h2><p>選擇單項服務與加購，整理需求，再由 Pamela 確認正式報價。</p></header>
+  <p class="quote-intro">起價項目先計算參考下限；依量報價、特殊規格與範圍尚未確定的項目另列待確認。套組方案不列入此初估。</p>
+  <noscript><p class="pricing-category__note">請開啟瀏覽器 JavaScript 使用自動初估，或直接 Email 至 pamela72choi@gmail.com 說明需求。</p></noscript>
+  <div class="quote-workspace">
+    <div class="quote-panel">
+      <h3>選擇服務</h3>
+      <form id="quote-item-form">
+        <div class="quote-fields">
+          <label class="quote-field quote-field--full">服務項目<select id="quote-service" required><option value="">請選擇服務</option></select></label>
+          <label class="quote-field">數量 <input id="quote-quantity" type="number" value="1" min="1" max="100" step="1" required><small id="quote-unit"></small></label>
+          <label class="quote-field">尺寸／規格<input id="quote-spec" maxlength="300" placeholder="例如：A2、1920 × 1080、盒型尺寸"></label>
+          <label class="quote-field quote-field--full" id="quote-variant-field" hidden>計價方式<select id="quote-variant"></select></label>
+        </div>
+        <p class="quote-service-note" id="quote-service-note" hidden></p>
+        <button class="pricing-cta quote-add" type="submit">加入初估清單</button>
+      </form>
+      <div class="quote-contact">
+        <h4>聯絡與需求</h4>
+        <div class="quote-fields">
+          <label class="quote-field">姓名／公司<input id="quote-name" maxlength="100" autocomplete="name" placeholder="您的稱呼"></label>
+          <label class="quote-field">Email／LINE／電話<input id="quote-contact" maxlength="200" placeholder="方便聯絡您的方式"></label>
+          <label class="quote-field quote-field--full">希望完成日期<input id="quote-deadline" type="date"></label>
+          <label class="quote-field quote-field--full">需求補充<textarea id="quote-details" rows="4" maxlength="5000" placeholder="用途、風格、素材準備情況、修改需求、交付格式或急件說明"></textarea></label>
+        </div>
+        <p class="quote-help">需求會先整理成 Email 草稿，由您確認並寄出。請於信件附上原圖、參考圖片或刀模；收到後由 Pamela 確認檔期與正式報價。</p>
+      </div>
+    </div>
+    <aside class="quote-panel quote-summary" aria-labelledby="quote-summary-title">
+      <h3 id="quote-summary-title">您的需求初估</h3>
+      <p class="quote-total" id="quote-total">尚未加入項目</p>
+      <p class="quote-help" id="quote-total-note">加入服務後，即可查看參考明細。</p>
+      <div class="quote-empty" id="quote-empty">可以選擇多項服務，也能從下方報價卡片直接加入。</div>
+      <ul class="quote-cart" id="quote-cart" aria-label="初估項目"></ul>
+      <p class="quote-estimate-note" id="quote-manual-note"></p>
+      <ul class="quote-policy"><li>初估不代表正式報價或已承諾交期。</li><li>一般項目每案 3 次微調；基礎影片剪輯為 1 次，AI 包裝重建為 2 次局部修改。</li><li>印刷、打樣、運費與網站外部服務費用另計；稅額與原始檔交付需另確認。</li></ul>
+      <div class="quote-actions"><button type="button" class="pricing-cta" id="quote-email">整理需求並開啟 Email</button><button type="button" class="quote-secondary" id="quote-copy">複製需求</button><button type="button" class="quote-secondary" id="quote-print">列印初估</button></div>
+      <p class="quote-error" id="quote-error" role="alert" hidden></p><p class="quote-success" id="quote-success" role="status" hidden></p>
+    </aside>
+  </div>
+  <section class="quote-panel quote-consultation" aria-labelledby="quote-chat-title">
+    <h3 id="quote-chat-title">先問問合作與報價</h3><p class="quote-help">依本頁價格與合作規則自動回答。特殊需求會請您補充資料，由 Pamela 確認。</p>
+    <div class="quote-faq-buttons"><button type="button" data-quote-question="包裝重建需要準備什麼？">AI 圖與包裝完稿</button><button type="button" data-quote-question="網站報價包含什麼？">網站製作</button><button type="button" data-quote-question="可以修改幾次？">修改次數</button><button type="button" data-quote-question="報價包含印刷費嗎？">印刷費</button><button type="button" data-quote-question="可以接急件嗎？">交期與急件</button></div>
+    <div class="quote-chat" id="quote-chat" role="log" aria-live="polite" aria-label="諮詢對話"><div class="quote-message">您好，您可以詢問服務價格、AI 圖轉印刷檔、包裝刀模、修改次數或合作流程。</div></div>
+    <form class="quote-chat-form" id="quote-chat-form"><input id="quote-question" aria-label="諮詢問題" placeholder="例如：商品宣傳圖卡多少錢？" maxlength="1000" required><button type="submit" class="pricing-cta">送出問題</button></form>
+  </section>
+</section>
+
+        <section class="pricing-section" id="packages" aria-labelledby="packages-title">
+          <header class="pricing-section__header"><h2 id="packages-title">套組方案</h2><p>適合希望一次整合多項內容、維持視覺一致性的品牌。</p></header>
+          <div class="pricing-grid pricing-grid--packages">
+            <article class="pricing-card"><h3>商品視覺優化方案</h3><p class="pricing-card__price">NT$9,800 起</p><p class="pricing-card__intro">強化商品賣點呈現，提升理解與轉換效率。</p><ul><li>商品宣傳圖卡 6～8 張</li><li>社群圖片 3 張</li><li>商品頁整理</li></ul></article>
+            <article class="pricing-card pricing-card--recommended"><span class="pricing-card__badge">完整內容推薦</span><h3>新品上市整合方案</h3><p class="pricing-card__price">NT$26,800 起</p><p class="pricing-card__intro">一次完成新品上市所需的完整內容配置。</p><ul><li>一頁式網站 1 頁</li><li>商品宣傳圖卡 6～8 張</li><li>社群圖片 3 張</li><li>短影音 1 支</li><li>基礎 RWD 響應式網頁設計</li></ul></article>
+            <article class="pricing-card"><h3>品牌長期經營方案</h3><p class="pricing-card__price">NT$20,000／月起</p><p class="pricing-card__intro">適合持續曝光及維持品牌視覺一致性的客戶。</p><ul><li>社群圖片 6～8 張</li><li>短影音 2 支</li><li>既有網站圖文更新</li></ul><p class="pricing-card__note">實際內容依網站架構與每月需求調整。</p></article>
+          </div>
+        </section>
+
+        <section class="pricing-section" id="individual-items" aria-labelledby="individual-title">
+          <header class="pricing-section__header"><h2 id="individual-title">單一品項</h2><p>可依需求選擇個別服務，正式費用將視製作範圍評估。</p></header>
+          <nav class="pricing-quick-links" aria-label="單一品項分類">
+            <a href="#ai-print-pricing">AI 圖印刷完稿</a><a href="#web-design-pricing">網頁設計</a><a href="#digital-materials">社群・電商・網頁素材</a><a href="#graphic-design">平面視覺設計</a><a href="#print-design-pricing">印刷品設計</a><a href="#video-post-production">影音後製</a>
+          </nav>
+
+          <section class="pricing-category" id="web-design-pricing" aria-labelledby="web-design-title">
+            <h3 id="web-design-title">網站設計服務</h3>
+            <p class="pricing-card__intro">4 種主要方案，依實際需求、內容量與功能另行評估。</p>
+            <div class="pricing-grid pricing-grid--items">
+              <article class="pricing-card" id="website-plan-1">
+                <h3>01｜一頁式網站</h3>
+                <p class="pricing-card__price">NT$15,000 起</p>
+                <p class="pricing-card__intro">用一個完整頁面，把品牌、服務與行動入口說清楚。<br>適合剛起步、預算有限，或只需要單一活動／服務頁面的客戶。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>個人品牌、小型工作室、單項服務、活動宣傳、產品／服務 Landing Page。</p>
+                <h4>包含方向</h4><ul><li>單頁式網站企劃</li><li>視覺設計</li><li>內容區塊排版</li><li>手機／桌機 RWD</li><li>基本聯絡表單</li><li>LINE／Email／社群連結</li><li>CTA 行動按鈕</li><li>基本 SEO 結構</li></ul>
+
+              <div class="quote-card-select"><button type="button" data-quote-select="service-1">加入需求初估</button></div></article>
+              <article class="pricing-card" id="website-plan-2">
+                <h3>02｜品牌形象官網</h3>
+                <p class="pricing-card__price">NT$28,000 起</p>
+                <p class="pricing-card__intro">建立完整品牌門面，讓客戶更清楚認識你是誰、提供什麼服務，以及如何與你聯絡。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>企業、品牌、工作室、專業服務、宗教／禮儀服務、個人品牌。</p>
+                <h4>基本可包含</h4><ul><li>首頁</li><li>關於我們</li><li>服務／產品介紹</li><li>案例／作品</li><li>最新消息或常見問題</li><li>聯絡頁</li><li>手機／桌機 RWD</li><li>基本 SEO 架構</li><li>社群／LINE／Email 整合</li></ul>
+                <p class="pricing-card__note">NT$28,000 起方案以品牌形象與資訊展示為主。若需要商品銷售、活動報名、會員、付款或其他功能，可依需求另行評估。</p>
+              <div class="quote-card-select"><button type="button" data-quote-select="service-2">加入需求初估</button></div></article>
+              <article class="pricing-card" id="website-plan-3">
+                <h3>03｜商品展示／電商導購網站</h3>
+                <p class="pricing-card__price">NT$32,000 起</p>
+                <p class="pricing-card__intro">網站負責品牌形象、商品內容與導購；訂單、付款與物流則可依實際需求，搭配成熟電商平台完成。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>已有蝦皮、Coupang 酷澎、Yahoo、momo 或其他購物平台的品牌。</p>
+                <h4>可包含</h4><ul><li>品牌首頁</li><li>商品分類</li><li>商品介紹</li><li>活動／優惠頁</li><li>商品導購</li><li>串接蝦皮／酷澎／Yahoo／momo／其他商城</li><li>LINE／社群導購</li><li>RWD</li><li>基本 SEO</li></ul>
+                <p class="pricing-card__note">不是所有品牌都需要重新打造一套購物系統。若客戶已經有成熟的電商通路，可優先整合既有平台，降低維護成本，也讓日後訂單與物流管理更簡單。</p>
+                <p class="pricing-card__note">若需要官網購物車、金流、會員、訂單、物流或優惠券：完整購物功能依平台與需求另行報價。</p>
+              <div class="quote-card-select"><button type="button" data-quote-select="service-3">加入需求初估</button></div></article>
+              <article class="pricing-card" id="website-plan-4">
+                <h3>04｜活動／報名網站</h3>
+                <p class="pricing-card__price">NT$12,000 起</p>
+                <p class="pricing-card__intro">從活動宣傳、資訊整理、報名入口，到活動後的成績或結果公布，依照活動流程規劃適合的網站內容。</p>
+                <p class="pricing-card__intro"><strong>適合：</strong>運動賽事、講座、展覽、招生活動、宗教法會、禮儀活動、公益活動、品牌活動、各式期間限定活動。</p>
+                <h4>基本可包含</h4><ul><li>活動主視覺</li><li>活動介紹</li><li>日期／時間／地點</li><li>活動流程</li><li>注意事項</li><li>報名入口</li><li>FAQ</li><li>聯絡資訊</li><li>RWD</li><li>基本 SEO</li></ul>
+                <details><summary>可依需求追加</summary><ul><li>報名名單</li><li>場次選擇</li><li>賽程</li><li>即時公告</li><li>參加者資訊</li><li>成績公布</li><li>比賽結果</li><li>活動成果頁</li><li>相簿／影片</li><li>線上付款</li><li>第三方報名平台整合</li></ul></details>
+                <p class="pricing-card__note">宗教法會也可套用此類型：法會介紹、日期場次、功德項目、報名方式、流程說明與相關公告，皆可依活動需求規劃。</p>
+              <div class="quote-card-select"><button type="button" data-quote-select="service-4">加入需求初估</button></div></article>
+            </div>
+            <div class="web-addons" aria-labelledby="web-addons-title">
+              <h3 id="web-addons-title">常見加購項目</h3>
+              <dl class="web-addons__list">
+                <div><dt>追加一般內容頁</dt><dd>NT$3,000 起／頁</dd></div>
+                <div><dt>活動／Landing Page</dt><dd>NT$8,000 起／頁</dd></div>
+                <div><dt>商品頁版型設計</dt><dd>NT$5,000 起</dd></div>
+                <div><dt>大量商品上架</dt><dd>依數量報價</dd></div>
+                <div><dt>表單設計／需求表</dt><dd>NT$3,000 起</dd></div>
+                <div><dt>第三方平台串接／導流</dt><dd>NT$2,000～3,000 起</dd></div>
+                <div><dt>報名頁內容／流程整理</dt><dd>NT$3,000 起</dd></div>
+                <div><dt>多語系網站</dt><dd>NT$5,000 起／語系<br>或依原網站費用＋20% 評估</dd></div>
+                <div><dt>基本 SEO 設定</dt><dd>Title／Description／網站結構等基本設定依方案包含；<br>進階 SEO、關鍵字策略及長期優化另行評估。</dd></div>
+                <div><dt>網站內容整理／文案協助</dt><dd>依內容量報價</dd></div>
+                <div><dt>網站後續維護</dt><dd>單次 NT$1,500 起<br>月維護方案 NT$5,000 起<br>依更新內容與頻率報價</dd></div>
+              </dl>
+            </div>
+            <div class="pricing-category__note">
+              <p>以上為基本建置參考價格。實際費用會依網站頁數、內容量、功能、資料整理程度、平台、第三方服務及製作時程評估。</p>
+              <p>不綁單一平台。會依預算、功能需求與日後維護方式，規劃適合的網站與數位整合方案。</p>
+              <p>網站主機、網域、平台月費、金流、物流、第三方預約／報名工具及其他外部服務費用，若有產生，原則上由客戶依實際使用方案支付。</p>
+              <p>如果已有蝦皮、Coupang 酷澎、Yahoo、momo 或其他成熟電商平台，不一定需要另外建立複雜購物系統，可規劃品牌官網＋商品展示＋商城導購的方式。</p>
+            </div>
+          </section>
+
+          <section class="pricing-category" id="digital-materials"><h3>社群・電商・網頁素材</h3><div class="pricing-grid pricing-grid--items">
+            <article class="pricing-card"><h3>社群貼文設計</h3><p class="pricing-card__price">NT$500 起／張</p><p class="pricing-card__intro">適用於 Facebook、Instagram 貼文及一般社群宣傳圖片。</p><div class="quote-card-select"><button type="button" data-quote-select="service-5">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>商品宣傳圖卡</h3><p class="pricing-card__price">NT$800 起／張</p><p class="pricing-card__intro">適用於商品特色、優惠活動、品牌宣傳及電商平台圖卡。</p><div class="quote-card-select"><button type="button" data-quote-select="service-6">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>商品詳情長圖</h3><p class="pricing-card__price">NT$5,000 起</p><p class="pricing-card__intro">約 5～6 個內容區塊，依商品資料、文案整理及設計難度報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-7">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>Banner 設計</h3><p class="pricing-card__price">NT$1,500 起</p><p class="pricing-card__intro">適用於網站首頁、電商活動及廣告橫幅，以單一尺寸計價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-8">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>LINE 圖文選單</h3><p class="pricing-card__price">NT$1,500 起</p><p class="pricing-card__intro">依選單格數、視覺內容與連結規劃確認正式報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-9">加入需求初估</button></div></article>
+          </div></section>
+
+          <section class="pricing-category" id="graphic-design"><h3>平面視覺設計</h3><div class="pricing-grid pricing-grid--items">
+            <article class="pricing-card"><h3>Logo 設計</h3><p class="pricing-card__price">NT$3,500 起</p><p class="pricing-card__intro">依品牌定位、設計方向與提案需求確認正式報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-10">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>吉祥物設計</h3><p class="pricing-card__price">NT$8,000 起</p><p class="pricing-card__intro">依角色複雜度、動作數量及延伸應用需求報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-11">加入需求初估</button></div></article>
+          </div></section>
+
+          <section class="pricing-category" id="print-design-pricing"><h3>印刷品設計</h3><div class="pricing-grid pricing-grid--items">
+            <article class="pricing-card"><h3>一般印刷品設計</h3><p class="pricing-card__price">NT$1,500 起／件</p><p class="pricing-card__intro">適用於 DM、海報、菜單、名片及宣傳小卡，以單一尺寸計價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-12">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>包裝貼標設計</h3><p class="pricing-card__price">NT$3,000 起</p><p class="pricing-card__intro">依標籤尺寸、品項數量與印刷需求確認正式報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-13">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>包裝紙盒設計</h3><p class="pricing-card__price">NT$9,800 起</p><p class="pricing-card__intro">適用於已有刀模的包裝紙盒設計。若需協助規劃刀模、打樣或聯繫印刷廠，另行報價。</p><div class="quote-card-select"><button type="button" data-quote-select="service-14">加入需求初估</button></div></article>
+          </div><p class="pricing-category__note">如需協助印刷發包、校稿及送印，可另行提供代辦服務；以上設計價格不包含印刷費與運費。</p></section>
+
+          <section class="pricing-category" id="video-post-production"><h3>影音後製</h3><div class="pricing-grid pricing-grid--items">
+            <article class="pricing-card"><h3>基礎影片剪輯</h3><p class="pricing-card__price">NT$800 起</p><p class="pricing-card__intro">包含基本字幕、轉場及背景配樂，依素材數量、影片長度與剪輯難度報價。</p><p class="pricing-card__note">包含 1 次字幕、配樂或轉場微調；超出修改次數後，每次加收原報價總額的 10%。</p><div class="quote-card-select"><button type="button" data-quote-select="service-15">加入需求初估</button></div></article>
+            <article class="pricing-card"><h3>AI 短影音全案</h3><p class="pricing-card__price">NT$3,000 起</p><p class="pricing-card__intro">包含腳本企劃、AI 角色或場景生成、影片剪輯及成品輸出。</p><p class="pricing-card__note">依腳本複雜度與生成數量報價。若更換角色、場景或腳本方向並重新生成，每次加收 NT$500 起。</p><div class="quote-card-select"><button type="button" data-quote-select="service-16">加入需求初估</button></div></article>
+          </div></section>
+        </section>
+
+        <footer class="pricing-footer-note">
+          <p>以上價格皆為參考起價，正式報價將依內容、尺寸、數量、製作難度、交期及修改範圍評估。</p>
+          <p>除影片剪輯與 AI 包裝重建另有標示外，每案提供 3 次免費微調。若超出原先確認的範圍、變更設計方向或增加製作項目，將另行報價。</p>
+          <p>若有其他設計需求，或作品集中尚未展示的項目，也歡迎以下聯絡方式提出討論 😊</p>
+        </footer>
+        <section class="page-seo-note" aria-label="設計服務報價說明"><p>品牌視覺、網頁與影音製作報價，<br>可依需求選擇單項服務，<br class="page-note-mobile-break">或規劃完整整合方案。</p></section>
+      </div>
+    </main>
+    <div data-site-footer></div>
+    <script>
+(() => {
+  'use strict';
+  const catalog = [{"id": "ai-flat", "group": "AI 生成圖轉可印刷檔案", "name": "單張大圖重建與印刷完稿", "rate": "看圖後報價／張", "min": null, "max": null, "unit": "張", "note": "請提供原圖、完整文字、實際印刷尺寸與印刷規格。需重建的文字、Logo、元素及影像品質，先看圖再評估；複雜插畫重畫與重新生成另估。"}, {"id": "ai-package", "group": "AI 生成圖轉可印刷檔案", "name": "立體包裝重建與展開排版", "rate": "NT$4,000～8,000／款", "min": 4000, "max": 8000, "unit": "款", "note": "各一尺寸、正反面完稿、2 次局部修改。需提供正式刀模、完整文字、原圖與印刷規格；另購素材、複雜插畫重畫、印刷與打樣另計。", "variants": [{"name": "一般包裝重建", "min": 4000, "max": 8000}, {"name": "梨山春茶袋（原討論範圍）", "min": 5000, "max": 8000}, {"name": "肉脯袋（原討論範圍）", "min": 4000, "max": 6000}]}, {"id": "service-1", "group": "網站設計服務", "name": "一頁式網站", "rate": "NT$15,000 起", "min": 15000, "max": null, "unit": "案", "note": "用一個完整頁面，把品牌、服務與行動入口說清楚。 適合剛起步、預算有限，或只需要單一活動／服務頁面的客戶。\n適合： 個人品牌、小型工作室、單項服務、活動宣傳、產品／服務 Landing Page。"}, {"id": "service-2", "group": "網站設計服務", "name": "品牌形象官網", "rate": "NT$28,000 起", "min": 28000, "max": null, "unit": "案", "note": "建立完整品牌門面，讓客戶更清楚認識你是誰、提供什麼服務，以及如何與你聯絡。\n適合： 企業、品牌、工作室、專業服務、宗教／禮儀服務、個人品牌。\nNT$28,000 起方案以品牌形象與資訊展示為主。若需要商品銷售、活動報名、會員、付款或其他功能，可依需求另行評估。"}, {"id": "service-3", "group": "網站設計服務", "name": "商品展示／電商導購網站", "rate": "NT$32,000 起", "min": 32000, "max": null, "unit": "案", "note": "網站負責品牌形象、商品內容與導購；訂單、付款與物流則可依實際需求，搭配成熟電商平台完成。\n適合： 已有蝦皮、Coupang 酷澎、Yahoo、momo 或其他購物平台的品牌。\n不是所有品牌都需要重新打造一套購物系統。若客戶已經有成熟的電商通路，可優先整合既有平台，降低維護成本，也讓日後訂單與物流管理更簡單。\n若需要官網購物車、金流、會員、訂單、物流或優惠券：完整購物功能依平台與需求另行報價。"}, {"id": "service-4", "group": "網站設計服務", "name": "活動／報名網站", "rate": "NT$12,000 起", "min": 12000, "max": null, "unit": "案", "note": "從活動宣傳、資訊整理、報名入口，到活動後的成績或結果公布，依照活動流程規劃適合的網站內容。\n適合： 運動賽事、講座、展覽、招生活動、宗教法會、禮儀活動、公益活動、品牌活動、各式期間限定活動。\n宗教法會也可套用此類型：法會介紹、日期場次、功德項目、報名方式、流程說明與相關公告，皆可依活動需求規劃。"}, {"id": "service-5", "group": "社群・電商・網頁素材", "name": "社群貼文設計", "rate": "NT$500 起／張", "min": 500, "max": null, "unit": "張", "note": "適用於 Facebook、Instagram 貼文及一般社群宣傳圖片。"}, {"id": "service-6", "group": "社群・電商・網頁素材", "name": "商品宣傳圖卡", "rate": "NT$800 起／張", "min": 800, "max": null, "unit": "張", "note": "適用於商品特色、優惠活動、品牌宣傳及電商平台圖卡。"}, {"id": "service-7", "group": "社群・電商・網頁素材", "name": "商品詳情長圖", "rate": "NT$5,000 起", "min": 5000, "max": null, "unit": "案", "note": "約 5～6 個內容區塊，依商品資料、文案整理及設計難度報價。"}, {"id": "service-8", "group": "社群・電商・網頁素材", "name": "Banner 設計", "rate": "NT$1,500 起", "min": 1500, "max": null, "unit": "案", "note": "適用於網站首頁、電商活動及廣告橫幅，以單一尺寸計價。"}, {"id": "service-9", "group": "社群・電商・網頁素材", "name": "LINE 圖文選單", "rate": "NT$1,500 起", "min": 1500, "max": null, "unit": "案", "note": "依選單格數、視覺內容與連結規劃確認正式報價。"}, {"id": "service-10", "group": "平面視覺設計", "name": "Logo 設計", "rate": "NT$3,500 起", "min": 3500, "max": null, "unit": "案", "note": "依品牌定位、設計方向與提案需求確認正式報價。"}, {"id": "service-11", "group": "平面視覺設計", "name": "吉祥物設計", "rate": "NT$8,000 起", "min": 8000, "max": null, "unit": "案", "note": "依角色複雜度、動作數量及延伸應用需求報價。"}, {"id": "service-12", "group": "印刷品設計", "name": "一般印刷品設計", "rate": "NT$1,500 起／件", "min": 1500, "max": null, "unit": "件", "note": "適用於 DM、海報、菜單、名片及宣傳小卡，以單一尺寸計價。"}, {"id": "service-13", "group": "印刷品設計", "name": "包裝貼標設計", "rate": "NT$3,000 起", "min": 3000, "max": null, "unit": "款", "note": "依標籤尺寸、品項數量與印刷需求確認正式報價。"}, {"id": "service-14", "group": "印刷品設計", "name": "包裝紙盒設計", "rate": "NT$9,800 起", "min": 9800, "max": null, "unit": "款", "note": "適用於已有刀模的包裝紙盒設計。若需協助規劃刀模、打樣或聯繫印刷廠，另行報價。"}, {"id": "service-15", "group": "影音後製", "name": "基礎影片剪輯", "rate": "NT$800 起", "min": 800, "max": null, "unit": "支", "note": "包含基本字幕、轉場及背景配樂，依素材數量、影片長度與剪輯難度報價。\n包含 1 次字幕、配樂或轉場微調；超出修改次數後，每次加收原報價總額的 10%。"}, {"id": "service-16", "group": "影音後製", "name": "AI 短影音全案", "rate": "NT$3,000 起", "min": 3000, "max": null, "unit": "支", "note": "包含腳本企劃、AI 角色或場景生成、影片剪輯及成品輸出。\n依腳本複雜度與生成數量報價。若更換角色、場景或腳本方向並重新生成，每次加收 NT$500 起。"}, {"id": "addon-1", "group": "網站加購與維護", "name": "追加一般內容頁", "rate": "NT$3,000 起／頁", "min": 3000, "max": null, "unit": "頁", "note": "一般內容頁追加，依資料與排版範圍評估。"}, {"id": "addon-2", "group": "網站加購與維護", "name": "活動／Landing Page", "rate": "NT$8,000 起／頁", "min": 8000, "max": null, "unit": "頁", "note": "新增活動／Landing Page，依內容量評估。"}, {"id": "addon-3", "group": "網站加購與維護", "name": "商品頁版型設計", "rate": "NT$5,000 起", "min": 5000, "max": null, "unit": "案", "note": "商品頁版型設計，商品資料整理與延伸品項另確認。"}, {"id": "addon-4", "group": "網站加購與維護", "name": "大量商品上架", "rate": "依數量報價", "min": null, "max": null, "unit": "件", "note": "請註明商品數量、規格變體、平台與素材準備程度，人工確認費用。"}, {"id": "addon-5", "group": "網站加購與維護", "name": "表單設計／需求表", "rate": "NT$3,000 起", "min": 3000, "max": null, "unit": "案", "note": "表單設計／需求表，依欄位與流程確認。"}, {"id": "addon-6", "group": "網站加購與維護", "name": "第三方平台串接／導流", "rate": "NT$2,000～3,000 起", "min": 2000, "max": 3000, "unit": "案", "note": "依串接平台與功能確認；外部服務費用另計。"}, {"id": "addon-7", "group": "網站加購與維護", "name": "報名頁內容／流程整理", "rate": "NT$3,000 起", "min": 3000, "max": null, "unit": "案", "note": "報名頁內容與流程整理，依活動需求評估。"}, {"id": "addon-8", "group": "網站加購與維護", "name": "多語系網站", "rate": "NT$5,000 起／語系；或原網站費用＋20%", "min": 5000, "max": null, "unit": "語系", "note": "此初估先按 NT$5,000 起／語系計算；亦可依原網站費用＋20%評估，由 Pamela 確認適用方式，翻譯需求另確認。"}, {"id": "addon-9", "group": "網站加購與維護", "name": "基本 SEO 設定", "rate": "依方案包含；進階需求另估", "min": null, "max": null, "unit": "案", "note": "Title／Description／網站結構等基本設定依網站方案包含，不重複計入初估。進階 SEO、關鍵字策略與長期優化另估。"}, {"id": "addon-10", "group": "網站加購與維護", "name": "網站內容整理／文案協助", "rate": "依內容量報價", "min": null, "max": null, "unit": "案", "note": "依網站內容量、資料準備程度與文案範圍評估。"}, {"id": "addon-11", "group": "網站加購與維護", "name": "網站後續維護", "rate": "單次 NT$1,500 起；月維護 NT$5,000 起", "min": 1500, "max": null, "unit": "次／月", "note": "依更新內容與頻率報價；月維護按月份計算，單次維護按次數計算。", "variants": [{"name": "單次維護", "min": 1500, "max": null, "unit": "次"}, {"name": "月維護", "min": 5000, "max": null, "unit": "月"}]}];
+  const format = value => 'NT$' + value.toLocaleString('en-US');
+  function itemById(id) { return catalog.find(item => item.id === id); }
+  function resolveItem(id, quantity, variant = 0, spec = '') {
+    const service = itemById(id);
+    if (!service || !Number.isInteger(quantity) || quantity < 1 || quantity > 100) throw new Error('請選擇服務，數量需為 1～100 的整數。');
+    if (!Number.isInteger(variant) || variant < 0 || (service.variants && variant >= service.variants.length) || (!service.variants && variant !== 0)) throw new Error('請確認計價方式。');
+    const choice = service.variants ? service.variants[variant] : service;
+    return { id, quantity, variant, spec: String(spec).slice(0, 300), name: service.name + (service.variants ? '｜' + choice.name : ''), unit: choice.unit || service.unit, min: choice.min === null ? null : choice.min * quantity, max: choice.max === null ? null : choice.max * quantity, note: service.note };
+  }
+  function calculate(cart) {
+    const rows = cart.map(row => resolveItem(row.id, row.quantity, row.variant, row.spec));
+    return { rows, minimum: rows.reduce((sum, row) => sum + (row.min || 0), 0), hasKnown: rows.some(row => row.min !== null), pending: rows.filter(row => row.min === null), hasOpenPrice: rows.some(row => row.min !== null && row.max === null) };
+  }
+  function answer(question) {
+    const q = String(question).trim();
+    if (!q || q.length > 1000) throw new Error('請輸入 1～1000 字的問題。');
+    if (/準備|資料|素材|刀模|尺寸|解析度/.test(q)) {
+      if (/包裝|刀模/.test(q)) return '包裝重建請提供原始圖片、完整文字／Logo、正式刀模、實際尺寸與印刷廠規格。參考費用 NT$4,000～8,000／款，含各一尺寸、正反面完稿及 2 次局部修改；印刷、打樣、付費素材與複雜插畫重畫另計。';
+      if (/AI|生成|大圖|解析度/i.test(q)) return '單張大圖先看圖後報價。請提供原圖、完整文字、印刷尺寸及印刷廠規格，再確認文字、Logo 與元素的重建範圍；直接改解析度或轉存檔案不能保證印刷品質。';
+      return '請提供用途、尺寸或影片長度、數量、完整文案、品牌 Logo、參考風格、素材與希望完成日期。您可以先整理需求；圖片、影片或刀模請附在 Email 裡。';
+    }
+    if (/修改|改稿/.test(q)) return '一般服務每案提供 3 次微調；基礎影片剪輯含 1 次字幕、配樂或轉場微調，超出後每次加收原報價總額的 10%。AI 包裝重建含 2 次局部修改；AI 短影音更換角色、場景或腳本方向並重新生成，每次 NT$500 起。變更方向、尺寸或製作範圍需另行報價。';
+    if (/原始檔|原檔|\.ai|SVG|PDF|向量|授權|版權/i.test(q)) return 'AI 包裝重建可交付可編修 SVG／PDF，文字與適合重建的元素會整理成可編修內容；照片與複雜圖像不保證全部轉成向量。原生 .ai、其他原始檔與素材授權依案件另行確認，最終印刷規格仍需配合印刷廠。';
+    if (/急件|多久|檔期|交期|趕件|完成時間/.test(q)) return '請提供希望完成日期與急件原因。初估不會直接承諾交期；Pamela 會依素材是否齊全、製作範圍與當時檔期確認是否能接，急件費用另估。';
+    if (/付款|訂金|匯款|稅|發票/.test(q)) return '付款方式、訂金、稅額及交付安排會在正式報價時確認。自動初估不會直接產生付款要求，也不代表已成立委託。';
+    if (/印刷費|運費|打樣|代印|印刷發包/.test(q)) return '本頁設計與完稿價格不包含印刷、打樣與運費。若需要印刷發包、校稿或送印代辦，可在需求裡註明，由 Pamela 另行評估。';
+    if (/包套|套組/.test(q)) return '套組方案可查看本頁「套組方案」區塊，這個初估清單只計算單項服務與網站加購。若想採用套組，請在需求補充註明方案名稱，由 Pamela 確認。';
+    if (/網站/.test(q) && /包含|主機|網域|功能|商城/.test(q)) return '網站方案依本頁說明提供視覺、內容與基本 RWD／SEO 等服務。主機、網域、平台月費、金流、物流、第三方報名工具等外部費用另計。購物車、會員、付款與完整訂單功能需另確認；也可採官網＋既有商城導購。';
+    if (/包含/.test(q)) return '服務範圍以本頁各項說明與正式報價為準。新增尺寸、內容、重做方向、拍攝、印刷、付費素材或其他外部費用需另確認；可先加入初估，並在需求補充說明。';
+    const rules = [ [/AI.*(圖|生成)|大圖|重建|可印刷/i, ['ai-flat','ai-package']], [/包裝|紙盒|貼標/,['service-13','service-14','ai-package']], [/社群|貼文/,['service-5']], [/商品.*(圖卡|宣傳)/,['service-6']], [/長圖|詳情/,['service-7']], [/banner|橫幅/i,['service-8']], [/LINE.*(選單|圖文)/i,['service-9']], [/logo|標誌/i,['service-10']], [/吉祥物|角色/,['service-11']], [/海報|DM|菜單|名片|印刷品/i,['service-12']], [/AI.*(影音|影片)/i,['service-16']], [/影片|剪輯|影音/,['service-15','service-16']], [/網站|網頁/,['service-1','service-2','service-3','service-4']] ];
+    let found = catalog.filter(service => q.toLowerCase().includes(service.name.toLowerCase()));
+    if (!found.length) for (const [pattern, ids] of rules) if (pattern.test(q)) { found = ids.map(itemById); break; }
+    if (found.length) return found.map(service => service.name + '：' + service.rate + '\n' + service.note).join('\n\n') + '\n\n可在「需求與自動初估」加入服務，正式金額與交期由 Pamela 確認。';
+    if (/費用|價格|價錢|報價|多少/.test(q)) return '可在「需求與自動初估」選擇單項服務與網站加購。起價項目先計算參考下限；看圖或依量報價的項目會列為待確認。正式費用由 Pamela 看過需求後確認。';
+    return '這個問題需要 Pamela 進一步確認。請在「需求補充」寫下問題並留下聯絡方式，再將整理好的需求寄出。我可以先回答本頁服務價格、素材準備、修改、包裝刀模、印刷費與合作流程。';
+  }
+  if (typeof module !== 'undefined' && module.exports) module.exports = { catalog, resolveItem, calculate, answer };
+  if (typeof document === 'undefined') return;
+  const byId = id => document.getElementById(id);
+  const serviceSelect = byId('quote-service'), variantSelect = byId('quote-variant');
+  const cart = [];
+  const groups = [...new Set(catalog.map(service => service.group))];
+  for (const name of groups) { const group = document.createElement('optgroup'); group.label = name; for (const service of catalog.filter(v => v.group === name)) { const option = document.createElement('option'); option.value = service.id; option.textContent = service.name + '｜' + service.rate; group.append(option); } serviceSelect.append(group); }
+  function hideMessages() { byId('quote-error').hidden = true; byId('quote-success').hidden = true; }
+  function showError(message) { byId('quote-error').textContent = message; byId('quote-error').hidden = false; }
+  function showSuccess(message) { byId('quote-success').textContent = message; byId('quote-success').hidden = false; }
+  function selectService(id) { const service = itemById(id); if (!service) return; serviceSelect.value = id; byId('quote-unit').textContent = '以「' + service.unit + '」計算；規格與製作範圍需確認。'; byId('quote-service-note').textContent = service.rate + '\n' + service.note; byId('quote-service-note').hidden = false; variantSelect.replaceChildren(); byId('quote-variant-field').hidden = !service.variants; if(service.variants) for(const [index, choice] of service.variants.entries()) { const option = document.createElement('option'); option.value = String(index); option.textContent = choice.name; variantSelect.append(option); } }
+  serviceSelect.addEventListener('change', () => { if (serviceSelect.value) selectService(serviceSelect.value); else { byId('quote-service-note').hidden = true; byId('quote-variant-field').hidden = true; byId('quote-unit').textContent = ''; } });
+  document.querySelectorAll('[data-quote-select]').forEach(button => button.addEventListener('click', () => { selectService(button.dataset.quoteSelect); byId('design-quote').scrollIntoView({ behavior: 'smooth', block: 'start' }); serviceSelect.focus({ preventScroll: true }); }));
+  function priceLabel(row) { if (row.min === null) return '待確認'; return row.max === null ? format(row.min) + ' 起' : format(row.min) + '～' + format(row.max); }
+  function render() {
+    const result = calculate(cart), list = byId('quote-cart'); list.replaceChildren(); byId('quote-empty').hidden = !!cart.length;
+    byId('quote-total').textContent = !cart.length ? '尚未加入項目' : result.hasKnown ? format(result.minimum) + ' 起' : '需人工確認報價';
+    byId('quote-total-note').textContent = !cart.length ? '加入服務後，即可查看參考明細。' : '已知項目的參考下限；不是正式總價。';
+    byId('quote-manual-note').textContent = result.pending.length ? '待確認：' + result.pending.map(v => v.name).join('、') + '。這些項目尚未計入上方金額。' : cart.length ? '各項正式費用需依完整需求、尺寸、數量與製作難度確認。' : '';
+    result.rows.forEach((row, index) => { const li = document.createElement('li'), content = document.createElement('div'), strong = document.createElement('strong'), small = document.createElement('small'), remove = document.createElement('button'); strong.textContent = row.name + ' × ' + row.quantity + row.unit; small.textContent = priceLabel(row) + (row.spec ? '\n規格：' + row.spec : ''); content.append(strong,small); remove.type = 'button'; remove.className = 'quote-remove'; remove.textContent = '移除'; remove.setAttribute('aria-label','移除 '+row.name); remove.addEventListener('click', () => { cart.splice(index,1); hideMessages(); render(); }); li.append(content,remove); list.append(li); });
+    for(const id of ['quote-copy','quote-print','quote-email']) byId(id).disabled = !cart.length;
+  }
+  byId('quote-item-form').addEventListener('submit', event => { event.preventDefault(); hideMessages(); try { if(cart.length>=30)throw new Error('每次最多加入 30 項，其他需求可在補充欄註明。'); const row = resolveItem(serviceSelect.value, Number(byId('quote-quantity').value), itemById(serviceSelect.value)?.variants ? Number(variantSelect.value) : 0, byId('quote-spec').value); cart.push(row); render(); showSuccess('已加入需求初估清單。'); } catch(error) { showError(error.message); } });
+  function summary() {
+    const result = calculate(cart);
+    return ['Pamela Creative Studio｜設計需求與參考初估','日期：'+new Date().toLocaleDateString('zh-TW',{timeZone:'Asia/Taipei'}),'姓名／公司：'+byId('quote-name').value.trim(),'聯絡方式：'+byId('quote-contact').value.trim(),'希望完成日期：'+(byId('quote-deadline').value||'待討論'),'','需求項目：',...result.rows.map((row,i)=>(i+1)+'. '+row.name+' × '+row.quantity+row.unit+'｜'+priceLabel(row)+(row.spec?'\n   規格：'+row.spec:'')+'\n   '+row.note),'','已知項目參考下限：'+(result.hasKnown?format(result.minimum)+' 起':'需人工確認'),...(result.pending.length?['尚未計入：'+result.pending.map(v=>v.name).join('、')]:[]),'','需求補充：',byId('quote-details').value.trim()||'待補充','','初估不是正式報價或交期承諾，實際費用由 Pamela 確認。','印刷、打樣、運費、付費素材與網站外部服務費用另計；稅額與交付內容另確認。','一般服務每案 3 次微調；基礎影片剪輯為 1 次，AI 包裝重建為 2 次局部修改。'].join('\n');
+  }
+  async function copySummary() { hideMessages(); try { await navigator.clipboard.writeText(summary()); showSuccess('需求已複製，可以貼到 Email 或 LINE。'); } catch { const area = document.createElement('textarea'); area.value = summary(); area.setAttribute('aria-label','需求摘要，請長按複製'); area.style.cssText='width:100%;min-height:200px;margin-top:16px'; byId('quote-copy-fallback')?.remove(); area.id='quote-copy-fallback'; byId('quote-success').before(area); area.focus(); area.select(); showSuccess('瀏覽器無法自動複製，請在下方摘要全選並複製。'); } }
+  byId('quote-copy').addEventListener('click', copySummary);
+  byId('quote-email').addEventListener('click', () => { hideMessages(); if(!byId('quote-name').value.trim() || !byId('quote-contact').value.trim()) { showError('請先填入姓名／公司與聯絡方式，方便確認正式報價。'); byId(!byId('quote-name').value.trim()?'quote-name':'quote-contact').focus(); return; } const body = summary(); const uri = 'mailto:pamela72choi@gmail.com?subject='+encodeURIComponent('設計需求與報價諮詢｜'+byId('quote-name').value.trim())+'&body='+encodeURIComponent(body); if(uri.length>7000) { showError('需求內容較長，請使用「複製需求」，再貼到 Email 寄至 pamela72choi@gmail.com。'); return; } window.location.href = uri; showSuccess('已嘗試開啟 Email 草稿。請在郵件 App 確認寄出；本站尚未送出或儲存這筆需求。若沒有開啟，請複製需求並自行寄信。'); });
+  byId('quote-print').addEventListener('click', () => { let page = byId('quote-print-page'); if(!page) { page = document.createElement('section'); page.id = 'quote-print-page'; page.className = 'quote-print'; document.body.append(page); } const h = document.createElement('h1'); h.textContent = '設計需求初估單'; const pre = document.createElement('pre'); pre.textContent = summary(); page.replaceChildren(h,pre); document.body.classList.add('quote-is-printing'); window.print(); });
+  window.addEventListener('afterprint', () => document.body.classList.remove('quote-is-printing'));
+  function chat(question) { const q = question.trim(); if(!q) return; const log = byId('quote-chat'); for (const [role, value] of [['user',q],['assistant',answer(q)]]) { const message = document.createElement('div'); message.className = 'quote-message' + (role === 'user' ? ' quote-message--user' : ''); message.textContent = value; log.append(message); } while(log.childElementCount>41)log.firstElementChild.remove(); log.scrollTop = log.scrollHeight; }
+  byId('quote-chat-form').addEventListener('submit', event => { event.preventDefault(); chat(byId('quote-question').value); byId('quote-question').value = ''; });
+  document.querySelectorAll('[data-quote-question]').forEach(button => button.addEventListener('click', () => chat(button.dataset.quoteQuestion)));
+  render();
+})();
+
+    </script>
   </body>
 </html>
