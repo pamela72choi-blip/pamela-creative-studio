@@ -83,16 +83,16 @@ function buildFooter() {
 document.querySelector("[data-site-header]").innerHTML = buildHeader();
 document.querySelector("[data-site-footer]").innerHTML = buildFooter();
 
-// A persistent shortcut to the guided solution questionnaire.
+// A persistent shortcut to design pricing and consultation.
 const currentPageName = window.location.pathname.split("/").pop() || "index.html";
-if (currentPageName !== "find-the-right-solution.html") {
+if (currentPageName !== "service-pricing.html") {
   const solutionShortcut = document.createElement("a");
   solutionShortcut.className = "solution-shortcut";
-  solutionShortcut.href = "find-the-right-solution.html";
-  solutionShortcut.setAttribute("aria-label", "幫你找最適合的方案");
+  solutionShortcut.href = "service-pricing.html";
+  solutionShortcut.setAttribute("aria-label", "設計需求報價，來問我");
   solutionShortcut.innerHTML = `
     <img src="assets/images/ui/find-the-right-solution.webp" alt="" width="368" height="368">
-    <span>幫你找<br>最適合的方案</span>`;
+    <span>設計需求報價<br>來問我</span>`;
   document.body.append(solutionShortcut);
 }
 
@@ -358,3 +358,4 @@ Promise.race([
   Promise.all(mediaReady),
   new Promise((resolve) => window.setTimeout(resolve, 15000))
 ]).then(finishLoadingScreen);
+
