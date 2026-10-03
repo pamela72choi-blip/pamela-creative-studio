@@ -85,7 +85,7 @@
 <section class="pricing-section" id="ai-print-pricing" aria-labelledby="ai-print-title">
   <header class="pricing-section__header"><h2 id="ai-print-title">AI 生成圖轉可印刷檔案</h2><p>依生成圖片重建文字與版面，整理成符合實際尺寸與印刷規格的檔案。</p></header>
   <div class="pricing-grid pricing-grid--items">
-    <article class="pricing-card"><h3>單張平面圖｜網頁素材、社群圖卡</h3><p class="pricing-card__price">NT$500 起／張</p><p class="pricing-card__intro">依既有圖片拆分可重建的圖層，將文字重新製作為可修改內容，方便後續更換文案與調整版面。</p><ul><li>基本起價適用於單張、單一尺寸、簡單版面</li><li>重建可修改文字，整理可分離的主要元素與圖層</li><li>依確認格式交付可編修檔與預覽圖</li></ul><p class="pricing-card__note">請提供原圖、完整文字與需求尺寸。複雜去字補背景、多物件拆圖、Logo 重畫與新增尺寸另估；照片與複雜圖像不保證全部轉成向量。</p><div class="quote-card-select"><button type="button" data-quote-select="ai-flat">加入需求初估</button></div></article>
+    <article class="pricing-card"><h3>單張平面圖｜網頁素材、社群圖卡</h3><p class="pricing-card__price">NT$300 起／張</p><p class="pricing-card__intro">依既有圖片拆分可重建的圖層，將文字重新製作為可修改內容，方便後續更換文案與調整版面。</p><ul><li>基本起價適用於單張、單一尺寸、簡單版面</li><li>重建可修改文字，整理可分離的主要元素與圖層</li><li>依確認格式交付可編修檔與預覽圖</li></ul><p class="pricing-card__note">請提供原圖、完整文字與需求尺寸。複雜去字補背景、多物件拆圖、Logo 重畫與新增尺寸另估；照片與複雜圖像不保證全部轉成向量。</p><div class="quote-card-select"><button type="button" data-quote-select="ai-flat">加入需求初估</button></div></article>
     <article class="pricing-card"><h3>單張平面圖｜印刷平面設計、DM、菜單、型錄</h3><p class="pricing-card__price">NT$500 起／頁</p><p class="pricing-card__intro">依既有圖片重建文字與平面版面，整理為符合實際尺寸與印刷規格的檔案。</p><ul><li>基本起價適用於單頁、單面、簡單版面</li><li>重建可修改文字，整理尺寸、版面與出血</li><li>依印刷廠規格輸出 PDF，編修格式另確認</li><li>雙面以 2 頁計，多頁菜單與型錄依頁數累計</li></ul><p class="pricing-card__note">請提供原圖、完整文字、印刷尺寸與印刷廠規格。複雜排版、影像修復、插畫重畫、封面或重新設計另估；印刷與打樣另計。直接改解析度或轉存檔案不能保證印刷品質。</p><div class="quote-card-select"><button type="button" data-quote-select="ai-print">加入需求初估</button></div></article>
     <article class="pricing-card"><h3>立體包裝重建與展開排版</h3><p class="pricing-card__price">NT$4,000～8,000／款</p><p class="pricing-card__intro">依 AI 包裝情境圖重建平面設計，配合印刷廠提供的正式刀模，完成包裝展開排版。</p><ul><li>各一尺寸、正反面完稿</li><li>重建文字與向量元素、展開排版與套刀模</li><li>包含 2 次局部修改</li><li>交付可編修 SVG／PDF；原生 .ai 檔依需求確認</li></ul><p class="pricing-card__note">梨山春茶袋參考 NT$5,000～8,000／款；肉脯袋參考 NT$4,000～6,000／款。需提供完整文字、原圖、正式刀模與印刷規格；另購素材、複雜插畫重畫、印刷與打樣另計。</p><div class="quote-card-select"><button type="button" data-quote-select="ai-package">加入需求初估</button></div></article>
   </div>
@@ -199,8 +199,8 @@
     "id": "ai-flat",
     "group": "AI 生成圖轉可印刷檔案",
     "name": "單張平面圖｜網頁素材、社群圖卡",
-    "rate": "NT$500 起／張",
-    "min": 500,
+    "rate": "NT$300 起／張",
+    "min": 300,
     "max": null,
     "unit": "張",
     "note": "基本起價適用於單張、單一尺寸、簡單版面；重建可修改文字並整理可分離的主要元素與圖層。複雜去字補背景、多物件拆圖、Logo 重畫與新增尺寸另估，編修格式需確認。"
@@ -545,7 +545,7 @@
     if (!q || q.length > 1000) throw new Error('請輸入 1～1000 字的問題。');
     if (/準備|資料|素材|刀模|尺寸|解析度/.test(q)) {
       if (/包裝|刀模/.test(q)) return '包裝重建請提供原始圖片、完整文字／Logo、正式刀模、實際尺寸與印刷廠規格。參考費用 NT$4,000～8,000／款，含各一尺寸、正反面完稿及 2 次局部修改；印刷、打樣、付費素材與複雜插畫重畫另計。';
-      if (/AI|生成|大圖|解析度/i.test(q)) return '單張平面圖：網頁素材、社群圖卡文字與圖層重建 NT$500 起／張；印刷平面設計、DM、菜單與型錄完稿 NT$500 起／頁。起價適用於單一尺寸、簡單版面，複雜重建另估。請提供原圖與完整文字；印刷用途另需尺寸及印刷廠規格，雙面以 2 頁計。';
+      if (/AI|生成|大圖|解析度/i.test(q)) return '單張平面圖：網頁素材、社群圖卡文字與圖層重建 NT$300 起／張；印刷平面設計、DM、菜單與型錄完稿 NT$500 起／頁。起價適用於單一尺寸、簡單版面，複雜重建另估。請提供原圖與完整文字；印刷用途另需尺寸及印刷廠規格，雙面以 2 頁計。';
       return '請提供用途、尺寸或影片長度、數量、完整文案、品牌 Logo、參考風格、素材與希望完成日期。您可以先整理需求；圖片、影片或刀模請附在 Email 裡。';
     }
     if (/修改|改稿/.test(q)) return '一般服務每案提供 3 次微調；基礎影片剪輯含 1 次字幕、配樂或轉場微調，超出後每次加收原報價總額的 10%。AI 包裝重建含 2 次局部修改；AI 短影音更換角色、場景或腳本方向並重新生成，每次 NT$500 起。變更方向、尺寸或製作範圍需另行報價。';
@@ -603,5 +603,6 @@
     </script>
   </body>
 </html>
+
 
 
