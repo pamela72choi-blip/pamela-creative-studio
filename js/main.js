@@ -18,23 +18,43 @@ function finishLoadingScreen() {
   }, minimumDisplayTime);
 }
 
-const navigationItems = [
-  ["網頁設計", "web-design.html"],
-  ["社群貼文圖片", "social-media-design.html"],
-  ["商品詳情長圖", "product-pages.html"],
-  ["公仔、吉祥物、文創商品", "characters-mascots.html"],
-  ["包裝設計", "packaging-design.html"],
-  ["海報、型錄、印刷品設計", "print-design.html"],
-  ["教學影片", "tutorial-videos.html"],
-  ["影片剪輯後製", "video-production.html"],
-  ["AI 短影音", "short-form-videos.html"],
-  ["關於 PAMELA", "about-pamela.html"],
+const navigationGroups = [
+  ["視覺設計", [
+    ["網頁設計", "web-design.html"],
+    ["社群貼文圖片", "social-media-design.html"],
+    ["商品詳情長圖", "product-pages.html"],
+    ["公仔、吉祥物、文創商品", "characters-mascots.html"],
+  ]],
+  ["印刷排版設計", [
+    ["包裝設計", "packaging-design.html"],
+    ["海報、型錄設計", "print-design.html"],
+  ]],
+  ["影音製作", [
+    ["教學影片", "tutorial-videos.html"],
+    ["影片剪輯後製", "video-production.html"],
+    ["AI 短影音", "short-form-videos.html"],
+  ]],
+];
+
+const navigationLinks = [
   ["服務報價", "service-pricing.html"],
+  ["關於 PAMELA", "about-pamela.html"],
 ];
 
 function buildHeader() {
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
-  const links = navigationItems.map(([label, href]) => {
+  const groups = navigationGroups.map(([label, items], index) => {
+    const submenu = items.map(([itemLabel, href]) => {
+      const active = href === currentPage ? ' aria-current="page"' : "";
+      return `<li><a href="${href}"${active}>${itemLabel}</a></li>`;
+    }).join("");
+    const current = items.some(([, href]) => href === currentPage) ? " is-current" : "";
+    return `<li class="site-nav__group${current}">
+      <button class="site-nav__trigger" type="button" aria-expanded="false" aria-controls="site-submenu-${index}">${label}<span class="site-nav__chevron" aria-hidden="true"></span></button>
+      <ul class="site-nav__submenu" id="site-submenu-${index}">${submenu}</ul>
+    </li>`;
+  }).join("");
+  const links = navigationLinks.map(([label, href]) => {
     const active = href === currentPage ? ' aria-current="page"' : "";
     return `<li><a href="${href}"${active}>${label}</a></li>`;
   }).join("");
@@ -48,7 +68,7 @@ function buildHeader() {
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="開啟選單">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
         </button>
-        <nav class="site-nav" id="site-navigation" aria-label="主要選單"><ul>${links}</ul></nav>
+        <nav class="site-nav" id="site-navigation" aria-label="主要選單"><ul class="site-nav__list">${groups}${links}</ul></nav>
       </div>
     </header>`;
 }
@@ -104,6 +124,43 @@ menuToggle?.addEventListener("click", () => {
   const isOpen = siteNavigation.classList.toggle("is-open");
   menuToggle.setAttribute("aria-expanded", String(isOpen));
   menuToggle.setAttribute("aria-label", isOpen ? "關閉選單" : "開啟選單");
+  if (!isOpen) closeSubmenus();
+});
+
+const submenuTriggers = [...document.querySelectorAll(".site-nav__trigger")];
+function closeSubmenus(except) {
+  submenuTriggers.forEach((trigger) => {
+    if (trigger === except) return;
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.parentElement.classList.remove("is-open");
+  });
+}
+
+submenuTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const isOpen = trigger.getAttribute("aria-expanded") !== "true";
+    closeSubmenus(trigger);
+    trigger.setAttribute("aria-expanded", String(isOpen));
+    trigger.parentElement.classList.toggle("is-open", isOpen);
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".site-nav__group")) closeSubmenus();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+  const openTrigger = submenuTriggers.find((trigger) => trigger.getAttribute("aria-expanded") === "true");
+  if (openTrigger) {
+    closeSubmenus();
+    openTrigger.focus();
+  } else if (siteNavigation?.classList.contains("is-open")) {
+    siteNavigation.classList.remove("is-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "開啟選單");
+    menuToggle.focus();
+  }
 });
 
 // Product-page gallery and scrollable detail modal.
