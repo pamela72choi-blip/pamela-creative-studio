@@ -34,6 +34,7 @@ const navigationGroups = [
   ]],
   ["影音製作", [
     ["教學影片", "tutorial-videos.html"],
+    ["國小互動教學動畫", "elementary-school-teaching-animation.html"],
     ["影片剪輯後製", "video-production.html"],
     ["AI 短影音", "short-form-videos.html"],
   ]],
