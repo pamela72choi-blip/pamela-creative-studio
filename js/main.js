@@ -25,6 +25,7 @@ const navigationGroups = [
     ["橫幅 Banner", "web-banners.html"],
     ["商品詳情長圖", "product-pages.html"],
     ["公仔、吉祥物、文創商品", "characters-mascots.html"],
+    ["教學插畫", "educational-illustrations.html"],
   ]],
   ["印刷排版設計", [
     ["包裝設計", "packaging-design.html"],
