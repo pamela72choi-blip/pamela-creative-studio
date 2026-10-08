@@ -11,11 +11,10 @@
 .teaching-card img { width:100%; aspect-ratio:4/3; object-fit:contain; }
 .teaching-card figcaption { margin-top:12px; color:#74706d; font-size:14px; text-align:center; }
 .teaching-card button:focus-visible { outline:3px solid #8e7463; outline-offset:4px; }
-.teaching-note { max-width:760px; margin:clamp(64px,8vw,100px) auto 0; padding-top:32px; border-top:1px solid #e8e5e1; color:#74706d; font-size:16px; line-height:1.9; }
+.teaching-note { max-width:760px; margin:clamp(64px,8vw,100px) auto 0; padding-top:32px; border-top:1px solid #e8e5e1; }
 .teaching-note p { margin:0 0 18px; }
 .teaching-note p:last-child { margin-bottom:0; }
 @media(max-width:700px) {
   .teaching-grid { grid-template-columns:1fr; gap:28px; }
   .teaching-category { scroll-margin-top:86px; }
-  .teaching-note { font-size:15px; }
 }
