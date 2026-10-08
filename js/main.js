@@ -29,6 +29,7 @@ const navigationGroups = [
   ["印刷排版設計", [
     ["包裝設計", "packaging-design.html"],
     ["海報、型錄設計", "print-design.html"],
+    ["名片設計", "business-card-design.html"],
   ]],
   ["影音製作", [
     ["教學影片", "tutorial-videos.html"],
