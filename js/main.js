@@ -108,6 +108,32 @@ document.querySelector("[data-site-footer]").innerHTML = buildFooter();
 
 // A persistent shortcut to design pricing and consultation.
 const currentPageName = window.location.pathname.split("/").pop() || "index.html";
+const pageItemTitles = {
+  "index.html": "作品總覽",
+  "web-design.html": "網頁設計",
+  "social-media-design.html": "社群貼文圖片",
+  "web-banners.html": "橫幅 Banner",
+  "product-pages.html": "商品詳情長圖",
+  "characters-mascots.html": "公仔、吉祥物、文創商品",
+  "educational-illustrations.html": "教學插畫",
+  "packaging-design.html": "包裝設計",
+  "print-design.html": "海報、型錄設計",
+  "business-card-design.html": "名片設計",
+  "tutorial-videos.html": "教學影片",
+  "elementary-school-teaching-animation.html": "國小互動教學動畫",
+  "video-production.html": "影片剪輯後製",
+  "short-form-videos.html": "AI 短影音",
+  "service-pricing.html": "服務報價",
+  "about-pamela.html": "關於 PAMELA",
+  "find-the-right-solution.html": "幫你找最適合的方案",
+};
+const mainContent = document.querySelector("main");
+if (mainContent && pageItemTitles[currentPageName]) {
+  const title = document.createElement("h2");
+  title.className = "page-item-title";
+  title.textContent = pageItemTitles[currentPageName];
+  (mainContent.firstElementChild || mainContent).prepend(title);
+}
 if (currentPageName !== "service-pricing.html") {
   const solutionShortcut = document.createElement("a");
   solutionShortcut.className = "solution-shortcut";
@@ -169,7 +195,6 @@ document.addEventListener("keydown", (event) => {
 // Product-page gallery and scrollable detail modal.
 const productGrid = document.querySelector("[data-products]");
 if (productGrid) {
-  const jpgProducts = new Set([5, 6, 9, 11, 22]);
   const pageCounts = [2, 3, 10, 11, 13, 14, 9, 10, 8, 10, 9, 12, 10, 10, 9, 4, 8, 10, 3, 7, 6, 7, 12];
   const productAltTexts = [
     "汽車晶艷鍍膜維護組電商商品詳情頁",
@@ -202,15 +227,14 @@ if (productGrid) {
   pageCounts.forEach((count, index) => {
     const id = String(index + 1).padStart(3, "0");
     const folder = `product-pages/ecommerce-${id}`;
-    const cover = `${folder}/cover.jpg`;
+    const cover = `${folder}/cover.webp`;
     const card = document.createElement("button");
     card.className = "product-card"; card.type = "button";
     card.innerHTML = `<img src="${cover}" alt="${productAltTexts[index]}" loading="eager">`;
     card.addEventListener("click", () => {
-      const extension = jpgProducts.has(index + 1) ? "jpg" : "webp";
       modalContent.replaceChildren(...Array.from({ length: count }, (_, page) => {
         const image = document.createElement("img");
-        image.src = `${folder}/${String(page).padStart(2, "0")}.${extension}`;
+        image.src = `${folder}/${String(page).padStart(2, "0")}.webp`;
         image.alt = `${productAltTexts[index]}，內容圖第 ${page + 1} 張`;
         return image;
       }));
@@ -238,7 +262,7 @@ if (characterProjectCover) {
     const content = modal.querySelector(".product-modal__content");
     ["00", "01", "02", "03"].forEach((file, index) => {
       const image = document.createElement("img");
-      image.src = `characters-mascots/characters-mascots_01/${file}.jpg`;
+      image.src = `characters-mascots/characters-mascots_01/${file}.webp`;
       image.alt = `品牌角色吉祥物完整設計稿第 ${index + 1} 張`;
       content.append(image);
     });
