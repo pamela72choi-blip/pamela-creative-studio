@@ -42,7 +42,6 @@ const navigationGroups = [
 
 const navigationLinks = [
   ["服務報價", "service-pricing.html"],
-  ["關於 PAMELA", "about-pamela.html"],
 ];
 
 function buildHeader() {
