@@ -154,7 +154,7 @@ main button:focus-visible img {
 .project-gallery--packaging .project-gallery__content img,
 .project-gallery--packaging .project-gallery__content video { width: 100%; height: auto; }
 .project-gallery--illustrations .project-gallery__content { width: min(100%, 640px); }
-.project-gallery--illustrations .illustration-card { display: block; width: 60%; margin-inline: auto; }
+.project-gallery--illustrations .illustration-card { display: block; width: 100%; margin-inline: auto; }
 .project-gallery--illustrations .illustration-card:first-of-type { margin-top: 16px; }
 .project-gallery--illustrations .illustration-card img { width: 100%; height: auto; }
 .project-gallery--web .project-gallery__content { width: min(100%, 576px); gap: 40px; }

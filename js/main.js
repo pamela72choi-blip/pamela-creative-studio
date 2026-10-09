@@ -109,7 +109,6 @@ document.querySelector("[data-site-footer]").innerHTML = buildFooter();
 // A persistent shortcut to design pricing and consultation.
 const currentPageName = window.location.pathname.split("/").pop() || "index.html";
 const pageItemTitles = {
-  "index.html": "作品總覽",
   "web-design.html": "網頁設計",
   "social-media-design.html": "社群貼文圖片",
   "web-banners.html": "橫幅 Banner",
