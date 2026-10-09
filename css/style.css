@@ -148,6 +148,7 @@ main button:focus-visible img {
 .project-gallery--natural .project-gallery__content .project-image--print-04 { width: min(723px, 100%); height: auto; aspect-ratio: 723 / 511; }
 .project-gallery--print .project-gallery__content { display: flex; width: min(100%, 630px); flex-direction: column; gap: 40px; }
 .project-gallery--print .project-gallery__content img { width: 100%; height: auto; }
+.project-gallery--business-cards .business-card-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 3vw, 20px); }
 .project-gallery--packaging .project-gallery__content { display: flex; width: min(100%, 640px); flex-direction: column; gap: 40px; }
 .project-gallery--packaging .project-gallery__content img,
 .project-gallery--packaging .project-gallery__content video { width: 100%; height: auto; }
