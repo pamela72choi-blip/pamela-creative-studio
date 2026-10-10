@@ -18,48 +18,56 @@ img { display: block; max-width: 100%; }
 
 /* Branded loading screen shared by every page. */
 html.is-loading { overflow: hidden; }
-html.is-loading body::before,
-html.is-loading body::after {
+html.is-loading body::before {
   position: fixed;
   z-index: 10000;
-  pointer-events: none;
-  transition: opacity 520ms ease, transform 520ms cubic-bezier(.22, 1, .36, 1);
-}
-html.is-loading body::before {
   inset: 0;
   background: #fff;
   content: "";
   opacity: 1;
+  pointer-events: none;
+  transition: opacity 520ms ease;
 }
-html.is-loading body::after {
+.loading-screen { display: none; }
+html.is-loading .loading-screen {
+  position: fixed;
+  z-index: 10001;
   top: 50%;
   left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: min(260px, calc(100vw - 64px));
+  text-align: center;
+  pointer-events: none;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(.22, 1, .36, 1);
+}
+.loading-screen__brand {
+  width: 100%;
   padding-bottom: 16px;
   border-bottom: 1px solid #aaa39e;
   color: #282828;
-  content: "Pamela Creative Studio";
   font-size: 17px;
   font-weight: 700;
   letter-spacing: .015em;
   line-height: 1.4;
-  text-align: center;
-  opacity: 1;
-  transform: translate(-50%, -50%);
-  animation: loading-mark 1.15s ease-in-out infinite alternate;
 }
+.loading-screen__message {
+  margin: 16px 0 12px;
+  color: #545454;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.loading-screen__cat { width: 135px; height: 135px; }
 html.is-loading.is-ready body::before { opacity: 0; }
-html.is-loading.is-ready body::after { opacity: 0; transform: translate(-50%, calc(-50% - 10px)); }
-
-@keyframes loading-mark {
-  from { border-bottom-color: #dedad7; }
-  to { border-bottom-color: #5f5a56; }
-}
+html.is-loading.is-ready .loading-screen { opacity: 0; transform: translate(-50%, calc(-50% - 10px)); }
 
 @media (prefers-reduced-motion: reduce) {
   html.is-loading body::before,
-  html.is-loading body::after { transition-duration: 1ms; }
-  html.is-loading body::after { animation: none; }
+  html.is-loading .loading-screen { transition-duration: 1ms; }
 }
 
 /* Give every clickable portfolio image the same subtle hover zoom. */
@@ -260,8 +268,8 @@ main button:focus-visible img {
   left: 16px;
   z-index: 39;
   display: block;
-  width: 184px;
-  height: 184px;
+  width: 135px;
+  height: 165.6px;
   color: #312c2a;
   text-decoration: none;
   filter: drop-shadow(0 8px 14px rgba(35, 29, 26, .15));
@@ -271,17 +279,17 @@ main button:focus-visible img {
 .solution-shortcut img { display:block; width:100%; height:100%; object-fit:contain; }
 .solution-shortcut span {
   position:absolute;
-  top:7%;
-  right:14%;
-  left:18%;
+  top:3%;
+  right:8%;
+  left:8%;
   height:30%;
   display:grid;
   place-content:center;
   color:#383230;
-  font-size:15px;
+  font-size:12px;
   font-weight:800;
   line-height:1.42;
-  letter-spacing:.08em;
+  letter-spacing:0;
   text-align:center;
   pointer-events:none;
 }
@@ -406,8 +414,8 @@ main button:focus-visible img {
 }
 
 @media (max-width: 620px) {
-  .solution-shortcut { bottom:8px; left:8px; width:142px; height:142px; }
-  .solution-shortcut span { top:7%; font-size:12px; }
+  .solution-shortcut { bottom:8px; left:8px; width:104.18px; height:127.8px; }
+  .solution-shortcut span { top:3%; font-size:10px; }
   .solution-page { padding-right:20px; padding-left:20px; }
   .solution-hero { margin-bottom:32px; }
   .solution-progress li small { display:none; }

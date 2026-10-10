@@ -139,7 +139,7 @@ if (currentPageName !== "service-pricing.html") {
   solutionShortcut.href = "service-pricing.html";
   solutionShortcut.setAttribute("aria-label", "設計需求報價，來問我");
   solutionShortcut.innerHTML = `
-    <img src="assets/images/ui/find-the-right-solution.webp" alt="" width="368" height="368">
+    <img src="assets/images/ui/find-the-right-solution.gif?v=20261010" alt="" width="150" height="184">
     <span>設計需求報價<br>來問我</span>`;
   document.body.append(solutionShortcut);
 }
