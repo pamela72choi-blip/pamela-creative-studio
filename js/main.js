@@ -1,8 +1,7 @@
 /* Shared site elements. Future pages only need data-site-header and data-site-footer. */
 document.documentElement.classList.add("has-js");
 
-// Keep the loading screen visible until this page's images and video previews
-// are ready, then reveal the complete layout at once.
+// Wait only for visible preview images; other images load as visitors scroll.
 const loadingStartedAt = performance.now();
 let loadingFinished = false;
 function finishLoadingScreen() {
@@ -229,11 +228,13 @@ if (productGrid) {
     const cover = `${folder}/cover.webp`;
     const card = document.createElement("button");
     card.className = "product-card"; card.type = "button";
-    card.innerHTML = `<img src="${cover}" alt="${productAltTexts[index]}" loading="eager">`;
+    card.innerHTML = `<img src="${cover}" alt="${productAltTexts[index]}" loading="lazy" decoding="async">`;
     card.addEventListener("click", () => {
       modalContent.replaceChildren(...Array.from({ length: count }, (_, page) => {
         const image = document.createElement("img");
         image.src = `${folder}/${String(page).padStart(2, "0")}.webp`;
+        image.loading = "lazy";
+        image.decoding = "async";
         image.alt = `${productAltTexts[index]}，內容圖第 ${page + 1} 張`;
         return image;
       }));
@@ -262,6 +263,8 @@ if (characterProjectCover) {
     ["00", "01", "02", "03"].forEach((file, index) => {
       const image = document.createElement("img");
       image.src = `characters-mascots/characters-mascots_01/${file}.webp`;
+      image.loading = "lazy";
+      image.decoding = "async";
       image.alt = `品牌角色吉祥物完整設計稿第 ${index + 1} 張`;
       content.append(image);
     });
@@ -283,6 +286,8 @@ document.querySelectorAll("[data-manuscript], [data-manuscripts]").forEach((trig
     manuscriptPaths.forEach((path, index) => {
       const image = document.createElement("img");
       image.src = path;
+      image.loading = "lazy";
+      image.decoding = "async";
       image.alt = `${trigger.querySelector("img").alt}原稿展示 ${index + 1}`;
       content.append(image);
     });
@@ -419,26 +424,24 @@ topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "s
 document.body.append(topButton);
 window.addEventListener("scroll", () => topButton.classList.toggle("is-visible", window.scrollY > 420), { passive: true });
 
-document.querySelectorAll('img[loading="lazy"]').forEach((image) => { image.loading = "eager"; });
-
-const mediaReady = [...document.querySelectorAll("main img, main video")].map((media) => {
-  if (media instanceof HTMLImageElement) {
-    const decodeImage = () => media.decode?.().catch(() => undefined);
-    if (media.complete) return decodeImage();
-    return new Promise((resolve) => {
-      media.addEventListener("load", () => Promise.resolve(decodeImage()).then(resolve), { once: true });
-      media.addEventListener("error", resolve, { once: true });
-    });
-  }
-  if (media.readyState >= 1) return Promise.resolve();
+// Keep below-the-fold artwork out of the initial network queue.
+const visibleImages = [...document.querySelectorAll("main img")].filter((image) => {
+  const bounds = image.getBoundingClientRect();
+  const visible = !image.closest('[aria-hidden="true"], [hidden]') &&
+    bounds.width > 0 && bounds.height > 0 && bounds.top < window.innerHeight && bounds.bottom > 0;
+  image.loading = visible ? "eager" : "lazy";
+  image.decoding = "async";
+  return visible;
+});
+const mediaReady = visibleImages.map((image) => {
+  const decodeImage = () => image.decode?.().catch(() => undefined);
+  if (image.complete) return decodeImage();
   return new Promise((resolve) => {
-    media.addEventListener("loadedmetadata", resolve, { once: true });
-    media.addEventListener("error", resolve, { once: true });
+    image.addEventListener("load", () => Promise.resolve(decodeImage()).then(resolve), { once: true });
+    image.addEventListener("error", resolve, { once: true });
   });
 });
-
 Promise.race([
   Promise.all(mediaReady),
-  new Promise((resolve) => window.setTimeout(resolve, 15000))
+  new Promise((resolve) => window.setTimeout(resolve, 3000))
 ]).then(finishLoadingScreen);
-
