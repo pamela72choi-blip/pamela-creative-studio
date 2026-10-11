@@ -24,7 +24,10 @@ const navigationGroups = [
     ["橫幅 Banner", "web-banners.html"],
     ["商品詳情長圖", "product-pages.html"],
     ["公仔、吉祥物、文創商品", "characters-mascots.html"],
-    ["教學插畫", "educational-illustrations.html"],
+  ]],
+  ["教學插畫", [
+    ["心智繪圖", "educational-illustrations.html"],
+    ["圖像英文記憶法", "visual-english-memory.html"],
   ]],
   ["印刷排版設計", [
     ["包裝設計", "packaging-design.html"],
@@ -113,7 +116,8 @@ const pageItemTitles = {
   "web-banners.html": "橫幅 Banner",
   "product-pages.html": "商品詳情長圖",
   "characters-mascots.html": "公仔、吉祥物、文創商品",
-  "educational-illustrations.html": "教學插畫",
+  "educational-illustrations.html": "心智繪圖",
+  "visual-english-memory.html": "圖像英文記憶法",
   "packaging-design.html": "包裝設計",
   "print-design.html": "海報、型錄設計",
   "business-card-design.html": "名片設計",
