@@ -28,6 +28,7 @@ const navigationGroups = [
   ["教學插畫", [
     ["心智繪圖", "educational-illustrations.html"],
     ["圖像英文記憶法", "visual-english-memory.html"],
+    ["寫實風格插畫", "realistic-illustrations.html"],
   ]],
   ["印刷排版設計", [
     ["包裝設計", "packaging-design.html"],
@@ -118,6 +119,7 @@ const pageItemTitles = {
   "characters-mascots.html": "公仔、吉祥物、文創商品",
   "educational-illustrations.html": "心智繪圖",
   "visual-english-memory.html": "圖像英文記憶法",
+  "realistic-illustrations.html": "寫實風格插畫",
   "packaging-design.html": "包裝設計",
   "print-design.html": "海報、型錄設計",
   "business-card-design.html": "名片設計",
