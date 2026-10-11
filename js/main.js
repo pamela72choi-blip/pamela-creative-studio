@@ -25,10 +25,14 @@ const navigationGroups = [
     ["商品詳情長圖", "product-pages.html"],
     ["公仔、吉祥物、文創商品", "characters-mascots.html"],
   ]],
-  ["教學插畫", [
+  ["插畫編繪", [
     ["心智繪圖", "educational-illustrations.html"],
     ["圖像英文記憶法", "visual-english-memory.html"],
     ["寫實風格教材插畫", "realistic-illustrations.html"],
+    ["趣味創作", "creative-illustrations.html"],
+    ["一頁漫畫", "one-page-comics.html"],
+    ["政府環保教育圖卡", "government-environmental-cards.html"],
+    ["照明知識圖卡", "lighting-knowledge-cards.html"],
   ]],
   ["印刷排版設計", [
     ["包裝設計", "packaging-design.html"],
@@ -120,6 +124,10 @@ const pageItemTitles = {
   "educational-illustrations.html": "心智繪圖",
   "visual-english-memory.html": "圖像英文記憶法",
   "realistic-illustrations.html": "寫實風格教材插畫",
+  "creative-illustrations.html": "趣味創作",
+  "one-page-comics.html": "一頁漫畫",
+  "government-environmental-cards.html": "政府環保教育圖卡",
+  "lighting-knowledge-cards.html": "照明知識圖卡",
   "packaging-design.html": "包裝設計",
   "print-design.html": "海報、型錄設計",
   "business-card-design.html": "名片設計",
