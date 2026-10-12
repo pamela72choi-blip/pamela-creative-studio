@@ -32,7 +32,6 @@ const navigationGroups = [
     ["趣味創作", "creative-illustrations.html"],
     ["一頁漫畫", "one-page-comics.html"],
     ["政府環保教育圖卡", "government-environmental-cards.html"],
-    ["照明知識圖卡", "lighting-knowledge-cards.html"],
   ]],
   ["印刷排版設計", [
     ["包裝設計", "packaging-design.html"],
