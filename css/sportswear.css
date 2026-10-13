@@ -20,3 +20,9 @@
 
 /* Keep artwork still while hovering or focusing its card. */
 main .concept-card img, main .concept-card:hover img, main .concept-card:focus-visible img{transform:none;transition:none}
+
+/* Fit the complete poster within the stage, leaving space at both edges. */
+.concept-stage{container-type:size}
+.concept-card{width:min(43cqw,450px,calc((100cqh - 64px)*1122/1402));aspect-ratio:1122/1402;background-size:contain;background-repeat:no-repeat}
+.concept-card img{width:100%;height:100%;object-fit:contain;object-position:center}
+@media(max-width:600px){.concept-card{width:min(65cqw,calc((100cqh - 64px)*1122/1402))}}
