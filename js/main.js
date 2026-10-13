@@ -473,7 +473,7 @@ Promise.race([
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (motion.matches || !('IntersectionObserver' in window)) return;
   const selector = [
-    '.portfolio-card', '.portfolio-local-note', '.project-gallery__content > *',
+    '[data-scroll-reveal]', '.portfolio-card', '.portfolio-local-note', '.project-gallery__content > *',
     '.social-gallery__squares > *', '.social-gallery__wide > *',
     '.teaching-card', '.teaching-section > h2', '.page-seo-note', '.product-card',
     '.pricing-card', '.pricing-category > h3', '.pricing-footer-note',
@@ -482,19 +482,35 @@ Promise.race([
   ].map(value => 'main ' + value).join(',');
   const candidates = [...document.querySelectorAll(selector)];
   const targets = candidates.filter(element => !candidates.some(parent => parent !== element && parent.contains(element)));
+  const initialScrollY = window.scrollY;
+  const reveal = element => {
+    element.classList.add('scroll-reveal--visible');
+    observer.unobserve(element);
+  };
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      entry.target.classList.add('scroll-reveal--visible');
-      observer.unobserve(entry.target);
+      if (entry.target.hasAttribute('data-scroll-reveal') && window.scrollY <= initialScrollY) return;
+      reveal(entry.target);
     });
   }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
   targets.forEach(element => {
     const bounds = element.getBoundingClientRect();
-    if (!bounds.width || !bounds.height || bounds.top < window.innerHeight) return;
+    if (!bounds.width || !bounds.height || (bounds.top < window.innerHeight && !element.hasAttribute('data-scroll-reveal'))) return;
     element.classList.add('scroll-reveal');
     observer.observe(element);
   });
+  // Explicit artwork remains ready for animation even when partially visible on load.
+  const explicitTargets = targets.filter(element => element.hasAttribute('data-scroll-reveal'));
+  const revealOnScroll = () => {
+    if (window.scrollY <= initialScrollY) return;
+    explicitTargets.forEach(element => {
+      const bounds = element.getBoundingClientRect();
+      if (bounds.top < window.innerHeight - 24 && bounds.bottom > 0) reveal(element);
+    });
+    if (explicitTargets.every(element => element.classList.contains('scroll-reveal--visible'))) window.removeEventListener('scroll', revealOnScroll);
+  };
+  if (explicitTargets.length) window.addEventListener('scroll', revealOnScroll, { passive: true });
   // Keyboard navigation should never wait for a hidden link or button.
   document.addEventListener('focusin', event => {
     const element = event.target.closest('.scroll-reveal');
@@ -505,6 +521,7 @@ Promise.race([
   motion.addEventListener('change', event => {
     if (!event.matches) return;
     observer.disconnect();
+    window.removeEventListener('scroll', revealOnScroll);
     targets.forEach(element => element.classList.remove('scroll-reveal', 'scroll-reveal--visible'));
   });
 })();
