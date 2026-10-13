@@ -1,4 +1,4 @@
-.concept-viewer{position:relative;width:100%;margin:24px auto 0;background:#f2f0ed;border-radius:16px;overflow:hidden;touch-action:pan-y;outline-offset:5px;cursor:grab;user-select:none}
+.concept-viewer{position:relative;width:100%;margin:24px auto 0;background:transparent;border-radius:16px;overflow:hidden;touch-action:pan-y;outline-offset:5px;cursor:grab;user-select:none}
 .concept-viewer.is-dragging{cursor:grabbing}
 .concept-stage{position:relative;width:100%;height:clamp(340px,49vw,650px);perspective:1400px}
 .concept-card{position:absolute;top:50%;left:50%;width:min(43%,450px);padding:0;border:0;background:transparent;transform:translate(-50%,-50%) translateX(var(--x)) scale(var(--scale)) rotateY(var(--angle));opacity:var(--opacity);z-index:var(--z);transition:transform .45s ease,opacity .45s ease;cursor:pointer;box-shadow:0 14px 34px #0003;visibility:visible}
