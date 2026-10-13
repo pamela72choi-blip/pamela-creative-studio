@@ -473,6 +473,7 @@ Promise.race([
   if (motion.matches || !('IntersectionObserver' in window)) return;
   const selector = [
     '.portfolio-card', '.portfolio-local-note', '.project-gallery__content > *',
+    '.social-gallery__squares > *', '.social-gallery__wide > *',
     '.teaching-card', '.teaching-section > h2', '.page-seo-note', '.product-card',
     '.pricing-card', '.pricing-category > h3', '.pricing-footer-note',
     '.about-page__intro', '.about-page__skills', '.about-flipbook', '.concept-viewer',
