@@ -466,3 +466,43 @@ Promise.race([
   Promise.all(mediaReady),
   new Promise((resolve) => window.setTimeout(resolve, 3000))
 ]).then(finishLoadingScreen);
+
+// Reveal below-the-fold image/text blocks once, 300ms after entering the viewport.
+(() => {
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (motion.matches || !('IntersectionObserver' in window)) return;
+  const selector = [
+    '.portfolio-card', '.portfolio-local-note', '.project-gallery__content > *',
+    '.teaching-card', '.teaching-section > h2', '.page-seo-note', '.product-card',
+    '.pricing-card', '.pricing-category > h3', '.pricing-footer-note',
+    '.about-page__intro', '.about-page__skills', '.about-flipbook', '.concept-viewer',
+    '.solution-hero', '.video-preview', '.project-videos__stack > *', '.short-video-grid > *', '.pricing-section__header'
+  ].map(value => 'main ' + value).join(',');
+  const candidates = [...document.querySelectorAll(selector)];
+  const targets = candidates.filter(element => !candidates.some(parent => parent !== element && parent.contains(element)));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('scroll-reveal--visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+  targets.forEach(element => {
+    const bounds = element.getBoundingClientRect();
+    if (!bounds.width || !bounds.height || bounds.top < window.innerHeight) return;
+    element.classList.add('scroll-reveal');
+    observer.observe(element);
+  });
+  // Keyboard navigation should never wait for a hidden link or button.
+  document.addEventListener('focusin', event => {
+    const element = event.target.closest('.scroll-reveal');
+    if (!element) return;
+    element.classList.remove('scroll-reveal');
+    observer.unobserve(element);
+  });
+  motion.addEventListener('change', event => {
+    if (!event.matches) return;
+    observer.disconnect();
+    targets.forEach(element => element.classList.remove('scroll-reveal', 'scroll-reveal--visible'));
+  });
+})();
