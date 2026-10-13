@@ -26,3 +26,5 @@ main .concept-card img, main .concept-card:hover img, main .concept-card:focus-v
 .concept-card{width:min(43cqw,450px,calc((100cqh - 64px)*1122/1402));aspect-ratio:1122/1402;background-size:contain;background-repeat:no-repeat}
 .concept-card img{width:100%;height:100%;object-fit:contain;object-position:center}
 @media(max-width:600px){.concept-card{width:min(65cqw,calc((100cqh - 64px)*1122/1402))}}
+
+.concept-card,.concept-card img{-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}

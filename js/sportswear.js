@@ -1,6 +1,8 @@
 (() => {
  const viewer=document.querySelector('.concept-viewer');
  if(!viewer) return;
+ viewer.addEventListener('contextmenu',event=>event.preventDefault());
+ viewer.addEventListener('dragstart',event=>event.preventDefault());
  const cards=[...viewer.querySelectorAll('.concept-card')];
  const dotsHost=document.querySelector('.concept-dots');
  let current=0,gesture=null,suppressClickUntil=0;
