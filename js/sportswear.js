@@ -12,6 +12,8 @@
    if(distance>cards.length/2) distance-=cards.length;
    const abs=Math.abs(distance);
    card.hidden=abs>2;
+   if(abs<=2) card.querySelector("img").loading="eager";
+   card.querySelector("img").fetchPriority=abs===0?"high":"low";
    card.style.setProperty('--x',`${distance*43}%`);
    card.style.setProperty('--scale',String(1-abs*.14));
    card.style.setProperty('--angle',`${distance*-12}deg`);
