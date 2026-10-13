@@ -17,3 +17,6 @@
 .concept-hint{text-align:center;font-size:12px;color:#999;margin:8px 0 0}
 @media(max-width:600px){.concept-stage{height:clamp(340px,98vw,540px)}.concept-card{width:65%}.concept-arrow{width:30px;height:46px;font-size:38px}.concept-prev{left:5px}.concept-next{right:5px}.concept-hint{font-size:11px}.concept-viewer{border-radius:10px}}
 @media(prefers-reduced-motion:reduce){.concept-card{transition:none}}
+
+/* Keep artwork still while hovering or focusing its card. */
+main .concept-card img, main .concept-card:hover img, main .concept-card:focus-visible img{transform:none;transition:none}
