@@ -18,6 +18,7 @@ function finishLoadingScreen() {
 }
 
 const navigationGroups = [
+  ["品牌廣告概念", [["運動服飾", "sportswear-concepts.html"]]],
   ["視覺設計", [
     ["網頁設計", "web-design.html"],
     ["社群貼文圖片", "social-media-design.html"],
@@ -119,6 +120,7 @@ document.querySelector("[data-site-footer]").innerHTML = buildFooter();
 // A persistent shortcut to design pricing and consultation.
 const currentPageName = window.location.pathname.split("/").pop() || "index.html";
 const pageItemTitles = {
+  "sportswear-concepts.html": "運動服飾",
   "memorial-design.html": "訃聞與紀念冊",
   "photo-restoration.html": "照片修復",
   "web-design.html": "網頁設計",

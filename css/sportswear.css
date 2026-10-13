@@ -1,0 +1,19 @@
+.concept-viewer{position:relative;width:100%;margin:24px auto 0;background:#f2f0ed;border-radius:16px;overflow:hidden;touch-action:pan-y;outline-offset:5px;cursor:grab;user-select:none}
+.concept-viewer.is-dragging{cursor:grabbing}
+.concept-stage{position:relative;width:100%;height:clamp(340px,49vw,650px);perspective:1400px}
+.concept-card{position:absolute;top:50%;left:50%;width:min(43%,450px);padding:0;border:0;background:transparent;transform:translate(-50%,-50%) translateX(var(--x)) scale(var(--scale)) rotateY(var(--angle));opacity:var(--opacity);z-index:var(--z);transition:transform .45s ease,opacity .45s ease;cursor:pointer;box-shadow:0 14px 34px #0003;visibility:visible}
+.concept-card[hidden]{display:none}
+.concept-card img{display:block;width:100%;height:auto;pointer-events:none}
+.concept-card:focus-visible{outline:3px solid #78716b;outline-offset:4px}
+.concept-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:12;width:44px;height:56px;border:0;border-radius:8px;background:#ffffffd9;color:#686460;font:48px/1 Arial,sans-serif;cursor:pointer}
+.concept-arrow:hover{background:#fff;color:#222}
+.concept-prev{left:16px}.concept-next{right:16px}
+.concept-caption{display:flex;justify-content:center;align-items:center;gap:16px;margin:20px 0 12px;font-size:14px;color:#555;min-height:24px}
+.concept-count{font-variant-numeric:tabular-nums;color:#888;white-space:nowrap}
+.concept-dots{display:flex;flex-wrap:wrap;justify-content:center;gap:4px}
+.concept-dot{border:0;padding:10px;background:transparent;cursor:pointer}
+.concept-dot::after{content:"";display:block;width:7px;height:7px;border-radius:50%;background:#d2ceca}
+.concept-dot[aria-current="true"]::after{background:#514b46}
+.concept-hint{text-align:center;font-size:12px;color:#999;margin:8px 0 0}
+@media(max-width:600px){.concept-stage{height:clamp(340px,98vw,540px)}.concept-card{width:65%}.concept-arrow{width:30px;height:46px;font-size:38px}.concept-prev{left:5px}.concept-next{right:5px}.concept-caption{gap:10px;font-size:12px}.concept-hint{font-size:11px}.concept-viewer{border-radius:10px}}
+@media(prefers-reduced-motion:reduce){.concept-card{transition:none}}
