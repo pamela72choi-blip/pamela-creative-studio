@@ -87,3 +87,39 @@
   updateTargets();
   for (const state of states) { state.current = state.target; draw(state); }
 })();
+
+(() => {
+  const artworks = [...document.querySelectorAll('.cnc-artwork')];
+  if (!artworks.length) return;
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  if (motion.matches || !('IntersectionObserver' in window)) return;
+  artworks.forEach(art => art.classList.add('scroll-reveal'));
+  const reveal = art => {
+    if (art.classList.contains('scroll-reveal--visible')) return;
+    art.classList.add('scroll-reveal--visible');
+    observer.unobserve(art.parentElement);
+  };
+  const observer = new IntersectionObserver(entries => {
+    if (document.documentElement.classList.contains('is-loading')) return;
+    entries.forEach(entry => {
+      if (entry.isIntersecting) reveal(entry.target.querySelector('.cnc-artwork'));
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+  artworks.forEach(art => observer.observe(art.parentElement));
+  function revealVisible() {
+    if (document.documentElement.classList.contains('is-loading')) return;
+    artworks.forEach(art => {
+      const bounds = art.parentElement.getBoundingClientRect();
+      if (bounds.top < innerHeight - 24 && bounds.bottom > 0) reveal(art);
+    });
+    loadingObserver.disconnect();
+  }
+  const loadingObserver = new MutationObserver(revealVisible);
+  loadingObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  revealVisible();
+  motion.addEventListener('change', event => {
+    if (!event.matches) return;
+    observer.disconnect(); loadingObserver.disconnect();
+    artworks.forEach(art => art.classList.remove('scroll-reveal', 'scroll-reveal--visible'));
+  });
+})();
