@@ -36,10 +36,10 @@
     if (state.lastDrawn === p) return;
     state.lastDrawn = p;
     if (state.type === 'vertical') {
-      const y = reduced.matches ? 0 : (.025 - p * .05) * state.height;
-      const x = reduced.matches ? 0 : (.0125 - p * .025) * state.width;
+      const y = reduced.matches ? 0 : (.008 - p * .016) * state.height;
+      const x = reduced.matches ? 0 : (.004 - p * .008) * state.width;
       state.front.style.transform = `translate3d(${x}px,${y}px,0) scale(1.08)`;
-      state.back.style.transform = `translate3d(0,${p * state.height * .015}px,0) scale(1.04)`;
+      state.back.style.transform = `translate3d(0,${p * state.height * .005}px,0) scale(1.04)`;
     } else {
       state.back.style.transform = `translate3d(${p * state.width * .012}px,0,0) scale(${1.08 - p * .04})`;
       state.front.style.transform = `translate3d(${-p * state.width * .022}px,0,0)`;
