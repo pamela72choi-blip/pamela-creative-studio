@@ -18,7 +18,7 @@ function finishLoadingScreen() {
 }
 
 const navigationGroups = [
-  ["品牌廣告概念", [["運動服飾", "sportswear-concepts.html"], ["品嚐咖啡教程", "coffee-tutorial.html"]]],
+  ["品牌廣告概念", [["運動服飾", "sportswear-concepts.html"], ["品嚐咖啡教程", "coffee-tutorial.html"], ["CNC操作教學", "cnc-operation.html"]]],
   ["視覺設計", [
     ["網頁設計", "web-design.html"],
     ["社群貼文圖片", "social-media-design.html"],
@@ -120,6 +120,7 @@ document.querySelector("[data-site-footer]").innerHTML = buildFooter();
 // A persistent shortcut to design pricing and consultation.
 const currentPageName = window.location.pathname.split("/").pop() || "index.html";
 const pageItemTitles = {
+  "cnc-operation.html": "CNC操作教學",
   "coffee-tutorial.html": "品嚐咖啡教程",
   "sportswear-concepts.html": "運動服飾",
   "memorial-design.html": "訃聞與紀念冊",

@@ -1,0 +1,41 @@
+.cnc-gallery {
+  display: flex;
+  width: min(100%, 756px);
+  flex-direction: column;
+  gap: 40px;
+  margin: 40px auto 0;
+}
+.cnc-track { position: relative; width: 100%; --cnc-top: 132px; }
+.cnc-track::after { display: block; height: clamp(260px, 45vh, 400px); content: ""; }
+.cnc-scene {
+  position: sticky;
+  top: var(--cnc-top);
+  width: 100%;
+  aspect-ratio: 1672 / 941;
+  overflow: hidden;
+  isolation: isolate;
+  perspective: 1600px;
+  background: #c6d5df;
+}
+.cnc-scene .cnc-layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+.cnc-back { z-index: 0; transform-origin: right center; transform: scale(1.04); }
+.cnc-middle { z-index: 1; }
+.cnc-front { z-index: 2; transform-origin: right center; transform: translateY(2.5%) scale(1.08); }
+[data-cnc-scene="depth"] .cnc-back { transform-origin: center; transform: scale(1.08); }
+[data-cnc-scene="depth"] .cnc-front { transform-origin: 75% 50%; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .cnc-track::after { height: 0; }
+  .cnc-scene { position: relative; top: auto; }
+  .cnc-scene .cnc-layer { will-change: auto; }
+}
