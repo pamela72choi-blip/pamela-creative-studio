@@ -17,7 +17,21 @@
     <script>document.documentElement.classList.add("has-js","is-loading")</script>
     <link rel="stylesheet" href="css/style.css?v=20261013-scroll-reveal-v2">
     <script src="js/main.js?v=20261016-menu-design" defer></script>
-  </head>
+  <style id="coffee-image-protection">
+  img { -webkit-touch-callout: none; -webkit-user-drag: none; user-select: none; }
+</style>
+<script>
+// Block image context menus and dragging, including the gallery's surrounding area.
+(() => {
+  const protectedArea = 'img, .project-gallery__content';
+  for (const type of ['contextmenu', 'dragstart']) {
+    document.addEventListener(type, event => {
+      if (event.target instanceof Element && event.target.closest(protectedArea)) event.preventDefault();
+    }, {capture:true});
+  }
+})();
+</script>
+</head>
   <body>
     <div class="loading-screen" role="status" aria-live="polite">
       <div class="loading-screen__brand">Pamela Creative Studio</div>
