@@ -38,6 +38,7 @@ const navigationGroups = [
     ["包裝設計", "packaging-design.html"],
     ["海報、型錄設計", "print-design.html"],
     ["名片設計", "business-card-design.html"],
+    ["菜單設計", "menu-design.html"],
   ]],
   ["影音製作", [
     ["教學影片", "tutorial-videos.html"],
@@ -120,6 +121,7 @@ document.querySelector("[data-site-footer]").innerHTML = buildFooter();
 // A persistent shortcut to design pricing and consultation.
 const currentPageName = window.location.pathname.split("/").pop() || "index.html";
 const pageItemTitles = {
+  "menu-design.html": "菜單設計",
   "cnc-operation.html": "CNC操作教學",
   "coffee-tutorial.html": "品嚐咖啡教程",
   "sportswear-concepts.html": "運動服飾",
