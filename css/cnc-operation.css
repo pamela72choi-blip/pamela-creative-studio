@@ -67,7 +67,7 @@
   .cnc-copy__title, .cnc-copy__subtitle { opacity: 1; transform: none; animation: none; }
 }
 
-.cnc-documents { display: flex; flex-direction: column; gap: 40px; width: min(100%, 756px); margin: 40px auto 0; }
+.cnc-documents { display: flex; flex-direction: column; gap: 40px; width: min(80%, 512px); margin: 40px auto 0; }
 .cnc-document { margin: 0; width: 100%; }
 .cnc-documents .cnc-document img { display: block; width: 100%; height: auto; max-width: 100%; user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; }
 
