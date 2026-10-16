@@ -1,5 +1,6 @@
 (() => {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const compact = matchMedia('(max-width: 768px)');
   const header = document.querySelector('.site-header');
   const states = [...document.querySelectorAll('[data-cnc-scene]')].map(track => ({
     track, scene: track.querySelector('.cnc-scene'), back: track.querySelector('.cnc-back'),
@@ -19,7 +20,7 @@
       // Keep a wide scene inside short landscape windows as well as below the header.
       const top = Math.min(headerHeight + 16, Math.max(0, innerHeight - state.height - 16));
       state.top = top;
-      state.travel = Math.max(1, state.track.offsetHeight - state.height);
+      state.travel = compact.matches ? innerHeight + state.height : Math.max(1, state.track.offsetHeight - state.height);
       state.documentTop = state.track.getBoundingClientRect().top + scroll;
     }
     for (const state of states) state.track.style.setProperty('--cnc-top', state.top + 'px');
@@ -28,7 +29,7 @@
   }
   function updateTargets() {
     const scroll = window.scrollY;
-    for (const state of states) state.target = reduced.matches ? 0 : clamp((scroll + state.top - state.documentTop) / state.travel);
+    for (const state of states) state.target = reduced.matches ? 0 : clamp((scroll + (compact.matches ? innerHeight : state.top) - state.documentTop) / state.travel);
     targetsDirty = false;
   }
   function draw(state) {
@@ -80,6 +81,7 @@
   addEventListener('resize', resize, { passive: true });
   addEventListener('pageshow', resize);
   reduced.addEventListener('change', resize);
+  compact.addEventListener('change', resize);
   const observer = new ResizeObserver(resize);
   if (header) observer.observe(header);
   for (const state of states) observer.observe(state.scene);
@@ -104,7 +106,7 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) reveal(entry.target.querySelector('.cnc-artwork'));
     });
-  }, { threshold: 0, rootMargin: '0px 0px -24px 0px' });
+  }, { threshold: .15, rootMargin: '0px 0px -24px 0px' });
   artworks.forEach(art => observer.observe(art.parentElement));
   function revealVisible() {
     if (document.documentElement.classList.contains('is-loading')) return;

@@ -70,3 +70,11 @@
 .cnc-documents { display: flex; flex-direction: column; gap: 40px; width: min(100%, 756px); margin: 40px auto 0; }
 .cnc-document { margin: 0; width: 100%; }
 .cnc-documents .cnc-document img { display: block; width: 100%; height: auto; max-width: 100%; user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; }
+
+/* Touch layouts follow the page flow; depth uses viewport progress instead of a sticky spacer. */
+@media (max-width: 768px) {
+  .cnc-track::after { display: none; height: 0; }
+  .cnc-scene { position: relative; top: auto; overflow: visible; }
+  .cnc-gallery, .cnc-documents { gap: 24px; }
+  .cnc-documents { margin-top: 24px; }
+}
