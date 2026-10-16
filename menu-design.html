@@ -26,14 +26,15 @@
       .menu-detail__close { width:38px; height:38px; padding:0; border:0; border-radius:50%; background:#222; color:#fff; font-size:28px; cursor:pointer; }
       .menu-detail img { display:block; width:100%; height:auto; }
       html:has(.menu-detail[open]) { overflow:hidden; }
+      img { -webkit-touch-callout:none; -webkit-user-drag:none; user-select:none; }
     </style>
-    <script src="js/menu-design.js?v=20261016-menu-design" defer></script>
+    <script src="js/menu-design.js?v=20261017-image-protection" defer></script>
   </head>
   <body>
     <div class="loading-screen" role="status" aria-live="polite">
       <div class="loading-screen__brand">Pamela Creative Studio</div>
       <p class="loading-screen__message">載入中，請稍等...</p>
-      <img class="loading-screen__cat" src="assets/images/ui/loading-cat.gif?v=20261010" alt="" width="135" height="135">
+      <img class="loading-screen__cat" src="assets/images/menu-design/loading-cat.webp?v=20261017" alt="" width="135" height="135" draggable="false">
     </div>
     <div data-site-header></div>
     <main>
@@ -41,7 +42,7 @@
         <h1 id="project-title" class="sr-only">菜單設計作品</h1>
         <div class="project-gallery__content">
           <button class="menu-preview" type="button" aria-label="開啟完整精品咖啡菜單" aria-haspopup="dialog" aria-controls="menu-detail">
-            <img src="assets/images/menu-design/coffee-menu-preview.webp" alt="精品咖啡菜單與咖啡館情境展示，點擊欣賞完整菜單" width="1536" height="1024" decoding="async" fetchpriority="high">
+            <img src="assets/images/menu-design/coffee-menu-preview.webp" alt="精品咖啡菜單與咖啡館情境展示，點擊欣賞完整菜單" width="1536" height="1024" decoding="async" fetchpriority="high" draggable="false">
           </button>
         </div>
       </section>
