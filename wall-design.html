@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>牆壁大圖設計作品｜Pamela Creative Studio</title>
+    <meta name="description" content="Pamela Creative Studio 牆壁大圖設計作品，展示秀傳醫療體系介紹牆面實拍，點擊查看平面設計圖稿。">
+    <link rel="canonical" href="https://pamela72.com/wall-design.html">
+    <meta property="og:title" content="牆壁大圖設計作品｜Pamela Creative Studio">
+    <meta property="og:description" content="Pamela Creative Studio 牆壁大圖設計作品，展示秀傳醫療體系介紹牆面實拍，點擊查看平面設計圖稿。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pamela72.com/wall-design.html">
+    <meta property="og:image" content="https://pamela72.com/assets/images/wall-design/medical-system-installed.webp">
+    <meta property="og:image:alt" content="秀傳醫療體系介紹牆面成品實拍">
+    <meta property="og:locale" content="zh_TW">
+    <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+    <script>document.documentElement.classList.add("has-js","is-loading")</script>
+    <link rel="stylesheet" href="css/style.css?v=20261013-scroll-reveal-v2">
+    <script src="js/main.js?v=20261017-wall-design" defer></script>
+  <style>
+      .wall-preview { display:block; width:100%; padding:0; border:0; background:none; cursor:zoom-in; }
+      .wall-preview:focus-visible { outline:3px solid #76533b; outline-offset:6px; }
+      .wall-detail { width:min(630px, calc(100vw - 32px)); max-width:none; max-height:calc(100dvh - 48px); padding:0; border:0; background:#fff; overflow:auto; }
+      .wall-detail::backdrop { background:rgba(0,0,0,.65); }
+      .wall-detail__bar { position:sticky; top:0; display:flex; justify-content:flex-end; padding:8px; background:#fff; z-index:1; }
+      .wall-detail__close { width:38px; height:38px; padding:0; border:0; border-radius:50%; background:#222; color:#fff; font-size:28px; cursor:pointer; }
+      .wall-detail img { display:block; width:100%; height:auto; }
+      html:has(.wall-detail[open]) { overflow:hidden; }
+      img { -webkit-touch-callout:none; -webkit-user-drag:none; user-select:none; }
+    </style>
+    <script src="js/wall-design.js?v=20261017-wall-design" defer></script>
+  </head>
+  <body>
+    <div class="loading-screen" role="status" aria-live="polite">
+      <div class="loading-screen__brand">Pamela Creative Studio</div>
+      <p class="loading-screen__message">載入中，請稍等...</p>
+      <img class="loading-screen__cat" src="assets/images/menu-design/loading-cat.webp?v=20261017" alt="" width="135" height="135" draggable="false">
+    </div>
+    <div data-site-header></div>
+    <main>
+      <section class="project-gallery project-gallery--print project-gallery--wall page-shell" aria-labelledby="project-title">
+        <h1 id="project-title" class="sr-only">牆壁大圖設計作品</h1>
+        <p class="gallery-hint">點擊小圖可看平面設計圖稿。</p>
+        <div class="project-gallery__content">
+          <button class="wall-preview" type="button" aria-label="查看醫療體系介紹牆面平面設計圖稿" aria-haspopup="dialog" aria-controls="wall-detail">
+            <img src="assets/images/wall-design/medical-system-installed.webp" alt="秀傳醫療體系介紹牆面成品實拍，點擊查看平面設計圖稿" width="1504" height="1000" decoding="async" fetchpriority="high" draggable="false">
+          </button>
+        </div>
+      </section>
+    </main>
+    <dialog class="wall-detail" id="wall-detail" aria-label="醫療體系介紹牆面平面設計圖稿">
+      <div class="wall-detail__bar"><button class="wall-detail__close" type="button" aria-label="關閉設計稿視窗" autofocus>×</button></div>
+      <img src="assets/images/wall-design/medical-system-artwork.webp" alt="秀傳醫療體系介紹牆面平面設計圖稿，尺寸 162 × 130 公分" width="3227" height="2480" loading="lazy" decoding="async" draggable="false">
+    </dialog>
+    <div data-site-footer></div>
+  </body>
+</html>
+
