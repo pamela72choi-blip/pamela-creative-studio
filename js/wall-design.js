@@ -1,11 +1,13 @@
-const wallPreview = document.querySelector('.wall-preview');
-const wallDetail = document.querySelector('#wall-detail');
-wallPreview.addEventListener('click', () => { wallDetail.showModal(); wallDetail.scrollTop = 0; });
-wallDetail.querySelector('button').addEventListener('click', () => wallDetail.close());
-wallDetail.addEventListener('click', event => {
-  if (event.target !== wallDetail) return;
-  const box = wallDetail.getBoundingClientRect();
-  if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) wallDetail.close();
+document.querySelectorAll('.wall-preview').forEach(preview => {
+  const detail = document.getElementById(preview.getAttribute('aria-controls'));
+  if (!detail) return;
+  preview.addEventListener('click', () => { detail.showModal(); detail.scrollTop = 0; });
+  detail.querySelector('.wall-detail__close').addEventListener('click', () => detail.close());
+  detail.addEventListener('click', event => {
+    if (event.target !== detail) return;
+    const box = detail.getBoundingClientRect();
+    if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) detail.close();
+  });
 });
 
 // This page uses compressed WebP for decorative animations as well as artwork.
