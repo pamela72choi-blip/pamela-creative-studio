@@ -49,7 +49,6 @@ const navigationGroups = [
   ]],
   ["其他", [
     ["照片修復", "photo-restoration.html"],
-    ["訃聞與紀念冊", "memorial-design.html"],
   ]],
 ];
 
@@ -127,7 +126,6 @@ const pageItemTitles = {
   "cnc-operation.html": "CNC操作教學",
   "coffee-tutorial.html": "品嚐咖啡教程",
   "sportswear-concepts.html": "運動服飾",
-  "memorial-design.html": "訃聞與紀念冊",
   "photo-restoration.html": "照片修復",
   "web-design.html": "網頁設計",
   "social-media-design.html": "社群貼文圖片",
