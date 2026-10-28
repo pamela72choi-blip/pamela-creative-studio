@@ -22,6 +22,8 @@ html.is-loading .about-page__title,html.is-loading .about-page__intro,html.is-lo
 @media (prefers-reduced-motion:reduce){.about-page__title,.about-page__intro,.about-page__skills article{animation:none}}
 
 .about-profile{display:grid;grid-template-columns:232px minmax(0,1fr);gap:36px;max-width:644px;margin:80px auto 0;align-items:start}.about-profile img{width:232px;max-width:100%;height:auto}.about-profile h2{font-size:19px;margin:0 0 14px}.about-profile p{color:#626262;font-size:13px;line-height:1.8;letter-spacing:.06em;margin:0 0 1em}.about-profile.is-pending{opacity:0;transform:translateY(28px)}.about-profile.is-visible{opacity:1;transform:translateY(0);transition:opacity .9s ease .25s,transform .9s ease .25s}@media(max-width:700px){.about-profile{grid-template-columns:1fr;gap:24px;margin-top:60px}.about-profile img{width:min(232px,100%);margin:auto}}@media(prefers-reduced-motion:reduce){.about-profile.is-pending{opacity:1;transform:none}.about-profile.is-visible{transition:none}}
+
+.about-heading{width:100%;max-width:720px;margin:0 auto 48px;line-height:0}.about-heading img{height:auto;position:relative}.about-heading__first{width:70%;margin-right:auto;animation:heading-left 1s ease-out both}.about-heading__second{width:40%;margin:-10% 0 0 auto;animation:heading-right 1s ease-out .2s both}html.is-loading .about-heading img{animation-play-state:paused}@keyframes heading-left{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}@keyframes heading-right{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}@media(prefers-reduced-motion:reduce){.about-heading img{animation:none}}
 </style></head>
   <body>
     <div class="loading-screen" role="status" aria-live="polite">
@@ -30,13 +32,13 @@ html.is-loading .about-page__title,html.is-loading .about-page__intro,html.is-lo
     </div>
     <div data-site-header></div>
     <main><section class="about-page page-shell">
-      <h1 class="about-page__title">設計跨 AI 世代，持續進化</h1>
+      <h1 class="about-heading" aria-label="設計跨 AI 世代，持續進化"><img class="about-heading__first" src="about/heading-design-ai-20261028.png" alt="" width="1267" height="525"><img class="about-heading__second" src="about/heading-evolution-20261028.png" alt="" width="691" height="372"></h1>
       <div class="about-page__intro"><div><p>我從沒有AI時代的手繪插畫、平面設計，到至今有AI協助的電商美編設計、商品上架，甚至可以架一個形象網站。已有二十多年相關設計經驗。</p><p>多元風格曾跨越不少產品，基本上只要公司要求我都會配合改變調整風格。</p><p>這個網頁裡面作品大部分都是之前公司或接案，都是一層一層圖層去設計，也有近期依公司要求快速用AI生成的平面設計和AI短影音。</p></div></div>
       <div class="about-page__skills"><article><h2>商品內容企劃美編</h2><ul><li>商品詳情敘述撰寫</li><li>商品詳情圖排版</li><li>商品圖拍攝、修圖</li><li>商品開箱影片拍攝、後製</li><li>商品使用教學</li></ul></article><article><h2>印刷排版設計</h2><ul><li>型錄、海報、小冊子、書籍</li><li>各式盒型包裝設計</li><li>特殊形狀貼標、貼紙設計</li><li>盒型結構的刀模設計</li></ul></article><article><h2>網頁前端設計</h2><ul><li>HTML／CSS 網頁切版基礎</li><li>AI快速生成網頁基本架構</li><li>WIX實作經驗</li><li>略懂WordPress及Figma基本概念</li></ul></article><article><h2>多媒體設計</h2><ul><li>Procreate 插畫速寫</li><li>Photoshop、Illustrator、Canva 美編排版工具</li><li>CapCut、Premiere、After Effects 影片後製</li><li>ChatGPT構圖生成及Grok影片動態生成</li><li>影片、動畫腳本策劃</li></ul></article></div>
       <section class="about-profile" aria-labelledby="about-profile-title">
         <img src="about/pamela-profile-20261028.jpg" alt="Pamela 的個人照片" width="1200" height="1600" loading="lazy" decoding="async">
         <div><h2 id="about-profile-title">關於Pamela</h2>
-          <p>在英國殖民地時期香港出生受教育，後來<strong>依親</strong>來台灣在台北從事設計相關工作近二十年，近期與家人在台中北屯購屋定居。</p>
+          <p>在英國殖民地時期香港出生受教育，後來依親來台灣在台北從事設計相關工作近二十年，近期與家人在台中北屯購屋定居。</p>
           <p>早期是做動畫和遊戲美術，主要是手繪設計為主。後期漸漸轉變領域至偏向商業設計領域，主要是網頁素材、網頁前端設計方面，在還沒有AI出現的時代是一串一串html及css語法切版、建構出來的。</p>
           <p>後來因市場所需，轉職電商美編，從企劃、商品詳情頁、商品影片及AI短影音，再加上AI協助能快速批次整理商品上架資訊，全程幾乎是只有我一個人部門獨自完成。</p>
           <p>我希望用過往累積的實務經驗與不斷學習新工具的應用，協助團隊共同互相激發創意、穩定在指定時程內完成各項的專案任務，將成就變成每個工作生活中的樂趣。</p></div>
