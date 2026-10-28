@@ -83,7 +83,7 @@ function buildHeader() {
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="開啟選單">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
         </button>
-        <nav class="site-nav" id="site-navigation" aria-label="主要選單"><ul class="site-nav__list">${groups}${links}</ul></nav>
+        <nav class="site-nav" id="site-navigation" aria-label="主要選單"><ul class="site-nav__list"><li><a href="about-pamela.html"${currentPage === "about-pamela.html" ? ' aria-current="page"' : ""}>關於 Pamela</a></li>${groups}${links}</ul></nav>
       </div>
     </header>`;
 }
