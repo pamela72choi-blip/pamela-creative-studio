@@ -37,6 +37,9 @@ html.is-loading .about-page__title,html.is-loading .about-page__intro,html.is-lo
 .about-profile.is-pending{opacity:1;transform:none}.about-profile.is-pending img,.about-profile.is-pending > div{opacity:0}.about-profile.is-pending img{transform:translateY(28px)}.about-profile.is-pending > div{transform:translateX(28px)}.about-profile.is-visible{transition:none}.about-profile.is-visible img,.about-profile.is-visible > div{opacity:1;transform:none;transition:opacity .9s ease,transform .9s ease}.about-profile.is-visible img{transition-delay:.25s}.about-profile.is-visible > div{transition-delay:.65s}
 @media(max-width:700px){.about-page__skills{padding-left:12px}.about-page__skills ul{font-size:clamp(9px,2.8vw,13px);letter-spacing:0}.about-page__skills li{white-space:nowrap}.about-profile.is-pending > div{transform:translateY(28px)}}
 @media(prefers-reduced-motion:reduce){.about-profile.is-pending img,.about-profile.is-pending > div{opacity:1;transform:none}.about-profile.is-visible img,.about-profile.is-visible > div{transition:none}}
+
+.about-page{padding-top:30px}
+@media(min-width:701px){.about-page__skills{grid-template-columns:270px minmax(0,1fr);column-gap:26px}.about-page__skills li{white-space:nowrap}}
 </style></head>
   <body>
     <div class="loading-screen" role="status" aria-live="polite">
