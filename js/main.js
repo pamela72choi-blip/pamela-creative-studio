@@ -18,7 +18,7 @@ function finishLoadingScreen() {
 }
 
 const navigationGroups = [
-  ["品牌廣告概念", [["運動服飾", "sportswear-concepts.html"], ["品嚐咖啡教程", "coffee-tutorial.html"], ["CNC操作教學", "cnc-operation.html"]]],
+  ["品牌廣告概念", [["黑喵抹茶烘焙品牌構思","black-cat-matcha.html"], ["品嚐咖啡教程", "coffee-tutorial.html"], ["運動服飾", "sportswear-concepts.html"], ["CNC操作教學", "cnc-operation.html"]]],
   ["視覺設計", [
     ["網頁設計", "web-design.html"],
     ["社群貼文圖片", "social-media-design.html"],
@@ -124,6 +124,7 @@ const pageItemTitles = {
   "wall-design.html": "牆壁大圖設計",
   "menu-design.html": "菜單設計",
   "cnc-operation.html": "CNC操作教學",
+  "black-cat-matcha.html": "黑喵抹茶烘焙品牌構思",
   "coffee-tutorial.html": "品嚐咖啡教程",
   "sportswear-concepts.html": "運動服飾",
   "photo-restoration.html": "照片修復",
